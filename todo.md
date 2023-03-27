@@ -1,3 +1,4 @@
+- merge https://github.com/selfteaching/the-craft-of-selfteaching/issues/67
 - git rm --cached test.sh update.md
 - yuba 夜间模式
 - 主页夜间模式
