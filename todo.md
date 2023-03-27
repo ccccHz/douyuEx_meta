@@ -1,0 +1,5 @@
+- git rm --cached test.sh update.md
+- yuba 夜间模式
+- 主页夜间模式
+- 自动最高清晰度
+- continue fans 多次执行，并融合

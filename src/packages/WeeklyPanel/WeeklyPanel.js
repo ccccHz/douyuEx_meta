@@ -1,14 +1,14 @@
 function initPkg_WeeklyPanel() {
-    if (isShowWeeklyPanel()) {
-        initPkg_WeeklyPanel_Dom();
-        initPkg_WeeklyPanel_Func();
-    }
+  if (isShowWeeklyPanel()) {
+    initPkg_WeeklyPanel_Dom();
+    initPkg_WeeklyPanel_Func();
+  }
 }
 
 function initPkg_WeeklyPanel_Dom() {
-	let a = document.createElement("div");
-	a.className = "weeklypanel__panel-wrap";
-	a.innerHTML = `
+  let a = document.createElement("div");
+  a.className = "weeklypanel__panel-wrap";
+  a.innerHTML = `
 		<div class="weeklypanel__panel">
             <div class="weeklypanel__close">×</div>
 			<div class="weeklypanel__content">
@@ -20,31 +20,35 @@ function initPkg_WeeklyPanel_Dom() {
 			</div>
 		</div>
 	`;
-	
-	let b = document.getElementById("root");
-	b.insertBefore(a, b.childNodes[0]);
+
+  let b = document.getElementById("root");
+  b.insertBefore(a, b.childNodes[0]);
 }
 
 function initPkg_WeeklyPanel_Func() {
-    let weeklyPanel = document.getElementsByClassName("weeklypanel__panel-wrap")[0];
-    document.getElementsByClassName("weeklypanel__close")[0].addEventListener("click", () => {
-        weeklyPanel.style.display = "none";
+  let weeklyPanel = document.getElementsByClassName(
+    "weeklypanel__panel-wrap"
+  )[0];
+  document
+    .getElementsByClassName("weeklypanel__close")[0]
+    .addEventListener("click", () => {
+      weeklyPanel.style.display = "none";
     });
 }
 
 function isShowWeeklyPanel() {
-    const LOCAL_NAME = "Ex_WeeklyPanel_NextTime";
-    let tt = new Date().getTime();
-    let nt = tt + 604800000;
-    let nextTime = Number(localStorage.getItem(LOCAL_NAME));
-    if (nextTime) {
-        if (tt >= nextTime) {
-            localStorage.setItem(LOCAL_NAME, nt);
-            return true;
-        }
-    } else {
-        localStorage.setItem(LOCAL_NAME, nt);
-        return true;
-    }
-    return false;
+  // const LOCAL_NAME = "Ex_WeeklyPanel_NextTime";
+  // let tt = new Date().getTime();
+  // let nt = tt + 604800000;
+  // let nextTime = Number(localStorage.getItem(LOCAL_NAME));
+  // if (nextTime) {
+  //     if (tt >= nextTime) {
+  //         localStorage.setItem(LOCAL_NAME, nt);
+  //         return true;
+  //     }
+  // } else {
+  //     localStorage.setItem(LOCAL_NAME, nt);
+  //     return true;
+  // }
+  return false;
 }
