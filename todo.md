@@ -1,5 +1,5 @@
 - merge https://github.com/selfteaching/the-craft-of-selfteaching/issues/67
-- git rm --cached test.sh update.md
+- 删除远程无关 git rm --cached 
 - yuba 夜间模式
 - 主页夜间模式
 - 自动最高清晰度
