@@ -1,0 +1,4 @@
+- how to maintain
+  - build.sh 生成完整的userscript
+  - dev.sh 生产不带head的us，用于文件地址的热更新
+  - 每次upstream更新后，解决冲突

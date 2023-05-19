@@ -9693,7 +9693,7 @@ var _hmt = _hmt || [];
 
 function initPkg_Statistics() {
   let hm = document.createElement("script");
-  hm.src = "https://hm.baidu.com/hm.js?ef649a5ac4355ceef72a7c848b349182";
+  hm.src = "https://hm.baidu.com/hm.js?4dc4fb0549a56fe03ba53c022b1ff455";
   let s = document.getElementsByTagName("script")[0]; 
   s.parentNode.insertBefore(hm, s);
 }
@@ -9715,7 +9715,7 @@ function initPkg_TabSwitch() {
 // 版本号
 // 格式 yyyy.MM.dd.**
 // var curVersion = "2020.01.12.01";
-var curVersion = "2023.03.09.01";
+var curVersion = "2023.05.19.01";
 var isNeedUpdate = false;
 var lastestVersion = "";
 function initPkg_Update() {
@@ -12147,9 +12147,9 @@ function RealLive_get_sign_url(r, tt, is_https, qn, reallive_callback, is_video)
                         // qn写1015则不返回清晰度，即默认
                         // realLive = "http://tx2play1.douyucdn.cn/live/" + result + ".xs";
                         // realLive = "http://dyscdnali1.douyucdn.cn/live/" + result + ".flv?uuid=";
-                        realLive = "https://hdltctwk.douyucdn2.cn/live/" + result + ".flv?uuid=";
+                        realLive = "https://openhls-tct.douyucdn2.cn/dyliveflv1/" + result + ".flv?uuid=";
                     } else {
-                        realLive = "https://hdltctwk.douyucdn2.cn/live/" + result + "_" + cl + ".flv?uuid=";
+                        realLive = "https://openhls-tct.douyucdn2.cn/dyliveflv1/" + result + "_" + cl + ".flv?uuid=";
                         // realLive = "http://tx2play1.douyucdn.cn/live/" + result + "_" + cl + ".xs";
                     }
                 }
