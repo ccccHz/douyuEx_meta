@@ -2321,7 +2321,7 @@ function CopyRealLive_insertIcon() {
 
 function initPkg_CopyRealLive_Func() {
 	document.getElementById("copy-real-live").addEventListener("click", function() {
-        getRealLive_Douyu(rid, true, false, "1015", (lurl) => {
+        getRealLive_Douyu(rid, true, true, "0", (lurl) => {
             if (lurl == "None") {
                 showMessage("房间未开播或其他错误", "error");
             } else {
@@ -2334,7 +2334,7 @@ function initPkg_CopyRealLive_Func() {
         })
     });
     document.getElementsByClassName("Title-header")[0].addEventListener("click", function() {
-        getRealLive_Douyu(rid, true, false, "1015", (lurl) => {
+        getRealLive_Douyu(rid, true, true, "0", (lurl) => {
             if (lurl == "None") {
                 showMessage("房间未开播或其他错误", "error");
             } else {
@@ -9715,7 +9715,7 @@ function initPkg_TabSwitch() {
 // 版本号
 // 格式 yyyy.MM.dd.**
 // var curVersion = "2020.01.12.01";
-var curVersion = "2023.05.19.01";
+var curVersion = "2023.06.12.01";
 var isNeedUpdate = false;
 var lastestVersion = "";
 function initPkg_Update() {
