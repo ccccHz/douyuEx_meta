@@ -37,7 +37,7 @@ function recur_dir(){
                 continue
             fi
             cat "$file" >> $tempFunc
-            echo "\n" >> $tempFunc
+            printf "\n\n" >> $tempFunc
             # echo $file added
         elif    [[ $file = *.css ]]
         then
