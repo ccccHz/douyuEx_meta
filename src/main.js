@@ -16,6 +16,8 @@
 // @match			*://*.douyu.com/7*
 // @match			*://*.douyu.com/8*
 // @match			*://*.douyu.com/9*
+// @match     *://*.douyu.com/g_*
+// @match     *://*.douyu.com/directory/myFollow
 // @match			*://*.douyu.com/topic/*
 // @match        *://www.douyu.com/member/cp/getFansBadgeList
 // @match        *://passport.douyu.com/*
@@ -71,7 +73,7 @@ function init() {
 function initPkg() {
   Update_checkVersion();
   initPkg_Night();
-  initPkg_AutoDark_main();
+  initPkg_AutoDark();
   initPkg_ExIcon();
   initPkg_ExPanel();
   initPkg_RealAudience();

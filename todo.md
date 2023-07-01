@@ -1,6 +1,10 @@
-- merge https://github.com/selfteaching/the-craft-of-selfteaching/issues/67
+- merge 教程 https://github.com/selfteaching/the-craft-of-selfteaching/issues/67
 - 删除远程无关 git rm --cached 
 - yuba 夜间模式
-- 主页夜间模式
 - 自动最高清晰度
 - continue fans 多次执行，并融合
+---
+- settimeout 用于等待页面加载 比如  removeAD(); 和initRouter_DouyuCategoryPage(); 期待改进
+- 耦合问题严重 room和关注、分类页的执行耦合在一起
+  - 同样是autodark，写在不同地方，又互相引用
+- 引入npm

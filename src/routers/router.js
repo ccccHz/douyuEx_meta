@@ -51,7 +51,20 @@ function initRouter(href) {
       ) {
         return;
       }
-      initRouter_DouyuRoom_Main();
+      if (
+        String(href).indexOf("directory/myFollow") !== -1 ||
+        String(href).indexOf("g_") !== -1
+      ) {
+        //分类页 和 我的关注
+        categorypage_dark_fast();
+        setTimeout(() => {
+          removeAD();
+          initRouter_DouyuCategoryPage();
+        }, 1500);
+      } else {
+        //直播间
+        initRouter_DouyuRoom_Main();
+      }
     }
   }
 }
@@ -185,4 +198,8 @@ function initRouter_Video() {
 
 function initRouter_FansBadgeList() {
   initPkg_FansBadgeList();
+}
+
+function initRouter_DouyuCategoryPage() {
+  initPkg_CategoryPage();
 }
