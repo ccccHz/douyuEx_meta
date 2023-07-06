@@ -4,6 +4,7 @@ function initPkg_AutoDark() {
 }
 
 // 单独调用
+// 预先根据系统设置 修改exsave mode
 function initPkg_AutoDarkFast() {
   // func 方式 在initPkg_Night_Set_Fast()前调用
   // 提前设置好 local data和currentMode

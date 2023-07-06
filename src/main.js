@@ -68,6 +68,7 @@ function init() {
   initPkg_Console();
   initPkg_Menu();
   initPkg_FollowList();
+  initPkg_DailyAuto();
 }
 
 function initPkg() {

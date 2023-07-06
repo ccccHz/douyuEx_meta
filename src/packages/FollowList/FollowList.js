@@ -22,6 +22,7 @@ function handleFollowList(m) {
     document.getElementsByClassName("Header-follow-listBox")[0].style.display = "none";
     setNewFollowList(panel[0]);
 }
+// 关注列表可滑动, 总长度通过 ul 的css设置
 async function setNewFollowList(panel) {
     let followList = await getFollowList();
     if (followList.error != "0") {
@@ -31,18 +32,22 @@ async function setNewFollowList(panel) {
     let limit = 0;
     let html = `<div id="refreshFollowList"><span style="margin-left:3px">长按弹出同屏播放</span></div>`;
     let nowTime = Math.floor(Date.now()/1000);
+    let ullist = document.createElement("ul");
+    ullist.className = "Header-follow-listBox";
     for (let i = 0; i < followList.data.list.length; i++) {
         let item = followList.data.list[i];
         if (item.show_status == "1" && item.videoLoop == "0") {
             // 开播且非录播
-            html += `<li class="DropPaneList FollowList ExFollowListItem" rid="${ item.room_id }"><a><div class="DropPaneList-cover"><div class="LazyLoad is-visible DyImg "><img src="${ String(item.avatar_small).replace("_big","_small") }" alt="${ item.nickname }" class="DyImg-content is-normal "></div></div><div class="DropPaneList-info"><p><span class="DropPaneList-hot"><i></i>${ item.online }</span><span class="DropPaneList-title">${ item.room_name }</span></p><p><span class="DropPaneList-name">${ item.nickname }</span><span class="DropPaneList-time">已播${ formatSeconds(nowTime - Number(item.show_time)) }</span></p></div></a></li>`
+            let li = `<li class="DropPaneList FollowList ExFollowListItem" rid="${ item.room_id }"><a><div class="DropPaneList-cover"><div class="LazyLoad is-visible DyImg "><img src="${ String(item.avatar_small).replace("_big","_small") }" alt="${ item.nickname }" class="DyImg-content is-normal "></div></div><div class="DropPaneList-info"><p><span class="DropPaneList-hot"><i></i>${ item.online }</span><span class="DropPaneList-title">${ item.room_name }</span></p><p><span class="DropPaneList-name">${ item.nickname }</span><span class="DropPaneList-time">已播${ formatSeconds(nowTime - Number(item.show_time)) }</span></p></div></a></li>`
+            ullist.innerHTML += li;
             // html += `<li class="DropPaneList FollowList ExFollowListItem" rid="${ item.room_id }"><a><div class="DropPaneList-cover"><div class="DyImg "><img src="${ String(item.avatar_small).replace("_big","_small") }" alt="${ item.nickname }" class="DyImg-content is-normal "></div></div><div class="DropPaneList-info"><p><span class="DropPaneList-hot"><i></i>${ item.online }</span><span class="DropPaneList-title">${ item.room_name }</span></p><p><span class="DropPaneList-name">${ item.nickname }</span><span class="DropPaneList-time">已播${ formatSeconds(nowTime - Number(item.show_time)) }</span></p></div></a></li>`
             limit++;
         }
-        if (limit >= FOLLOWLIST_LIMIT) {
-            break;
-        }
+        // if (limit >= FOLLOWLIST_LIMIT) {
+        //     break;
+        // }
     }
+    html+=ullist.outerHTML;
     panel.innerHTML += html;
 
 

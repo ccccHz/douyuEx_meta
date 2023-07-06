@@ -2,6 +2,44 @@ function initPkg_CategoryPage() {
   initPkg_Night_Dom();
   categorypage_dark();
   initPkg_Night_Set();
+  categorypage_autoDark();
+}
+
+// 提前于 dark fast 执行
+function categorypage_autoDark_fast() {
+  // 提前设置好 local data和currentMode
+  // 自动dark
+  var matchList = matchMedia("(prefers-color-scheme: dark)");
+  let ret = localStorage.getItem("ExSave_Mode");
+  if (ret != null) {
+    let retJson = JSON.parse(ret);
+    if ("mode" in retJson == false) {
+      return;
+    }
+    // 页面黑 系统白
+    if (retJson.mode == 1 && !matchList.matches) {
+      currentMode = 0;
+      saveData_Mode();
+      // 页面白 系统黑
+    } else if (retJson.mode == 0 && matchList.matches) {
+      currentMode = 1;
+      saveData_Mode();
+    }
+  }
+}
+// 为icon添加自动dark 的监听
+function categorypage_autoDark() {
+  var matchList = matchMedia("(prefers-color-scheme: dark)");
+  const check = (ifSysDark) => {
+    let ifCurDark = currentMode === 1;
+    if (ifCurDark != ifSysDark) {
+      document.getElementById("ex-night").click();
+    }
+  };
+  check(matchList.matches);
+  matchList.addEventListener("change", (event) => {
+    check(event.matches);
+  });
 }
 
 function categorypage_dark() {
@@ -22,8 +60,9 @@ function categorypage_dark() {
     }
   });
 }
+
 function categorypage_dark_fast() {
-  let ret = localStorage.getItem("ExSave_Mode");
+  ret = localStorage.getItem("ExSave_Mode");
   if (ret != null) {
     let retJson = JSON.parse(ret);
     if ("mode" in retJson == false) {
@@ -92,6 +131,7 @@ function categorypage_setDark() {
 
   StyleHook_set("Ex_Style_CategoryPageNightMode", cssText);
 }
+
 function categorypage_cancleDark() {
   StyleHook_remove("Ex_Style_CategoryPageNightMode");
 }
