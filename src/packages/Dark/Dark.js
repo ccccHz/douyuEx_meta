@@ -4,7 +4,11 @@ let svg_day =
   '<svg t="1587640423416" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="2270" width="26" height="26"><path d="M270.016 197.248l-83.84-84.544-69.76 70.464 83.776 84.544 69.76-70.4zM139.648 465.024H0v93.888h139.648V465.024zM558.528 0H465.472v136.192h93.056V0z m349.056 183.168l-69.76-70.464-83.84 84.544L819.2 263.04l88.384-79.872z m-153.6 643.584l83.84 84.48 65.28-65.728L819.2 760.96l-65.216 65.792z m130.368-267.84H1024V465.024h-139.648v93.888zM512.064 230.08C358.4 230.08 232.768 356.992 232.768 512c0 155.008 125.632 281.856 279.296 281.856 153.6 0 279.232-126.848 279.232-281.856 0-154.944-125.632-281.856-279.232-281.856zM465.472 1024h93.056v-136.256H465.472V1024z m-349.056-183.232l69.76 70.4 83.84-84.48L204.8 760.96 116.48 840.768z" p-id="2271" fill="#8a8a8a"></path></svg>';
 
 let currentMode = 0; // 0日间模式 1夜间模式
-function initPkg_Night() {
+function initPkg_Dark() {
+  initPkg_nightModule();
+  initPkg_AutoDark();
+}
+function initPkg_nightModule() {
   initPkg_Night_Dom();
   initPkg_Night_Func();
   initPkg_Night_Set();
@@ -42,6 +46,7 @@ function initPkg_Night_Set_Fast() {
       retJson.mode = 0;
     }
     if (retJson.mode == 1) {
+      darkOnload();
       setNightMode();
     }
   }
@@ -99,111 +104,157 @@ function initPkg_Night_Func() {
 
 function setNightMode() {
   let cssText = `
-    .layout-Player-barrage,.Barrage--paddedBarrage,.Barrage-firstCharge,.Barrage-notice--replyBarrage{background-color:rgba(37,38,42,1) !important;}
-    .Barrage-userEnter{background-color:rgba(37,38,42,1) !important;color:rgba(187,187,187,1) !important;}
-    /*.Barrage-content,.Barrage-text{color:rgba(187,187,187,1) !important;}*/
-    .Barrage-content,.Barrage-text{color:rgba(187,187,187,1);}
-    .Barrage-notice--noble{background-color:rgba(37,38,42,1) !important;border:rgba(37,38,42,1) solid 1px !important;}
-    .layout-Player-title{background-color:rgba(35,36,39,1) !important;border:rgba(35,36,39,1) solid 1px !important;}
-    .Title-header{color:rgba(191,191,191,1) !important;}
-    .Title-anchorText{color:rgba(107,176,125,1) !important;}
-    .Title-row-text,.Title-anchorName{color:rgba(153,153,153,1) !important;}
-    #js-player-toolbar{background:rgb(37,38,42) !important;border:1px solid rgb(37,38,42) !important;}
-    .PlayerToolbar-wealthNum,.Header-wrap .Header-menu-link>a,.public-DropMenu-link,.Header-icon{color:rgb(191,191,191) !important;}
-    .layout-Main{background-color:rgba(35,36,39,1) !important;}
-    .ChatRank-rankWraper{background:rgba(47,48,53,1) !important;border:rgba(47,48,53,1) solid 1px !important;}
-    .bg-icon{display:none;}
-    .ChatRankWeek-headerContent,.NobleRank,.NobleRankTips{background-color:rgba(47,48,53,1) !important;}
-    #js-player-asideMain{border:1px solid rgba(37,38,42,1) !important;background-color:rgb(47,48,53) !important;}
-    .Chat,.ChatSend-txt{background:rgba(47,48,53,1) !important;color:rgb(187,187,187) !important;border-radius:0px !important;}
-    .ChatTabContainer-titleWraper--tabLi{background:rgb(29,32,35) !important;border:1px solid rgb(47,48,53) !important;}
-    .ChatTabContainer-titleWraper--tabLi.is-active,.ChatBarrageCollect-tip,.FansRankInfo{background:rgb(47,48,53) !important;}
-    .FansRankInfo-txt{color:rgb(121,127,137) !important;}
-    .Barrage{border:1px solid rgba(35,36,39,1) !important;}
-    .layout-Player-chat{border-top:1px solid rgba(47,48,53,1) !important;}
-    .layout-Player-announce{background-color:rgb(29,32,35) !important;border:1px solid rgb(29,32,35) !important;}
-    .FansRankBottom,.AnchorFriend-footer{border-top:1px solid rgb(47,48,53) !important;}
-    .Title-official{background:rgb(35,36,39) !important;}
-    .Header-wrap{background:rgb(45,46,54) !important;border-bottom:1px solid rgb(45,46,54) !important;}
-    .layout-Menu{background:rgb(47,48,53) !important;border-color:rgb(35,36,39) !important;}
-    .GuessMainPanel{background:rgba(47,48,53,0.9) !important;border:1px solid rgb(47,48,53) !important;}
-    .danmuAuthor-3d7b4a{color:rgb(234,234,234) !important;}
-    .danmudiv-32f498{background:rgba(47,49,53,0.9) !important;}
-    .danmuContent-25f266{background:rgba(35,36,39,0.9) !important;}
-    .word-89c053{background:rgba(35,36,39,0.9) !important;color:rgb(187,187,187) !important;}
-    .FansMedalPanel-Panel{color:black !important;}
-    .AnchorLike-ItemBox,.AnchorFriendPane-content,.SociatyLabelPop-content{border:1px solid rgb(35,36,39) !important;}
-    .AnchorFriendCard-info>h3,.GiftExpandPanel-descName,.GiftInfoPanel-name,.FansMedalInfo-titleL,.SociatyAnchorCard-info>h3{color:rgb(204,204,204) !important;}
-    .GuessReturnYwFdSlider{background:rgba(47,48,53,0.7); !important;border-left:1px solid rgb(35,36,39) !important;}
-    .GuessGuideList-itemBox,.GuessGuideList-moreGuess{background-color:rgba(47,48,53) !important;color:rgb(204,204,204) !important;}
-    .AnchorFriend-footer a{background-color:rgb(47,48,53) !important;color:rgb(204,204,204) !important;}
-    .AnchorFriendPane-title{border-bottom:1px solid rgb(47,48,53) !important;background-color:rgb(35,36,39) !important;}
-    .AnchorLike-friendList .AnchorFriendPane-title h3,.Title svg{color:rgb(153,153,153) !important;}
-    .GiftExpandPanel{background-color:rgb(35,36,39) !important;border:1px solid rgb(35,36,39) !important;}
-    .GiftInfoPanel-cont{background-color:rgb(35,36,39) !important;border:1px solid rgb(35,36,39) !important;}
-    .BatchGiveForm-num{background-color:rgb(35,36,39) !important;}
-    .BatchGiveForm-input{background-color:rgb(35,36,39) !important;color:rgb(149,149,149) !important;}
-    .BatchGiveForm-btn,.Backpack-prop.is-blank,.GuessMainPanel-sliderItem{background-color:rgb(47,48,53) !important;}
-    .Backpack{background-color:rgb(35,36,39) !important;border:1px solid rgb(35,36,39) !important;}
-    .Backpack-name,.NormalCard-btn,.NormalCard-close,.NobleCard-close,.ReportButton-41fa9e,.HideButton-d22988,.txtHidden-486e56,.BackpackInfoPanel-name,.NormalCard-name{color:rgb(187,187,187) !important;}
-    .Backpack-propPage,.BatchProp-content{background-color:rgb(35,36,39) !important;color:rgb(149,149,149)!important;}
-    .BackpackInfoPanel-content{background-color:rgb(35,36,39) !important;border:1px solid rgb(35,36,39) !important;}
-    .BatchProp-customIpt,.BatchGiveForm-num,.GiftInfoPanel-intro{color:rgb(149,149,149) !important;}
-    .GuessReturnYwFdSlider-numIptWrap,.GuessReturnYwFdSlider-numIpt{background-color:rgb(47,48,53) !important;color:rgb(149,149,149) !important;}
-    .GuessReturnYwFdSlider-giftName{color:rgb(160,160,160) !important;}
-    .NormalCard-common,.GuessRankPanel{background-color:rgb(47,48,53) !important;border:1px solid rgb(47,48,53) !important;}
-    .FansMedalPanel-OwnerInfo,.FansMedalPanel-list{background-color:rgb(47,48,53) !important;color:rgb(187,187,187) !important;}
-    .FansMedalList-item:hover{background-color:rgb(37,38,42) !important;}
-    .AnchorFriend-content,.SociatyAnchor-content{background-color:rgb(35,36,39) !important;border-top:1px solid rgb(47,48,53) !important;}
-    .SociatyLabelPop-title{border-bottom:1px solid rgb(121,127,137) !important;background-color:rgb(35,36,39) !important;color:rgb(153,153,153) !important;}
-    .Barrage-nickName{color:rgb(255,119,0) !important;}
-    .wm-general-wrapper{background:rgb(35,36,39) !important;}
-    .ChatRank-rankWraper .ChatRankTab-title.is-active{color:rgb(255,119,0)!important;}
-    .ChatRank-rankWraper .ChatRankTab-title{color:rgb(131,140,154)!important;background:rgb(29,32,35)!important;border:1px solid rgb(47,48,53)!important;}
-    .MatchTeamRankList-topAvatar{background:rgb(47,48,53)!important;}
-    .MatchTeamRankList-topName{color:rgb(131,140,154)!important;background-color:rgb(47,48,53)!important;}
-    .MatchTeamRankTitle-content{background:rgb(47,48,53)!important;color:rgb(131,140,154)!important;}
-    .MatchTeamRankBottom{background:rgb(47,48,53) !important;}
-    .MatchTeamRankBottom-lable{color:rgb(131,140,154);}
-    .MatchTeamRankBottom-desc{color:rgb(121,127,137);}
-    .Barrage-text>a,.Barrage-firstCharge{color:rgb(187,187,187)!important;}
-    .GuessMainPanelHeader-slogon{color:rgb(204,204,204)!important;}
-    .Barrage-hitYwGame--text{color:rgb(187,187,187)!important;}
-    .AnchorFriendPane-title h3{color:rgb(153,153,153)!important;}
-    .Barrage-nickName.is-self{color:rgb(255,0,51)!important;}
-    .barragePanel__funcPanel{background:rgba(47,49,53,0.9) !important;}
-    .layui-text{color:rgb(187,187,187) !important;}
-    .GuessReturnYwFdSlider-ywNum{color:rgb(237,90,101) !important;}
-    .VideoBottomTabs span{color:rgb(204,204,204)}
-    .BackpackHeader-info--title,#point__value{color:rgb(191,191,191) !important;}
-    #red_envelope_text,#red_envelope_query{color:rgb(191,191,191) !important;}
-    .layout-Container{background-color:rgb(35,36,39) !important;}
-    .FansRankBottom-invisible,.ChatRankWeek-invisibleContent{background:rgb(47,48,53) !important;}
-    .Barrage-roomVip--super{border-top: 1px solid rgb(37,38,42)!important;border-bottom: 1px solid rgb(37,38,42)!important;background: rgb(37,38,42)!important;}
-    .Barrage-userEnter--vip{background: rgb(37,38,42)!important;}
-    .ChatRankWeek-nobleInvisible{border-top:1px solid rgb(121,127,137) !important;}
-    #refresh-video2-svg{fill:#ffffff !important}
-    .VideoRecommendItem a{border-bottom: 3px solid rgb(35,36,39) !important;}
-    .AnchorFriendPane-title a:after{display:none !important;}
+  .layout-Player-barrage,.Barrage--paddedBarrage,.Barrage-firstCharge,.Barrage-notice--replyBarrage{background-color:rgba(37,38,42,1) !important;}
+.Barrage-userEnter{background-color:rgba(37,38,42,1) !important;color:rgba(187,187,187,1) !important;}
+/*.Barrage-content,.Barrage-text{color:rgba(187,187,187,1) !important;}*/
+.Barrage-content,.Barrage-text{color:rgba(187,187,187,1);}
+.Barrage-notice--noble{background-color:rgba(37,38,42,1) !important;border:rgba(37,38,42,1) solid 1px !important;}
+.layout-Player-title{background-color:rgba(35,36,39,1) !important;border:rgba(35,36,39,1) solid 1px !important;}
+.Title-header{color:rgba(191,191,191,1) !important;}
+.Title-anchorText{color:rgba(107,176,125,1) !important;}
+.Title-row-text,.Title-anchorName{color:rgba(153,153,153,1) !important;}
+#js-player-toolbar{background:rgb(37,38,42) !important;border:1px solid rgb(37,38,42) !important;}
+.PlayerToolbar-wealthNum,.Header-wrap .Header-menu-link>a,.public-DropMenu-link,.Header-icon{color:rgb(191,191,191) !important;}
+.layout-Main{background-color:rgba(35,36,39,1) !important;}
+.ChatRank-rankWraper{background:rgba(47,48,53,1) !important;border:rgba(47,48,53,1) solid 1px !important;}
+.bg-icon{display:none;}
+.ChatRankWeek-headerContent,.NobleRank,.NobleRankTips{background-color:rgba(47,48,53,1) !important;}
+#js-player-asideMain{border:1px solid rgba(37,38,42,1) !important;background-color:rgb(47,48,53) !important;}
+.Chat,.ChatSend-txt{background:rgba(47,48,53,1) !important;color:rgb(187,187,187) !important;border-radius:0px !important;}
+.ChatTabContainer-titleWraper--tabLi{background:rgb(29,32,35) !important;border:1px solid rgb(47,48,53) !important;}
+.ChatTabContainer-titleWraper--tabLi.is-active,.ChatBarrageCollect-tip,.FansRankInfo{background:rgb(47,48,53) !important;}
+.FansRankInfo-txt{color:rgb(121,127,137) !important;}
+.Barrage{border:1px solid rgba(35,36,39,1) !important;}
+.layout-Player-chat{border-top:1px solid rgba(47,48,53,1) !important;}
+.layout-Player-announce{background-color:rgb(29,32,35) !important;border:1px solid rgb(29,32,35) !important;}
+.FansRankBottom,.AnchorFriend-footer{border-top:1px solid rgb(47,48,53) !important;}
+.Title-official{background:rgb(35,36,39) !important;}
+.Header-wrap{background:rgb(45,46,54) !important;border-bottom:1px solid rgb(45,46,54) !important;}
+.layout-Menu{background:rgb(47,48,53) !important;border-color:rgb(35,36,39) !important;}
+.GuessMainPanel{background:rgba(47,48,53,0.9) !important;border:1px solid rgb(47,48,53) !important;}
+.danmuAuthor-3d7b4a{color:rgb(234,234,234) !important;}
+.danmudiv-32f498{background:rgba(47,49,53,0.9) !important;}
+.danmuContent-25f266{background:rgba(35,36,39,0.9) !important;}
+.word-89c053{background:rgba(35,36,39,0.9) !important;color:rgb(187,187,187) !important;}
+.FansMedalPanel-Panel{color:black !important;}
+.AnchorLike-ItemBox,.AnchorFriendPane-content,.SociatyLabelPop-content{border:1px solid rgb(35,36,39) !important;}
+.AnchorFriendCard-info>h3,.GiftExpandPanel-descName,.GiftInfoPanel-name,.FansMedalInfo-titleL,.SociatyAnchorCard-info>h3{color:rgb(204,204,204) !important;}
+.GuessReturnYwFdSlider{background:rgba(47,48,53,0.7); !important;border-left:1px solid rgb(35,36,39) !important;}
+.GuessGuideList-itemBox,.GuessGuideList-moreGuess{background-color:rgba(47,48,53) !important;color:rgb(204,204,204) !important;}
+.AnchorFriend-footer a{background-color:rgb(47,48,53) !important;color:rgb(204,204,204) !important;}
+.AnchorFriendPane-title{border-bottom:1px solid rgb(47,48,53) !important;background-color:rgb(35,36,39) !important;}
+.AnchorLike-friendList .AnchorFriendPane-title h3,.Title svg{color:rgb(153,153,153) !important;}
+.GiftExpandPanel{background-color:rgb(35,36,39) !important;border:1px solid rgb(35,36,39) !important;}
+.GiftInfoPanel-cont{background-color:rgb(35,36,39) !important;border:1px solid rgb(35,36,39) !important;}
+.BatchGiveForm-num{background-color:rgb(35,36,39) !important;}
+.BatchGiveForm-input{background-color:rgb(35,36,39) !important;color:rgb(149,149,149) !important;}
+.BatchGiveForm-btn,.Backpack-prop.is-blank,.GuessMainPanel-sliderItem{background-color:rgb(47,48,53) !important;}
+.Backpack{background-color:rgb(35,36,39) !important;border:1px solid rgb(35,36,39) !important;}
+.Backpack-name,.NormalCard-btn,.NormalCard-close,.NobleCard-close,.ReportButton-41fa9e,.HideButton-d22988,.txtHidden-486e56,.BackpackInfoPanel-name,.NormalCard-name{color:rgb(187,187,187) !important;}
+.Backpack-propPage,.BatchProp-content{background-color:rgb(35,36,39) !important;color:rgb(149,149,149)!important;}
+.BackpackInfoPanel-content{background-color:rgb(35,36,39) !important;border:1px solid rgb(35,36,39) !important;}
+.BatchProp-customIpt,.BatchGiveForm-num,.GiftInfoPanel-intro{color:rgb(149,149,149) !important;}
+.GuessReturnYwFdSlider-numIptWrap,.GuessReturnYwFdSlider-numIpt{background-color:rgb(47,48,53) !important;color:rgb(149,149,149) !important;}
+.GuessReturnYwFdSlider-giftName{color:rgb(160,160,160) !important;}
+.NormalCard-common,.GuessRankPanel{background-color:rgb(47,48,53) !important;border:1px solid rgb(47,48,53) !important;}
+.FansMedalPanel-OwnerInfo,.FansMedalPanel-list{background-color:rgb(47,48,53) !important;color:rgb(187,187,187) !important;}
+.FansMedalList-item:hover{background-color:rgb(37,38,42) !important;}
+.AnchorFriend-content,.SociatyAnchor-content{background-color:rgb(35,36,39) !important;border-top:1px solid rgb(47,48,53) !important;}
+.SociatyLabelPop-title{border-bottom:1px solid rgb(121,127,137) !important;background-color:rgb(35,36,39) !important;color:rgb(153,153,153) !important;}
+.Barrage-nickName{color:rgb(255,119,0) !important;}
+.wm-general-wrapper{background:rgb(35,36,39) !important;}
+.ChatRank-rankWraper .ChatRankTab-title.is-active{color:rgb(255,119,0)!important;}
+.ChatRank-rankWraper .ChatRankTab-title{color:rgb(131,140,154)!important;background:rgb(29,32,35)!important;border:1px solid rgb(47,48,53)!important;}
+.MatchTeamRankList-topAvatar{background:rgb(47,48,53)!important;}
+.MatchTeamRankList-topName{color:rgb(131,140,154)!important;background-color:rgb(47,48,53)!important;}
+.MatchTeamRankTitle-content{background:rgb(47,48,53)!important;color:rgb(131,140,154)!important;}
+.MatchTeamRankBottom{background:rgb(47,48,53) !important;}
+.MatchTeamRankBottom-lable{color:rgb(131,140,154);}
+.MatchTeamRankBottom-desc{color:rgb(121,127,137);}
+.Barrage-text>a,.Barrage-firstCharge{color:rgb(187,187,187)!important;}
+.GuessMainPanelHeader-slogon{color:rgb(204,204,204)!important;}
+.Barrage-hitYwGame--text{color:rgb(187,187,187)!important;}
+.AnchorFriendPane-title h3{color:rgb(153,153,153)!important;}
+.Barrage-nickName.is-self{color:rgb(255,0,51)!important;}
+.barragePanel__funcPanel{background:rgba(47,49,53,0.9) !important;}
+.layui-text{color:rgb(187,187,187) !important;}
+.GuessReturnYwFdSlider-ywNum{color:rgb(237,90,101) !important;}
+.VideoBottomTabs span{color:rgb(204,204,204)}
+.BackpackHeader-info--title,#point__value{color:rgb(191,191,191) !important;}
+#red_envelope_text,#red_envelope_query{color:rgb(191,191,191) !important;}
+.layout-Container{background-color:rgb(35,36,39) !important;}
+.FansRankBottom-invisible,.ChatRankWeek-invisibleContent{background:rgb(47,48,53) !important;}
+.Barrage-roomVip--super{border-top: 1px solid rgb(37,38,42)!important;border-bottom: 1px solid rgb(37,38,42)!important;background: rgb(37,38,42)!important;}
+.Barrage-userEnter--vip{background: rgb(37,38,42)!important;}
+.ChatRankWeek-nobleInvisible{border-top:1px solid rgb(121,127,137) !important;}
+#refresh-video2-svg{fill:#ffffff !important}
+.VideoRecommendItem a{border-bottom: 3px solid rgb(35,36,39) !important;}
+.AnchorFriendPane-title a:after{display:none !important;}
 
-    .MedalOwnerInfo-box{border-bottom: 1px solid rgb(79 81 88)!important;}
-    .FansMedalList-item.is-NoWear{border-top: 1px solid rgb(79 81 88)!important;}
+.MedalOwnerInfo-box{border-bottom: 1px solid rgb(79 81 88)!important;}
+.FansMedalList-item.is-NoWear{border-top: 1px solid rgb(79 81 88)!important;}
 
-    /*弹幕时速*/
-    .barrageSpeed{color: rgba(255,255,255,0.5) !important;}
+/*弹幕时速*/
+.barrageSpeed{color: rgba(255,255,255,0.5) !important;}
 
-    /*用户等级*/
-    ${getUserLevelNightModeStyle()}
+/*用户等级*/
+${getUserLevelNightModeStyle()}
 
-    /*新背包*/
-    .BackpackHeader{border-bottom: 1px solid rgb(37,38,42) !important;}
-    .BackpackHeader-tabItem{color:rgb(121,127,137)!important;}
-    .RightsPropsList{background-color: rgb(35,36,39) !important;color: rgb(149,149,149)!important;}
-    .RightsPropsList-item{background: rgb(47,48,53) !important;}
+/*新背包*/
+.BackpackHeader{border-bottom: 1px solid rgb(37,38,42) !important;}
+.BackpackHeader-tabItem{color:rgb(121,127,137)!important;}
+.RightsPropsList{background-color: rgb(35,36,39) !important;color: rgb(149,149,149)!important;}
+.RightsPropsList-item{background: rgb(47,48,53) !important;}
 
-    /*加入公会*/
-    .SociatyLabelPop-content{background:rgb(35,36,39) !important;}
-    `;
+/*加入公会*/
+.SociatyLabelPop-content{background:rgb(35,36,39) !important;}
+
+/* catergory page and follow page */
+/* https://www.douyu.com/directory/myFollow */
+.DyLiveCover,
+.DyLiveRecord,
+.DyLiveCover-pic,
+.DyLiveRecord-pic,
+.layout-Cover-card
+ {
+    background-color: rgb(35, 36, 39) !important;
+}
+
+.DyLiveRecord-userName,
+.DyLiveCover-userName,
+.layout-Module-title {
+    color: rgb(191, 191, 191) !important;
+}
+
+.DyLiveRecord-content,
+.DyLiveCover-content, 
+.layout-Module-head {
+    background: rgb(45, 46, 54) !important;
+    border-bottom: 1px solid rgb(45, 46, 54) !important;
+}
+
+/* other */
+.layout-Customization,
+.layout-Module-label,
+.layout-Module-label--hasList,
+.layout-Module-filter-more,
+.dy-Pagination-item,
+.ListFooter-btn-wrap,
+.dy-Pagination-prev,
+.dy-Pagination-next,
+.DyListCover-wrap,
+.DyListCover-wrap.is-hover {
+    background: rgb(45, 46, 54) !important;
+}
+
+.gameName,
+.userName,
+.title,
+.DyListCover-intro,
+.ListFooter>ul>li>a {
+    color: rgb(191, 191, 191) !important;
+}
+  `;
   StyleHook_set("Ex_Style_NightMode", cssText);
 }
 
@@ -336,4 +387,24 @@ function cancelNightModeIframe() {
       .getElementsByTagName("iframe")[0].contentWindow.document,
     "Ex_Style_NightModeIframe"
   );
+}
+
+// 提前设置dark 防止白色抖动
+function darkOnload() {
+  let csstext = `
+body.dark  {
+  color: #eee;
+  background-color: #444 !important;
+}
+`;
+  StyleHook_set("Ex_Style_loadDark", csstext);
+
+  if (document.readyState !== "loading") {
+    // 提前添加dark的class, 防止颜色抖动
+    document.body.classList.add("dark");
+  } else {
+    document.addEventListener("DOMContentLoaded", () => {
+      document.body.classList.add("dark");
+    });
+  }
 }

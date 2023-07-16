@@ -1,8 +1,9 @@
 function initRouter(href) {
-  // 用于优先载入夜间模式
-  // if (String(href).indexOf("www.douyu.com") && String(href).indexOf("getFansBadgeList") == -1) {
-  //     initPkg_Night_Set_Fast();
-  // }
+  if (String(href).indexOf("www.douyu.com")) {
+    initPkg_AutoDarkFast();
+    initPkg_Night_Set_Fast();
+    initRouter_AllPage();
+  }
 
   // 路由转发
   if (
@@ -56,7 +57,7 @@ function initRouter(href) {
         String(href).indexOf("g_") !== -1
       ) {
         //分类页 和 我的关注
-        initRouter_DouyuCategoryPage();
+        // initRouter_DouyuCategoryPage();
       } else {
         //直播间
         initRouter_DouyuRoom_Main();
@@ -97,7 +98,7 @@ function initRouter_DouyuRoom_Main() {
       return;
     }
     setTimeout(() => {
-      initStyles();
+      // initStyles();
       initPkg();
       initPkgSpecial();
       initTimer();
@@ -196,13 +197,11 @@ function initRouter_FansBadgeList() {
   initPkg_FansBadgeList();
 }
 
-function initRouter_DouyuCategoryPage() {
-  initStyles();
-  initPkg_DailyAuto();
-  categorypage_autoDark_fast();
-  categorypage_dark_fast();
+function initRouter_AllPage() {
   setTimeout(() => {
+    initStyles();
     removeAD();
-    initPkg_CategoryPage();
+    initPkg_Dark();
+    initPkg_DailyAuto();
   }, 1500);
 }

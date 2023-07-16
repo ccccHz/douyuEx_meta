@@ -1,18 +1,33 @@
 const lastTime = "Ex_DailyAuto_LastTime";
-const restRid = "12306";
+const restRid = "52";
 function initPkg_DailyAuto() {
+  const isInLivingRoom = async () => {
+    let a = await mscststs.wait(".BackpackButton", true, (timeout = 50));
+    if (!a === null) {
+      return true;
+    }
+    return false;
+  };
   if (stateControl()) {
     fansContinue_auto()
       .then(() => {
         localStorage.setItem(lastTime, new Date());
       })
-      .catch((err) => {
+      .catch(async (err) => {
         if (err == 0) {
           showMessage("【续牌】" + "赠送失败,背包为空", "error");
         } else if (err == -1) {
           showMessage("【续牌】" + "赠送失败,没有荧光棒", "error");
         }
-        localStorage.setItem(lastTime, new Date());
+        // 只有进入直播间才能获取荧光棒
+        // 当新一天时,打开非直播页面,不会获取荧光棒,此时不要修改lastTime
+        if (await isInLivingRoom()) {
+          localStorage.setItem(lastTime, new Date());
+        } else {
+          showMessage("【续牌】" + "赠送失败,请进入直播间", "warning", {
+            timeout: 100,
+          });
+        }
       });
   }
 }
@@ -84,7 +99,7 @@ function fansContinue_auto() {
             const promises = [];
             for (let i = 0; i < n; i++) {
               let rid = a.children[i].getAttribute("data-fans-room"); // 获取房间号
-              const promise = new Promise(() => {
+              const promise = new Promise((resolve, reject) => {
                 sleep(100).then(() => {
                   sendGift_bag(giftId, Number(sendNum), rid)
                     .then((data) => {
@@ -93,6 +108,7 @@ function fansContinue_auto() {
                           "【续牌】" + rid + "赠送荧光棒成功",
                           "success"
                         );
+                        resolve();
                         // console.log(rid + "赠送一根荧光棒成功");
                       } else {
                         showMessage(

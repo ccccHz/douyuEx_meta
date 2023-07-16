@@ -59,8 +59,8 @@
 // ==/UserScript==
 
 function init() {
-  initPkg_AutoDarkFast();
-  initPkg_Night_Set_Fast();
+  // initPkg_AutoDarkFast();
+  // initPkg_Night_Set_Fast();
   initPkg_ShowDanmaku();
   initKillP2P();
   removeAD();
@@ -68,13 +68,12 @@ function init() {
   initPkg_Console();
   initPkg_Menu();
   initPkg_FollowList();
-  initPkg_DailyAuto();
 }
 
 function initPkg() {
   Update_checkVersion();
-  initPkg_Night();
-  initPkg_AutoDark();
+  // initPkg_Night();
+  // initPkg_AutoDark();
   initPkg_ExIcon();
   initPkg_ExPanel();
   initPkg_RealAudience();
