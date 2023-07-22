@@ -2596,7 +2596,7 @@ const restRid = "52";
 function initPkg_DailyAuto() {
   const isInLivingRoom = async () => {
     let a = await mscststs.wait(".BackpackButton", true, (timeout = 50));
-    if (!a === null) {
+    if (!(a === null)) {
       return true;
     }
     return false;
