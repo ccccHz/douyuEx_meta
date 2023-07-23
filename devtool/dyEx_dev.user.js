@@ -10237,7 +10237,7 @@ function initPkg_TabSwitch() {
 // 版本号
 // 格式 yyyy.MM.dd.**
 // var curVersion = "2020.01.12.01";
-var curVersion = "2023.07.21.01";
+var curVersion = "2023.07.23.01";
 var isNeedUpdate = false;
 var lastestVersion = "";
 function initPkg_Update() {
@@ -12558,7 +12558,7 @@ function getRealLive_Bilibili(room_id, qn, cdn, reallive_callback) {
                     rurl = `${url_info.host}${base_url}${url_info.extra}`;
                 }
             }
-            let streamList = ret.data?.durl;
+            let streamList = ret.data.durl;
             if (streamList) {
                 rurl = streamList.length > 0 ? streamList[0].url : "";
             }
