@@ -1,6 +1,12 @@
 const lastTime = "Ex_DailyAuto_LastTime";
 const restRid = "52";
 function initPkg_DailyAuto() {
+  // <i class="Backpack-newPropTip">获得新道具</i>
+  setTimeout(() => {
+    daily_main();
+  }, 3000);
+}
+function daily_main() {
   const isInLivingRoom = async () => {
     let a = await mscststs.wait(".BackpackButton", true, (timeout = 50));
     if (!(a === null)) {

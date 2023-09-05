@@ -9,3 +9,5 @@
 - darkfast 不够快 显示时仍旧有白色的300ms
   - 参考bili evoled的实现架构更变
 - 引入npm
+
+- remove noble danmu
