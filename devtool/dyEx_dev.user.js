@@ -2553,33 +2553,49 @@ function CopyRealLive_insertIcon() {
     }
 }
 
+function CopyRealLive_getQn(qnName) {
+    if (String(qnName).includes("蓝光8M")) return 8;
+    if (String(qnName).includes("蓝光4M")) return 4;
+    if (String(qnName).includes("超清")) return 3;
+    if (String(qnName).includes("高清")) return 2;
+    return 0;
+}
+
+function CopyRealLive_copyUrl(qn) {
+    getRealLive_Douyu(rid, true, false, qn, (lurl) => {
+        if (lurl == "None") {
+            showMessage("房间未开播或其他错误", "error");
+        } else {
+            let str = String(lurl);
+            // GM_setClipboard(String(lurl).replace("https", "http"));
+            GM_setClipboard(str);
+            showMessage("复制成功", "success");
+        }
+    })
+}
+
 function initPkg_CopyRealLive_Func() {
 	document.getElementById("copy-real-live").addEventListener("click", function() {
-        getRealLive_Douyu(rid, true, false, "1015", (lurl) => {
-            if (lurl == "None") {
-                showMessage("房间未开播或其他错误", "error");
-            } else {
-                let str = String(lurl);
-                // GM_setClipboard(String(lurl).replace("https", "http"));
-                GM_setClipboard(str);
-                showMessage("复制成功", "success");
-            }
-            
-        })
+        if (document.querySelectorAll(".tipItem-898596 > ul > li").length > 0) {
+            document.querySelectorAll(".tipItem-898596 > ul > li").forEach(item => {
+                if (item.className.includes("selected")) {
+                    CopyRealLive_copyUrl(CopyRealLive_getQn(item.innerText));
+                }
+            })
+        } else {
+            CopyRealLive_copyUrl(0);
+        }
     });
     document.getElementsByClassName("Title-header")[0].addEventListener("click", function() {
-        getRealLive_Douyu(rid, true, false, "1015", (lurl) => {
-            if (lurl == "None") {
-                showMessage("房间未开播或其他错误", "error");
-            } else {
-                // // GM_setClipboard(String(lurl).replace("https", "http"));
-                // GM_setClipboard(String(lurl));
-                let str = String(lurl);
-                GM_setClipboard(str);
-                showMessage("复制成功", "success");
-            }
-            
-        })
+        if (document.querySelectorAll(".tipItem-898596 > ul > li").length > 0) {
+            document.querySelectorAll(".tipItem-898596 > ul > li").forEach(item => {
+                if (item.className.includes("selected")) {
+                    CopyRealLive_copyUrl(CopyRealLive_getQn(item.innerText));
+                }
+            })
+        } else {
+            CopyRealLive_copyUrl(0);
+        }
     });
 
     let titNode = document.getElementsByClassName("RecommendViewTit-04ebd8");
@@ -2595,6 +2611,7 @@ function initPkg_CopyRealLive_Func() {
 const lastTime = "Ex_DailyAuto_LastTime";
 const restRid = "52";
 function initPkg_DailyAuto() {
+  // <i class="Backpack-newPropTip">获得新道具</i>
   setTimeout(() => {
     daily_main();
   }, 3000);
@@ -8102,7 +8119,7 @@ function createNewVideo_Douyu(id, rid) {
             a.rid = rid;
             a.className = "exVideoDiv";
             html += "<div class='exVideoInfo' id='exVideoInfo" + String(id) + "'><a title='进入直播间' target='_blank' href='https://www.douyu.com/" + rid + "'><span class='exVideoRID' id='exVideoRID" + String(id) + "' style='color:white'>" + "斗鱼 - " + rid + "</span></a>";
-            html += "<select class='exVideoQn' id='exVideoQn" + String(id) + "'><option value='1'>流畅</option><option value='2'>高清</option><option value='3'>超清</option><option value='4'>蓝光</option></option><option value='0'>原画</option></select>";
+            html += "<select class='exVideoQn' id='exVideoQn" + String(id) + "'><option value='2'>高清</option><option value='3'>超清</option><option value='4'>蓝光4M</option><option value='8'>蓝光8M</option></option><option value='0'>原画</option></select>";
             html += "<select style='display:none' class='exVideoCDN' id='exVideoCDN" + String(id) + "'><option value='1'>主线路</option><option value='2'>备用线路5</option><option value='3'>备用线路6</option></select>";
             html += "<a style='margin-left:5px' href='" + lurl_host + "' target='_blank'>无视频？</a>";
             html += `<input id='exVideoEmbed${String(id)}' type='button' value='嵌入视频' style='height:30px;'>`;
@@ -8929,7 +8946,7 @@ function initPkg_Refresh_Barrage_Set() {
  
 function setRefreshBarrage() {
     let cssText = `
-    .Barrage-honor,.Barrage-listItem .Barrage-icon,.Barrage-listItem .FansMedal.is-made,.Barrage-listItem .RoomLevel,.Barrage-listItem .Motor,.Barrage-listItem .ChatAchievement,.Barrage-listItem .Barrage-hiIcon,.Barrage-listItem .Medal,.Barrage-listItem .MatchSystemTeamMedal{display:none !important;}
+    .UserCsgoGameDataMedal,.Barrage-honor,.Barrage-listItem .Barrage-icon,.Barrage-listItem .FansMedal.is-made,.Barrage-listItem .RoomLevel,.Barrage-listItem .Motor,.Barrage-listItem .ChatAchievement,.Barrage-listItem .Barrage-hiIcon,.Barrage-listItem .Medal,.Barrage-listItem .MatchSystemTeamMedal{display:none !important;}
     /*.Barrage-listItem .UserLevel{display:none !important;}*/
     `;
     StyleHook_set("Ex_Style_RefreshBarrage", cssText);
@@ -9050,7 +9067,7 @@ function Refresh_Video_insertIcon() {
 
 function initPkg_Refresh_Video_Func() {
 	document.getElementById("refresh-video").addEventListener("click", (e) => {
-        let dom_toolbar = document.getElementsByClassName("PlayerToolbar-Content")[0];
+        let dom_toolbar = document.getElementsByClassName("PlayerToolbar-ContentRow")[0];
         let dom_video = document.getElementsByClassName("layout-Player-video")[0];
         let dom_refresh = document.getElementById("refresh-video");
         let dom_refresh2 = document.getElementById("refresh-video2");
@@ -9070,7 +9087,7 @@ function initPkg_Refresh_Video_Func() {
         saveData_Refresh();
     });
     document.getElementById("refresh-video2").addEventListener("click", () => {
-        let dom_toolbar = document.getElementsByClassName("PlayerToolbar-Content")[0];
+        let dom_toolbar = document.getElementsByClassName("PlayerToolbar-ContentRow")[0];
         let dom_video = document.getElementsByClassName("layout-Player-video")[0];
         let dom_refresh = document.getElementById("refresh-video");
         let dom_refresh2 = document.getElementById("refresh-video2");
@@ -9092,7 +9109,7 @@ function initPkg_Refresh_Video_Func() {
 }
 
 function refresh_Video_getStatus() {
-    let dom_toolbar = document.getElementsByClassName("PlayerToolbar-Content")[0];
+    let dom_toolbar = document.getElementsByClassName("PlayerToolbar-ContentRow")[0];
     if (dom_toolbar.style.visibility == "hidden") {
         return true;
     } else {
@@ -9108,7 +9125,7 @@ function initPkg_Refresh_Video_Set() {
             retJson.video = {status: false};
         }
         if (retJson.video.status == true) {
-            let dom_toolbar = document.getElementsByClassName("PlayerToolbar-Content")[0];
+            let dom_toolbar = document.getElementsByClassName("PlayerToolbar-ContentRow")[0];
             let dom_video = document.getElementsByClassName("layout-Player-video")[0];
             let dom_refresh2 = document.getElementById("refresh-video2");
             let dom_refresh = document.getElementById("refresh-video");
@@ -10262,7 +10279,7 @@ function initPkg_TabSwitch() {
 // 版本号
 // 格式 yyyy.MM.dd.**
 // var curVersion = "2020.01.12.01";
-var curVersion = "2023.07.23.01";
+var curVersion = "2023.08.31.02";
 var isNeedUpdate = false;
 var lastestVersion = "";
 function initPkg_Update() {
@@ -12621,18 +12638,35 @@ function getRealLive_Douyu(room_id, is_video, is_https, qn, reallive_callback) {
     // 第三个参数传入bool,表示是否返回https地址。注意https地址只能使用一次，使用过以后需要再次获取；http地址无限制
     // 第四个参数传入string(1,2,3,4),表示清晰度 流畅_550p(rate:1) 高清_1200p(rate:2) 超清_2000p(rate:3) 蓝光4M_4000p(rate:0) 填写1015则返回默认清晰度
     // 第五个参数传入回调函数，最好是箭头函数，用于处理返回的地址，例: (url) => {console.log(url)}
-    GM_xmlhttpRequest({
-		method: "GET",
-		url: 'https://m.douyu.com/' + room_id,
-		responseType: "text",
-		onload: function(response) {
-            let a = response.response.match(/(function ub9.*)[\s\S](var.*)/i);
-            let ub9_ex = String(a[0]).replace("ub98484234", "ub98484234_ex");
-            eval1(ub9_ex, "exScript1");
-            let tt0 = Math.round(new Date().getTime()/1000).toString();
-            RealLive_get_sign_url(room_id, tt0, is_https, qn, reallive_callback, is_video);
-        }
-	});
+    let tt0 = Math.round(new Date().getTime()/1000).toString();
+    if (is_video) {
+        // 由于pc获取的流没办法通过在后缀增加&only-audio=1来实现音频流，所以分开来实现
+        GM_xmlhttpRequest({
+            method: "GET",
+            url: 'https://www.douyu.com/' + room_id,
+            responseType: "text",
+            onload: function(response) {
+                let a = response.response.match(/(vdwdae325w_64we[\s\S]*?function ub98484234[\s\S]*?)function/i);
+                let ub9_ex = String(a[1]).replace("ub98484234", "ub98484234_ex_pc");
+                eval1(ub9_ex, "exScript2");
+                // RealLive_get_sign_url(room_id, tt0, is_https, qn, reallive_callback, is_video);
+                RealLive_get_sign_url_pc(room_id, tt0, true, qn, reallive_callback, is_video);
+            }
+        });
+    } else {
+        GM_xmlhttpRequest({
+            method: "GET",
+            url: 'https://m.douyu.com/' + room_id,
+            responseType: "text",
+            onload: function(response) {
+                let a = response.response.match(/(function ub9.*)[\s\S](var.*)/i);
+                let ub9_ex = String(a[0]).replace("ub98484234", "ub98484234_ex");
+                eval1(ub9_ex, "exScript1");
+                // RealLive_get_sign_url(room_id, tt0, is_https, qn, reallive_callback, is_video);
+                RealLive_get_sign_url(room_id, tt0, true, qn, reallive_callback, is_video);
+            }
+        });
+    }
 }
 
 function RealLive_get_sign_url(r, tt, is_https, qn, reallive_callback, is_video) {
@@ -12710,6 +12744,35 @@ function RealLive_get_sign_url(r, tt, is_https, qn, reallive_callback, is_video)
         }
     });
 }
+
+function RealLive_get_sign_url_pc(r, tt, is_https, qn, reallive_callback) {
+    let param1 = ub98484234_ex_pc(r, getDyDid(), tt);
+    let postData;
+    if (qn == "1015") {
+        postData = param1 + "&ver=219032101&cdn=hs-h5&rid=" + r + "&rate=0";
+    } else {
+        postData = param1 + "&ver=219032101&cdn=hs-h5&rid=" + r + "&rate=" + qn;
+    }
+    document.getElementById("exScript2").remove();
+    GM_xmlhttpRequest({
+        method: "POST",
+        url: "https://www.douyu.com/lapi/live/getH5Play/" + r,
+        data: postData,
+        responseType: "json",
+        headers: {
+            'Content-Type': 'application/x-www-form-urlencoded',
+        },
+        onload: function(response) {
+            let ret = response.response;
+            let realLive = "";
+            if (ret.error === 0) {
+                realLive = `${ret.data.rtmp_url}/${ret.data.rtmp_live}`
+            }
+            reallive_callback(realLive);
+        }
+    });
+}
+
 
 
 function eval1(str, iid) {
