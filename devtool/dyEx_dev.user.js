@@ -2610,7 +2610,7 @@ function initPkg_CopyRealLive_Func() {
 }
 
 const lastTime = "Ex_DailyAuto_LastTime";
-const restRid = "12306";
+const restRid = "8256300";
 function initPkg_DailyAuto() {
   // <i class="Backpack-newPropTip">获得新道具</i>
   setTimeout(() => {
@@ -4930,20 +4930,29 @@ let barrageSendCheckTimer = 0;
 async function initPkg_LiveTool_BarrageSendCheck() {
   myName = await getUserName();
   let a = new DomHook("#js-barrage-list", false, (m) => {
-      if (m.length <= 0) return;
-      if (m[0].addedNodes.length <= 0) return;
-      let dom = m[0].addedNodes[0];
-      let isSelf = dom.getElementsByClassName("is-self").length > 0;
-      if (!isSelf) return;
-      let localLastBarrage = dom.getElementsByClassName("Barrage-content")[0].innerText.trim();
-      clearTimeout(barrageSendCheckTimer);
-      barrageSendCheckTimer = setTimeout(() => {
-        if (!myLastBarrage.replace(/\s+/g, ' ').includes(localLastBarrage.replace(/\s+/g, ' '))) {
+    if (m.length <= 0) return;
+    if (m[0].addedNodes.length <= 0) return;
+    let dom = m[0].addedNodes[0];
+    let isSelf = dom.getElementsByClassName("is-self").length > 0;
+    if (!isSelf) return;
+    let localLastBarrage = dom
+      .getElementsByClassName("Barrage-content")[0]
+      .innerText.trim();
+    clearTimeout(barrageSendCheckTimer);
+    barrageSendCheckTimer = setTimeout(() => {
+      if (myLastBarrage !== "" && localLastBarrage !== "") {
+        let data = stt_deserialize(myLastBarrage);
+        if (!data.txt) return;
+        if (
+          data.txt.replace(/\s+/g, " ") !==
+          localLastBarrage.replace(/\s+/g, " ")
+        ) {
           dom.style.display = "none";
           showMessage(`弹幕【${localLastBarrage}】发送失败`, "error");
-        };
-      }, 250);
-  })
+        }
+      }
+    }, 300);
+  });
 }
 
 function initPkg_LiveTool_BarrageSendCheck_Handle(text) {
@@ -4952,6 +4961,7 @@ function initPkg_LiveTool_BarrageSendCheck_Handle(text) {
     myLastBarrage = text;
   }
 }
+
 
 let barrageSpeed_count = 0;
 function initPkg_LiveTool_BarrageSpeed() {
@@ -10310,7 +10320,7 @@ function initPkg_TabSwitch() {
 // 版本号
 // 格式 yyyy.MM.dd.**
 // var curVersion = "2020.01.12.01";
-var curVersion = "2023.09.23.02";
+var curVersion = "2023.09.26.01";
 var isNeedUpdate = false;
 var lastestVersion = "";
 function initPkg_Update() {
