@@ -2601,7 +2601,7 @@ function initPkg_CopyRealLive_Func() {
 }
 
 const lastTime = "Ex_DailyAuto_LastTime";
-const restRid = "8256300";
+const restRid = "12306";
 function initPkg_DailyAuto() {
   // <i class="Backpack-newPropTip">获得新道具</i>
   setTimeout(() => {
@@ -5001,6 +5001,7 @@ async function initPkg_LiveTool_BarrageSendCheck() {
         ) {
           let contentDom = dom.getElementsByClassName("Barrage-content")[0];
           contentDom.style.textDecoration = "line-through gray 1px";
+          showMessage(`弹幕【${localLastBarrage}】发送失败`, "error");
           // 创建一个新的 DOM 元素
           let span = document.createElement("span");
           span.textContent = "(可能发送失败)";
