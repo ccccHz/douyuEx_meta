@@ -9959,6 +9959,12 @@ function Refresh_Video_insertIcon() {
 }
 
 function initPkg_Refresh_Video_Func() {
+    new DomHook('.right-e7ea5d', true, () => {
+        const video_fullPage = document.querySelector('.wfs-2a8e83.removed-9d4c42') ? true : false;
+        const dom_player_toolbar = document.getElementById("js-player-toolbar");
+        dom_player_toolbar.style = video_fullPage ? "z-index:20" : "z-index:30";
+    });
+
 	document.getElementById("refresh-video").addEventListener("click", (e) => {
         let dom_toolbar = document.getElementsByClassName("PlayerToolbar-ContentRow")[0];
         let dom_video = document.getElementsByClassName("layout-Player-video")[0];
@@ -10024,8 +10030,10 @@ function initPkg_Refresh_Video_Set() {
             let dom_video = document.getElementsByClassName("layout-Player-video")[0];
             let dom_refresh2 = document.getElementById("refresh-video2");
             let dom_refresh = document.getElementById("refresh-video");
+            let dom_player_toolbar = document.getElementById("js-player-toolbar");
             dom_toolbar.style.visibility = "hidden";
             dom_video.style = "bottom:0;z-index:25";
+            dom_player_toolbar.style = "z-index:30";
             dom_refresh2.style.display = "block";
             dom_refresh.innerText = "√ 简洁模式";
             refresh_Video_setStyle();
@@ -10274,6 +10282,13 @@ function removeDanmakuBackground() {
         background: none !important;
       }
       .danmuItem-31f924 .noble-bf13ad {
+        background: none !important;
+      }
+      .customBarrage {
+        background: none !important;
+        text-shadow: none !important;
+      }
+      .customBarrage > div {
         background: none !important;
       }
   `
@@ -11489,7 +11504,7 @@ function initPkg_SyncJoy_Func() {
 // 版本号
 // 格式 yyyy.MM.dd.**
 // var curVersion = "2020.01.12.01";
-var curVersion = "2024.08.05.01"
+var curVersion = "2024.08.10.01"
 var isNeedUpdate = false
 var lastestVersion = ""
 function initPkg_Update() {
@@ -12251,12 +12266,31 @@ function initPkg_VideoTools_Filter_Func() {
         liveVideoNode.style.filter = `${ currentBrightness } ${ currentContrast } ${ currentSaturate }`;
     });
 
-    document.getElementById("ex-filter").addEventListener("mouseover", function () {
-        document.getElementsByClassName("filter__wrap")[0].style.display = "block";
+    const filterButton = document.getElementById("ex-filter");
+    const filterPanel = document.getElementsByClassName("filter__wrap")[0];
+    let overPanel = false;
+    let timeout = null;
+
+    filterButton.addEventListener("mouseover", function () {
+        if (timeout) clearTimeout(timeout);
+        filterPanel.style.display = "block";
+        timeout = setTimeout(() => {
+            if(!overPanel) {
+                filterPanel.style.display = "none";
+            }
+        }, 1500);
     });
-    document.getElementsByClassName("filter__wrap")[0].addEventListener("mouseleave", function () {
-        document.getElementsByClassName("filter__wrap")[0].style.display = "none"
+
+    filterPanel.addEventListener("mouseover", function() {
+        overPanel = true;
+    })
+    filterPanel.addEventListener("mouseleave", function () {
+        setTimeout(() => {
+            filterPanel.style.display = "none"
+            overPanel = false;
+        }, 500);
     });
+    
     document.getElementById("filter__reset").addEventListener("click", () => {
         resetVideoFilter();
     });
