@@ -1,7 +1,7 @@
 function initRouter(href) {
   if (String(href).indexOf("www.douyu.com")) {
-    initPkg_AutoDarkFast();
-    initPkg_Night_Set_Fast();
+    // initPkg_AutoDarkFast();
+    // initPkg_Night_Set_Fast();
     initRouter_AllPage();
   }
 
@@ -201,7 +201,7 @@ function initRouter_AllPage() {
   setTimeout(() => {
     initStyles();
     removeAD();
-    initPkg_Dark();
+    // initPkg_Dark();
     initPkg_DailyAuto();
   }, 1500);
 }

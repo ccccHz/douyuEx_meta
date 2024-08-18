@@ -11,14 +11,20 @@ ridPos = null;
 var my_uid = getCookieValue("acf_uid"); // 自己的uid
 var myName = "";
 var dyToken = getToken();
+// 功能条的显示定时器
+var exPanelTimer = null;
 
 function showExPanel() {
   // 显示功能条
   let a = document.getElementsByClassName("ex-panel")[0];
-  if (a.style.display != "block") {
-    a.style.display = "block";
+  if (a.style.visibility !== 'visible') {
+    a.style.visibility = 'visible';
+    a.style.opacity = '1';
+    clearTimeout(exPanelTimer);
   } else {
-    a.style.display = "none";
+    a.style.visibility = 'hidden';
+    a.style.opacity = '0';
+    clearTimeout(exPanelTimer);
   }
 }
 
@@ -506,72 +512,13 @@ function timeText2Ms(text) {
   return ret * 1000;
 }
 
-var mscststs = new (class {
-  sleep(miliseconds) {
-    return new Promise((resolve) => {
-      setTimeout(() => {
-        resolve();
-      }, miliseconds);
-    });
-  }
-  async _Step(selector, callback, need_content, timeout) {
-    while (timeout--) {
-      if (document.querySelector(selector) === null) {
-        await this.sleep(100);
-        continue;
-      } else {
-        if (need_content) {
-          if (document.querySelector(selector).innerText.length == 0) {
-            await this.sleep(100);
-            continue;
-          }
-        }
-      }
-      break;
-    }
+function resizeWindow() {
+  const resizeEvent = new Event("resize");
+  window.dispatchEvent(resizeEvent);
+}
 
-    callback(selector);
-  }
-  wait(selector, need_content = false, timeout = Infinity) {
-    return new Promise((resolve) => {
-      this._Step(
-        selector,
-        function (selector) {
-          resolve(document.querySelector(selector));
-        },
-        need_content,
-        timeout
-      );
-    });
-  }
-
-  hijackXMLHttpRequest(options, selfWindow = self) {
-    const rawXHR = selfWindow.XMLHttpRequest;
-    selfWindow.XMLHttpRequest = function (...args) {
-      const xhrInstance = new rawXHR(...args);
-      // 下面将 xhrInstance 添加
-      const xhrProxy = new Proxy(xhrInstance, {
-        get: function (target, property) {
-          if (typeof target[property] === "function") {
-            return function (...args) {
-              const before =
-                options["before" + property] ||
-                ((...args) => {
-                  return args;
-                });
-              const after = options["after" + property] || ((_) => _);
-              return after(target[property](...before(...args)));
-              //return target[property](...args)
-            };
-          } else {
-            return target[property];
-          }
-        },
-      });
-      return xhrProxy;
-    };
-    return function abort() {
-      selfWindow.XMLHttpRequest = rawXHR;
-    };
-  }
-})();
+function isValidImageFile(filename) {
+  const validExtensions = [".jpg", ".jpeg", ".png", ".gif", ".webp", ".svg", ".bmp", ".ico", ".tiff", ".tif"];
+  const ext = filename.substring(filename.lastIndexOf(".")).toLowerCase();
+  return validExtensions.includes(ext);
+}

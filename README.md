@@ -45,16 +45,15 @@
 - 代码可供互联网的同好们参考研究，**引用请注明出处**
 - 喜欢本插件的用户不妨点一下收藏或推荐给朋友，有建议或BUG请提交在greasyfork或github
 - 本插件仅为提高日常观看体验，不做薅羊毛/恶性竞争等功能
-- 本插件归属：[斗鱼直播间5189167](https://www.douyu.com/5189167)
 - 作者：小淳 / QQ：189964430
 
 ### 💎功能
-[功能介绍](https://xiaochunchun.gitee.io/douyuex/introduction/)
+[功能介绍](https://html.douyuex.com/introduction/)
 
 --------------------------------------------------
 
 ## 📕更新内容
-[更新内容](https://xiaochunchun.gitee.io/douyuex/update/)
+[更新内容](https://html.douyuex.com/update/)
 
 --------------------------------------------------
 

@@ -1,5 +1,5 @@
 const lastTime = "Ex_DailyAuto_LastTime";
-const restRid = "12306";
+const restRid = "52";
 function initPkg_DailyAuto() {
   // <i class="Backpack-newPropTip">获得新道具</i>
   setTimeout(() => {
@@ -15,6 +15,7 @@ function daily_main() {
     return false;
   };
   if (stateControl()) {
+    showMessage("【续牌】" + "开始赠送荧光棒", "info");
     fansContinue_auto()
       .then(() => {
         localStorage.setItem(lastTime, new Date());
