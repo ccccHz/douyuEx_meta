@@ -2336,6 +2336,39 @@ function isValidImageFile(filename) {
   const ext = filename.substring(filename.lastIndexOf(".")).toLowerCase();
   return validExtensions.includes(ext);
 }
+
+
+var mscststs = new class {
+  sleep(miliseconds) {
+    return new Promise(resolve => {
+      setTimeout(() => { resolve(); }, miliseconds);
+    });
+  }
+  async _Step(selector, callback, need_content, timeout) {
+    while (timeout--) {
+      if (document.querySelector(selector) === null) {
+        await this.sleep(100);
+        continue;
+      } else {
+        if (need_content) {
+          if (document.querySelector(selector).innerText.length == 0) {
+            await this.sleep(100);
+            continue;
+          }
+        }
+      }
+      break;
+    }
+
+    callback(selector);
+  }
+  wait(selector, need_content = false, timeout = Infinity) {
+    return new Promise(resolve => {
+      this._Step(selector, function (selector) { resolve(document.querySelector(selector)); }, need_content, timeout);
+    });
+  }
+}();
+
 let svg_accountList = `<svg t="1613993967937" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="2122" width="16" height="16"><path d="M217.472 311.808l384.64 384.64-90.432 90.56-384.64-384.64z" fill="#8A8A8A" p-id="2123"></path><path d="M896.32 401.984l-384.64 384.64-90.56-90.496 384.64-384.64z" fill="#8A8A8A" p-id="2124"></path></svg>`
 let cleanOverTimes = 0; // 用于判断是否全部清空并跳转
 function initPkg_AccountList() {
