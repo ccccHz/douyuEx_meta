@@ -61,6 +61,7 @@
 // ==/UserScript==
 
 function init() {
+    initPkg_Night_Set_Fast();
     initResponseHook();
     initPkg_ShowDanmaku();
     initKillP2P();
@@ -76,6 +77,7 @@ function init() {
 function initPkg() {
     initPkg_HighResoltion();
     Update_checkVersion();
+    initPkg_Night();
     initPkg_ExIcon();
     initPkg_ExPanel();
     initPkg_RealAudience();
