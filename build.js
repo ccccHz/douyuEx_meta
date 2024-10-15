@@ -35,7 +35,7 @@ function build() {
   header += "// ==/UserScript==\r\n";
 
   const result = uglifyjs.minify(template);
-  fs.writeFileSync("./dist/douyuex.user.js", header + result.code);
+  fs.writeFileSync("./dist/douyuex.user.js", result.code);
 }
 
 build();
