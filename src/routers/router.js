@@ -101,10 +101,15 @@ function initRouter_DouyuRoom_Main() {
       // initStyles();
       initPkg();
       initPkgSpecial();
+      initPkg_meta();
       initTimer();
     }, 1500);
     clearInterval(intID);
   }, 1000);
+}
+
+function initPkg_meta() {
+  initPkg_HighResoltion();
 }
 
 function initPkgSpecial() {

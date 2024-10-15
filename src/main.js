@@ -75,7 +75,6 @@ function init() {
 }
 
 function initPkg() {
-    initPkg_HighResoltion();
     Update_checkVersion();
     initPkg_Night();
     initPkg_ExIcon();
