@@ -29,14 +29,14 @@ function build(ifDev = false) {
     template = template.replace("/*编译器标记 勿删*/", css).replace("// 编译器标记 勿删", js);
 
     if (!fs.existsSync("./dist")) fs.mkdirSync("./dist");
-    fs.writeFileSync("./dist/douyuex.js", template);
+    fs.writeFileSync("./devtool/douyuex.js", template);
 
     let header = "";
     header = fs.readFileSync("./src/main.js", "utf8").split("// ==/UserScript==")[0];
     header += "// ==/UserScript==\r\n";
 
     const result = uglifyjs.minify(template);
-    fs.writeFileSync("./dist/douyuex.user.js", header + result.code);
+    fs.writeFileSync("./devtool/douyuex.user.js", header + result.code);
 
     if (ifDev) {
         // remove first line if equal to "use strict"
@@ -48,7 +48,7 @@ function build(ifDev = false) {
 
 const args = process.argv.slice(2);
 switch (args[0]) {
-    case "build":
+    case "build-mine":
         build();
         break;
     case "dev":
