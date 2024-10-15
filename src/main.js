@@ -60,8 +60,6 @@
 // @antifeature  tracking
 // ==/UserScript==
 
-// initPkg_AutoDarkFast();
-// initPkg_Night_Set_Fast();
 function init() {
   initResponseHook();
   initPkg_ShowDanmaku();
@@ -75,8 +73,6 @@ function init() {
   initPkg_FollowList();
 }
 
-// initPkg_Night();
-// initPkg_AutoDark();
 function initPkg() {
   initPkg_HighResoltion();
   Update_checkVersion();

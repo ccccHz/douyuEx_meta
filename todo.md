@@ -1,5 +1,18 @@
 # todo
 
+- auto dark
+  - now deleted
+
+``` js
+// initPkg_AutoDarkFast();
+// initPkg_Night_Set_Fast();
+function init() {
+
+// initPkg_Night();
+// initPkg_AutoDark();
+function initPkg() {
+```
+
 - update devtool
   - dev.sh remove
   - build.sh update to js
