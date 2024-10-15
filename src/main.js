@@ -60,9 +60,9 @@
 // @antifeature  tracking
 // ==/UserScript==
 
+// initPkg_AutoDarkFast();
+// initPkg_Night_Set_Fast();
 function init() {
-  // initPkg_AutoDarkFast();
-  // initPkg_Night_Set_Fast();
   initResponseHook();
   initPkg_ShowDanmaku();
   initKillP2P();
@@ -75,11 +75,11 @@ function init() {
   initPkg_FollowList();
 }
 
+// initPkg_Night();
+// initPkg_AutoDark();
 function initPkg() {
   initPkg_HighResoltion();
   Update_checkVersion();
-  // initPkg_Night();
-  // initPkg_AutoDark();
   initPkg_ExIcon();
   initPkg_ExPanel();
   initPkg_RealAudience();
