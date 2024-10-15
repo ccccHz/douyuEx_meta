@@ -61,68 +61,72 @@
 // ==/UserScript==
 
 function init() {
-    initResponseHook();
-    initPkg_ShowDanmaku();
-    initKillP2P();
-    initFullScreen();
-    initHighestVideoQuality();
-    removeAD();
-    initPkg_Statistics();
-    initPkg_Console();
-    initPkg_Menu();
-    initPkg_FollowList();
+  // initPkg_AutoDarkFast();
+  // initPkg_Night_Set_Fast();
+  initResponseHook();
+  initPkg_ShowDanmaku();
+  initKillP2P();
+  initFullScreen();
+  initHighestVideoQuality();
+  removeAD();
+  initPkg_Statistics();
+  initPkg_Console();
+  initPkg_Menu();
+  initPkg_FollowList();
 }
 
 function initPkg() {
-    initPkg_HighResoltion();
-    Update_checkVersion();
-    initPkg_ExIcon();
-    initPkg_ExPanel();
-    initPkg_RealAudience();
-    initPkg_CopyRealLive();
-    initPkg_AudioLine();
-    initPkg_RemoveAD();
-    initPkg_Shield();
-    initPkg_BagInfo();
-    initPkg_Update();
-    initPkg_SyncJoy();
-    initPkg_CSOB();
-    initPkg_Monitor();
-    initPkg_Lottery();
-    // initPkg_MiniProgram();
-    initPkg_PopupPlayer();
-    initPkg_LiveTool();
-    initPkg_VideoTools();
-    initPkg_ExpandTool();
-    initPkg_Refresh();
-    initPkg_BarrageLoop();
-    initPkg_FansContinue();
-    // initPkg_FishFood();
-    initPkg_Sign();
-    initPkg_BarragePanel();
-    // initPkg_AdVideo();
-    initPkg_AccountList();
-    initPkg_ChatTools();
-    initPkg_MonthCost();
-    initPkg_TabSwitch();
-    initPkg_WeeklyPanel();
-    initPkg_DanmakuCollect();
+  initPkg_HighResoltion();
+  Update_checkVersion();
+  // initPkg_Night();
+  // initPkg_AutoDark();
+  initPkg_ExIcon();
+  initPkg_ExPanel();
+  initPkg_RealAudience();
+  initPkg_CopyRealLive();
+  initPkg_AudioLine();
+  initPkg_RemoveAD();
+  initPkg_Shield();
+  initPkg_BagInfo();
+  initPkg_Update();
+  initPkg_SyncJoy();
+  initPkg_CSOB();
+  initPkg_Monitor();
+  initPkg_Lottery();
+  // initPkg_MiniProgram();
+  initPkg_PopupPlayer();
+  initPkg_LiveTool();
+  initPkg_VideoTools();
+  initPkg_ExpandTool();
+  initPkg_Refresh();
+  initPkg_BarrageLoop();
+  initPkg_FansContinue();
+  // initPkg_FishFood();
+  initPkg_Sign();
+  initPkg_BarragePanel();
+  // initPkg_AdVideo();
+  initPkg_AccountList();
+  initPkg_ChatTools();
+  initPkg_MonthCost();
+  initPkg_TabSwitch();
+  initPkg_WeeklyPanel();
+  initPkg_DanmakuCollect();
 }
 
 function initPkg_Timer() {
-    // initPkg_FishPond_Timer();
-    initPkg_DisableCloseJump_Timer();
-    initPkg_LevelTask_Timer();
+  // initPkg_FishPond_Timer();
+  initPkg_DisableCloseJump_Timer();
+  initPkg_LevelTask_Timer();
 }
 
 function initTimer() {
-    initPkg_Timer();
-    exTimer = setInterval(initPkg_Timer, 35000);
+  initPkg_Timer();
+  exTimer = setInterval(initPkg_Timer, 35000);
 }
 
 function initStyles() {
-    let style = document.createElement("style");
-    style.appendChild(document.createTextNode(`#ex-accountList-wrap {
+  let style = document.createElement("style");
+  style.appendChild(document.createTextNode(`#ex-accountList-wrap {
     left: -152px;
     top: -16px;
     /* max-height: 330px;
@@ -1805,7 +1809,7 @@ hr {
 .layui-timeline-title {
     position: relative;
 }`));
-    document.head.appendChild(style);
+  document.head.appendChild(style);
 }
 
 // 全局变量及公共函数
@@ -16321,5 +16325,5 @@ function initRouter_AllPage() {
 
 
 (async function () {
-    initRouter(window.location.href);
+  initRouter(window.location.href);
 })();
