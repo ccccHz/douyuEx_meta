@@ -16141,7 +16141,7 @@ class Ex_WebSocket_UnLogin {
 }
 
 function initRouter(href) {
-  if (String(href).indexOf("www.douyu.com")) {
+  if (String(href).indexOf("www.douyu.com") !== -1) {
     // initPkg_AutoDarkFast();
     // initPkg_Night_Set_Fast();
     initRouter_AllPage();
