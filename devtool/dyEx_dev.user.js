@@ -29,7 +29,6 @@ function initPkg() {
     initPkg_BagInfo();
     initPkg_Update();
     initPkg_SyncJoy();
-    initPkg_CSOB();
     initPkg_Monitor();
     initPkg_Lottery();
     // initPkg_MiniProgram();
@@ -12007,9 +12006,9 @@ function initPkg_ShowDanmakuOriginAction() {
             // 加一按钮
             newContent = newContent.replace(`if(s&&s.isOpenFireFBComment)`, `if(true)`);
             // 回复按钮
-            newContent = newContent.replace(`if(B&&!this.isFireOpenRank(a))if(parseInt(B,10)&&M&&S>=R&&(!L||L&&I))`, `if(true)if(true) `);
+            newContent = newContent.replace(`if(A&&!this.isFireOpenRank(a))if(parseInt(A,10)&&M&&S>=R&&(!L||L&&I))`, `if(true)if(true) `);
             // 点赞按钮
-            newContent = newContent.replace(`else if(1==+Object(m.y)("barrage_praise"))`, `if(true) `);
+            newContent = newContent.replace(`else if(1==+Object(m.B)("barrage_praise"))`, `if(true) `);
             return newContent;
         }
     });
@@ -13110,7 +13109,7 @@ function initPkg_SyncJoy_Func() {
 // 版本号
 // 格式 yyyy.MM.dd.**
 // var curVersion = "2020.01.12.01";
-var curVersion = "2024.10.15.01"
+var curVersion = "2024.10.21.01"
 var isNeedUpdate = false
 var lastestVersion = ""
 function initPkg_Update() {
@@ -15488,7 +15487,7 @@ function getRealLive_Bilibili(room_id, qn, cdn, reallive_callback) {
             let rurl = "";
             for (let i = 0; i < ret.data.playurl_info.playurl.stream.length; i++) {
                 const item = ret.data.playurl_info.playurl.stream[i];
-                if (String(item.protocol_name).includes("hls") && item.format.length > 0) {
+                if (String(item.protocol_name).includes("stream") && item.format.length > 0) {
                     let url_info = item.format[0].codec[0].url_info[0];
                     let base_url = item.format[0].codec[0].base_url;
                     rurl = `${url_info.host}${base_url}${url_info.extra}`;

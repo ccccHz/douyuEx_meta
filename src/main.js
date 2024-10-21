@@ -89,7 +89,6 @@ function initPkg() {
     initPkg_BagInfo();
     initPkg_Update();
     initPkg_SyncJoy();
-    initPkg_CSOB();
     initPkg_Monitor();
     initPkg_Lottery();
     // initPkg_MiniProgram();
