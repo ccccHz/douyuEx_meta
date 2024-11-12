@@ -19,23 +19,20 @@ function initPkg_RealAudience() {
   setNobleNum();
 
   fetch("https://www.douyu.com/swf_api/h5room/" + rid, {
-    method: "GET",
-    mode: "no-cors",
-    credentials: "include",
+    method: 'GET',
+    mode: 'no-cors',
+    credentials: 'include'
+  }).then(res => {
+    return res.json();
+  }).then(retData => {
+    real_info.showtime = retData.data.show_time;
+    real_info.isShow = retData.data.show_status;
+    setRealViewer();
+    setInterval(setRealViewer, 150000);
+    setInterval(switchRealAndTodayWatch, 5000);
+  }).catch(err => {
+    console.log("请求失败!", err);
   })
-    .then((res) => {
-      return res.json();
-    })
-    .then((retData) => {
-      real_info.showtime = retData.data.show_time;
-      real_info.isShow = retData.data.show_status;
-      setRealViewer();
-      setInterval(setRealViewer, 150000);
-      setInterval(switchRealAndTodayWatch, 10000);
-    })
-    .catch((err) => {
-      console.log("请求失败!", err);
-    });
 }
 
 function initPkg_RealAudience_StyleHook() {
@@ -229,25 +226,18 @@ function setAvatarVideo_Func(videoUrl, videoReplayUrl) {
 
 function getTodayWatch(rid) {
   return new Promise((resolve, reject) => {
-    fetch(
-      "https://www.douyu.com/japi/interactnc/web/fsjk/getCardTaskInfo?rid=" +
-        rid,
-      {
-        method: "GET",
-        mode: "no-cors",
-        credentials: "include",
-      }
-    )
-      .then((res) => {
-        return res.json();
-      })
-      .then((ret) => {
-        resolve(ret);
-      })
-      .catch((err) => {
-        reject(err);
-      });
-  });
+    fetch('https://www.douyu.com/japi/interactnc/web/fsjk/getCardTaskInfo?rid=' + rid, {
+      method: 'GET',
+      mode: 'no-cors',
+      credentials: 'include'
+    }).then(res => {
+      return res.json();
+    }).then(ret => {
+      resolve(ret);
+    }).catch(err => {
+      reject(err);
+    })
+  })
 }
 
 function getRealViewer(rid) {
