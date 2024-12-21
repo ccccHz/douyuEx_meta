@@ -9715,7 +9715,7 @@ function setNightMode() {
     .Title-row-text,.Title-anchorName{color:rgba(153,153,153,1) !important;}
     #js-player-toolbar{background:rgb(37,38,42) !important;border:1px solid rgb(37,38,42) !important;}
     .PlayerToolbar-wealthNum,.Header-wrap .Header-menu-link>a,.public-DropMenu-link,.Header-icon{color:rgb(191,191,191) !important;}
-    .layout-Main{background-color:rgba(35,36,39,1) !important;}
+    .layout-Main{background:rgba(35,36,39,1) !important;}
     .ChatRank-rankWraper{background:rgba(47,48,53,1) !important;border:rgba(47,48,53,1) solid 1px !important;}
     .bg-icon{display:none;}
     .ChatRankWeek-headerContent,.NobleRank,.NobleRankTips{background-color:rgba(47,48,53,1) !important;}
@@ -9791,8 +9791,8 @@ function setNightMode() {
     .VideoRecommendItem a{border-bottom: 3px solid rgb(35,36,39) !important;}
     .AnchorFriendPane-title a:after{display:none !important;}
 
-    .MedalOwnerInfo-box{border-bottom: 1px solid rgb(79 81 88)!important;}
-    .FansMedalList-item.is-NoWear{border-top: 1px solid rgb(79 81 88)!important;}
+    .MedalOwnerInfo-box{border-bottom: 1px solid rgb(79,81,88)!important;}
+    .FansMedalList-item.is-NoWear{border-top: 1px solid rgb(79,81,88)!important;}
 
     .layout-Player-announce,#js-player-title,.DiamondsFansRankList-anniversary{background: none !important;}
     .DiamondsFansRankContainer-skinbg,.shark-webp .DiamondsFansRankList-anniversary{background: none !important;background-color: rgba(35, 36, 39, 1) !important;}
@@ -11053,23 +11053,20 @@ function initPkg_RealAudience() {
   setNobleNum();
 
   fetch("https://www.douyu.com/swf_api/h5room/" + rid, {
-    method: "GET",
-    mode: "no-cors",
-    credentials: "include",
+    method: 'GET',
+    mode: 'no-cors',
+    credentials: 'include'
+  }).then(res => {
+    return res.json();
+  }).then(retData => {
+    real_info.showtime = retData.data.show_time;
+    real_info.isShow = retData.data.show_status;
+    setRealViewer();
+    setInterval(setRealViewer, 150000);
+    setInterval(switchRealAndTodayWatch, 5000);
+  }).catch(err => {
+    console.log("请求失败!", err);
   })
-    .then((res) => {
-      return res.json();
-    })
-    .then((retData) => {
-      real_info.showtime = retData.data.show_time;
-      real_info.isShow = retData.data.show_status;
-      setRealViewer();
-      setInterval(setRealViewer, 150000);
-      setInterval(switchRealAndTodayWatch, 10000);
-    })
-    .catch((err) => {
-      console.log("请求失败!", err);
-    });
 }
 
 function initPkg_RealAudience_StyleHook() {
@@ -11263,25 +11260,18 @@ function setAvatarVideo_Func(videoUrl, videoReplayUrl) {
 
 function getTodayWatch(rid) {
   return new Promise((resolve, reject) => {
-    fetch(
-      "https://www.douyu.com/japi/interactnc/web/fsjk/getCardTaskInfo?rid=" +
-        rid,
-      {
-        method: "GET",
-        mode: "no-cors",
-        credentials: "include",
-      }
-    )
-      .then((res) => {
-        return res.json();
-      })
-      .then((ret) => {
-        resolve(ret);
-      })
-      .catch((err) => {
-        reject(err);
-      });
-  });
+    fetch('https://www.douyu.com/japi/interactnc/web/fsjk/getCardTaskInfo?rid=' + rid, {
+      method: 'GET',
+      mode: 'no-cors',
+      credentials: 'include'
+    }).then(res => {
+      return res.json();
+    }).then(ret => {
+      resolve(ret);
+    }).catch(err => {
+      reject(err);
+    })
+  })
 }
 
 function getRealViewer(rid) {
@@ -11648,6 +11638,13 @@ function initPkg_Refresh_Video_Set() {
             dom_toolbar.style.visibility = "hidden";
             dom_video.style = "bottom:0;z-index:25";
             dom_player_toolbar.style = "z-index:30";
+            let ret = localStorage.getItem("ExSave_FullScreen");
+            if (ret != null) {
+                let retJson = JSON.parse(ret);
+                if (retJson.isFullScreen) {
+                    dom_player_toolbar.style = "z-index:20";
+                }
+            }
             dom_refresh2.style.display = "block";
             dom_refresh.innerText = "√ 简洁模式";
             refresh_Video_setStyle();
@@ -13109,7 +13106,7 @@ function initPkg_SyncJoy_Func() {
 // 版本号
 // 格式 yyyy.MM.dd.**
 // var curVersion = "2020.01.12.01";
-var curVersion = "2024.10.21.01"
+var curVersion = "2024.11.12.01"
 var isNeedUpdate = false
 var lastestVersion = ""
 function initPkg_Update() {
