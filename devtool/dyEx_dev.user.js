@@ -46,6 +46,7 @@ function initPkg() {
     initPkg_AccountList();
     initPkg_ChatTools();
     initPkg_MonthCost();
+    initPkg_RoomVip();
     initPkg_WeeklyPanel();
     initPkg_DanmakuCollect();
 }
@@ -1194,6 +1195,14 @@ function initStyles() {
 
 .top-0-important {
     top: 0 !important;
+}.room-vip {
+  -moz-user-select:none;/*火狐*/
+  -webkit-user-select:none;/*webkit浏览器*/
+  -ms-user-select:none;/*IE10*/
+  -khtml-user-select:none;/*早期浏览器*/
+  user-select:none;
+  vertical-align: middle;
+  float: left;
 }#ex-camera {
     background: rgba(0,0,0,0.7);
     position: absolute;
@@ -11834,6 +11843,55 @@ function saveData_removeMsgNotice() {
 }
 function initPkg_RemoveAdMeta() {}
 
+const roomVipExpireDayLimit = 3;
+function initPkg_RoomVip() {
+  setRoomVipExpireDays();
+}
+
+function initPkg_RoomVip_Dom() {
+  let a = document.createElement("span");
+  a.className = "room-vip";
+  a.innerHTML = `
+	距VIP到期 <span id="room-vip-expire-days">**</span> 天
+	`;
+  let b = document.getElementsByClassName("PlayerToolbar-Wealth")[0];
+  b.insertBefore(a, b.childNodes[0]);
+}
+
+function setRoomVipExpireDays() {
+  fetch("https://www.douyu.com/member/platform_task/effect_list", {
+    method: "GET",
+    mode: "no-cors",
+    cache: "default",
+    credentials: "include"
+  })
+    .then((res) => {
+      return res.text();
+    })
+    .then(async (doc) => {
+      doc = new DOMParser().parseFromString(doc, "text/html");
+      const enterEffectDom = doc.getElementsByClassName("enter-wraper is-effect");
+      if (!enterEffectDom) return;
+      if (enterEffectDom.length == 0) return;
+      const showEffectMoreDom = enterEffectDom[0].getElementsByClassName("show-effect-more");
+      if (!showEffectMoreDom) return;
+      if (showEffectMoreDom.length == 0) return;
+      for (let i = 0; i < showEffectMoreDom.length; i++) {
+        const detail = JSON.parse(showEffectMoreDom[i].getAttribute("data-detail"));
+        if (String(detail.show_id_list) !== String(rid)) continue;
+        const expireTime = detail.expire_time * 1000;
+        const days = Math.floor((expireTime - Date.now()) / (1000 * 60 * 60 * 24));
+        if (days <= roomVipExpireDayLimit) {
+          initPkg_RoomVip_Dom();
+          document.getElementById("room-vip-expire-days").innerText = days;
+        }
+      }
+    })
+    .catch((err) => {
+      console.log("请求失败!", err);
+    });
+}
+
 let isRemoveDanmakuBackground = getLocalIsRemoveDanmakuBackground();
 function initPkg_Shield_RemoveDanmakuBackground() {
   const shieldTool = document.getElementsByClassName("ShieldTool-list")[0];
@@ -12284,20 +12342,30 @@ async function getAct() {
 }
 
 async function initPkg_Sign_ActqzsUserTask() {
-  const rids = ["5189167", "290935", "6979222", "5132174", "63136"];
+  const rids = ["5189167", "290935", "6979222", "5132174", "4042402"];
   let activityId = await getActivityId(dateFormat("yyyyMM", new Date()));
   if (!activityId) {
     const currentDate = new Date();
     const nextMonth = currentDate.getMonth() + 1;
+    const prevMonth = currentDate.getMonth() - 1;
+    const prevMonthDate = new Date(currentDate.getFullYear(), prevMonth, 1);
     const nextMonthDate = new Date(currentDate.getFullYear(), nextMonth, 1);
-    activityId = await getActivityId(dateFormat("yyyyMM", nextMonthDate));
+    activityId = await getActivityId(dateFormat("yyyyMM", prevMonthDate));
+    if (!activityId) {
+      activityId = await getActivityId(dateFormat("yyyyMM", nextMonthDate));
+    }
   }
   let cardArenaId = await getCardArenaId(dateFormat("yyyyMM", new Date()));
   if (!cardArenaId) {
     const currentDate = new Date();
     const nextMonth = currentDate.getMonth() + 1;
+    const prevMonth = currentDate.getMonth() - 1;
+    const prevMonthDate = new Date(currentDate.getFullYear(), prevMonth, 1);
     const nextMonthDate = new Date(currentDate.getFullYear(), nextMonth, 1);
-    cardArenaId = await getCardArenaId(dateFormat("yyyyMM", nextMonthDate));
+    cardArenaId = await getCardArenaId(dateFormat("yyyyMM", prevMonthDate));
+    if (!cardArenaId) {
+      cardArenaId = await getCardArenaId(dateFormat("yyyyMM", nextMonthDate));
+    }
   }
   const actIds = [activityId, cardArenaId];
 
@@ -12405,6 +12473,7 @@ function signinAct(activityId, rid) {
     })
   })
 }
+
 function initPkg_Sign_Ad_Sign() {
 	getFishBall_Ad_Sign();
 }
@@ -13106,7 +13175,7 @@ function initPkg_SyncJoy_Func() {
 // 版本号
 // 格式 yyyy.MM.dd.**
 // var curVersion = "2020.01.12.01";
-var curVersion = "2024.11.12.01"
+var curVersion = "2024.12.19.02"
 var isNeedUpdate = false
 var lastestVersion = ""
 function initPkg_Update() {
@@ -14702,7 +14771,7 @@ function getActList() {
 class CClick {
     constructor(element) {
         const CONST_LONG_TIME = 700; // 长按多少ms执行
-        const CONST_DOUBLE_TIME = 250; // 双击的间隔
+        const CONST_DOUBLE_TIME = 0; // 双击的间隔
         this.func_click = null;
         this.func_dbClick = null;
         this.func_longClick = null;

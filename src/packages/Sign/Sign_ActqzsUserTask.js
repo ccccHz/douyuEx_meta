@@ -1,18 +1,28 @@
 async function initPkg_Sign_ActqzsUserTask() {
-  const rids = ["5189167", "290935", "6979222", "5132174", "63136"];
+  const rids = ["5189167", "290935", "6979222", "5132174", "4042402"];
   let activityId = await getActivityId(dateFormat("yyyyMM", new Date()));
   if (!activityId) {
     const currentDate = new Date();
     const nextMonth = currentDate.getMonth() + 1;
+    const prevMonth = currentDate.getMonth() - 1;
+    const prevMonthDate = new Date(currentDate.getFullYear(), prevMonth, 1);
     const nextMonthDate = new Date(currentDate.getFullYear(), nextMonth, 1);
-    activityId = await getActivityId(dateFormat("yyyyMM", nextMonthDate));
+    activityId = await getActivityId(dateFormat("yyyyMM", prevMonthDate));
+    if (!activityId) {
+      activityId = await getActivityId(dateFormat("yyyyMM", nextMonthDate));
+    }
   }
   let cardArenaId = await getCardArenaId(dateFormat("yyyyMM", new Date()));
   if (!cardArenaId) {
     const currentDate = new Date();
     const nextMonth = currentDate.getMonth() + 1;
+    const prevMonth = currentDate.getMonth() - 1;
+    const prevMonthDate = new Date(currentDate.getFullYear(), prevMonth, 1);
     const nextMonthDate = new Date(currentDate.getFullYear(), nextMonth, 1);
-    cardArenaId = await getCardArenaId(dateFormat("yyyyMM", nextMonthDate));
+    cardArenaId = await getCardArenaId(dateFormat("yyyyMM", prevMonthDate));
+    if (!cardArenaId) {
+      cardArenaId = await getCardArenaId(dateFormat("yyyyMM", nextMonthDate));
+    }
   }
   const actIds = [activityId, cardArenaId];
 
