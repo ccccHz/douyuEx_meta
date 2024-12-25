@@ -30,10 +30,21 @@ function ExpandTool_AutoFish_insertFunc() {
     const homepageRes = await AutoFish_getHomepageData();
     if (homepageRes.data) {
       baitData = homepageRes.data.baits.find((item) => item.inUse);
-      if (!baitData) return showMessage("【自动钓鱼】请设置鱼饵", "error");
+      if (!baitData) {
+        document.getElementById("extool__autofish_start").checked = false;
+        return showMessage("【自动钓鱼】请设置鱼饵", "error");
+      }
       baitId = baitData.id;
     } else {
+      document.getElementById("extool__autofish_start").checked = false;
       return showMessage("【自动钓鱼】未能获取活动信息", "error");
+    }
+    saveData_AutoFish();
+
+    if (homepageRes.data.fishing.stat == 0) {
+      // 未开始钓鱼
+      isFishing = false;
+      nextFishEndTime = 0;
     }
 
     if (homepageRes.data.fishing.stat == 1) {
@@ -48,7 +59,6 @@ function ExpandTool_AutoFish_insertFunc() {
       await sleep(1000);
     }
 
-
     timerAutoFish = setInterval(async () => {
       if (isFishing) {
         // 正在钓鱼中，检测是否到时间收杆
@@ -59,8 +69,15 @@ function ExpandTool_AutoFish_insertFunc() {
         const fishRes = await AutoFish_startFish();
         if (fishRes.error !== 0) {
           showMessage(fishRes.msg, "error");
-          console.log(fishRes);
-          clearInterval(timerAutoFish);
+          console.log(fishRes, "钓鱼失败");
+          if (fishRes.error == 1001007) {
+            // 操作失败
+            await endFish();
+          }
+          if (fishRes.error == 1005003) {
+            // 鱼饵不足
+            clearInterval(timerAutoFish);
+          }
           return;
         }
         isFishing = true;
@@ -74,7 +91,13 @@ function ExpandTool_AutoFish_insertFunc() {
 async function endFish() {
   const fishRes = await AutoFish_endFish();
   if (fishRes.error !== 0) {
-    console.log(fishRes);
+    console.log(fishRes, "收杆失败");
+    const homepageRes = await AutoFish_getHomepageData();
+    if (homepageRes.data.fishing.stat == 0) {
+      // 钓鱼已完成
+      isFishing = false;
+      nextFishEndTime = 0;
+    }
     return;
   }
   let str = `【自动钓鱼】`;
