@@ -5550,6 +5550,12 @@ function ExpandTool_AutoFish_insertFunc() {
         return showMessage("【自动钓鱼】请设置鱼饵", "error");
       }
       baitId = baitData.id;
+
+      const myCh = homepageRes.data.myCh;
+      if (!myCh) {
+        document.getElementById("extool__autofish_start").checked = false;
+        return showMessage("【自动钓鱼】请设置形象", "error");
+      }
     } else {
       document.getElementById("extool__autofish_start").checked = false;
       return showMessage("【自动钓鱼】未能获取活动信息", "error");
@@ -5583,7 +5589,7 @@ function ExpandTool_AutoFish_insertFunc() {
       } else {
         const fishRes = await AutoFish_startFish();
         if (fishRes.error !== 0) {
-          showMessage(fishRes.msg, "error");
+          showMessage(`【自动钓鱼】${fishRes.msg}`, "error");
           console.log(fishRes, "钓鱼失败");
           if (fishRes.error == 1001007) {
             // 操作失败
@@ -13399,7 +13405,7 @@ function initPkg_SyncJoy_Func() {
 // 版本号
 // 格式 yyyy.MM.dd.**
 // var curVersion = "2020.01.12.01";
-var curVersion = "2024.12.25.01"
+var curVersion = "2024.12.26.01"
 var isNeedUpdate = false
 var lastestVersion = ""
 function initPkg_Update() {
