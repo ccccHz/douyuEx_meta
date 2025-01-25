@@ -3,8 +3,8 @@
 // @name         DouyuEx_Meta
 // @namespace
 // @icon         data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz4KPHN2ZyB3aWR0aD0iMTA4cHgiIGhlaWdodD0iMTA4cHgiIHZpZXdCb3g9IjAgMCAxMDggMTA4IiB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiPgogICAgPHRpdGxlPueyvueBteeQgzwvdGl0bGU+CiAgICA8ZyBpZD0i6aG16Z2iLTEiIHN0cm9rZT0ibm9uZSIgc3Ryb2tlLXdpZHRoPSIxIiBmaWxsPSJub25lIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiPgogICAgICAgIDxnIGlkPSLnsr7ngbXnkIMiIHRyYW5zZm9ybT0idHJhbnNsYXRlKDAuODMwNzY5LCAwLjgzMDc2OSkiIGZpbGwtcnVsZT0ibm9uemVybyI+CiAgICAgICAgICAgIDxwYXRoIGQ9Ik01My4xNjkyMzA3LDEwNi4zMzg0NjEgQzIzLjgyNzY5MjIsMTA2LjMzODQ2MSAwLDgyLjUxMDc2OTIgMCw1My4xNjkyMzA3IEMwLDUxLjAwMzA3NjkgMS43NzIzMDc3NSw0OS4yMzA3NjkyIDMuOTM4NDYxNSw0OS4yMzA3NjkyIEwzMy40NzY5MjMsNDkuMjMwNzY5MiBDMzUuNjQzMDc2OSw0OS4yMzA3NjkyIDM3LjQxNTM4NDUsNTEuMDAzMDc3IDM3LjQxNTM4NDYsNTMuMTY5MjMwNyBDMzcuNDE1Mzg0Niw2MS44MzM4NDYxIDQ0LjUwNDYxNTQsNjguOTIzMDc2OSA1My4xNjkyMzA3LDY4LjkyMzA3NjkgQzYxLjgzMzg0NjEsNjguOTIzMDc2OSA2OC45MjMwNzY5LDYxLjgzMzg0NjEgNjguOTIzMDc2OSw1My4xNjkyMzA3IEM2OC45MjMwNzY5LDUxLjAwMzA3NjkgNzAuNjk1Mzg0Niw0OS4yMzA3NjkyIDcyLjg2MTUzODUsNDkuMjMwNzY5MiBMMTAyLjQsNDkuMjMwNzY5MiBDMTA0LjU2NjE1NCw0OS4yMzA3NjkyIDEwNi4zMzg0NjEsNTEuMDAzMDc3IDEwNi4zMzg0NjEsNTMuMTY5MjMwNyBDMTA2LjMzODQ2MSw4Mi41MTA3NjkyIDgyLjUxMDc2OTIsMTA2LjMzODQ2MSA1My4xNjkyMzA3LDEwNi4zMzg0NjEgWiIgaWQ9Iui3r+W+hCIgZmlsbD0iIzMzMzYzQSI+PC9wYXRoPgogICAgICAgICAgICA8cGF0aCBkPSJNOC4wNzM4NDYxMiw1Ny4xMDc2OTIyIEMxMC4wNDMwNzY5LDgwLjI0NjE1MzcgMjkuNTM4NDYxNSw5OC40NjE1Mzg1IDUzLjE2OTIzMDcsOTguNDYxNTM4NSBDNzYuOCw5OC40NjE1Mzg1IDk2LjI5NTM4NDYsODAuMjQ2MTUzOSA5OC4yNjQ2MTU0LDU3LjEwNzY5MjIgTDc2LjUwNDYxNTQsNTcuMTA3NjkyMiBDNzQuNjMzODQ2MSw2OC4yMzM4NDYxIDY0Ljg4NjE1MzksNzYuOCA1My4xNjkyMzA3LDc2LjggQzQxLjQ1MjMwNzYsNzYuOCAzMS43MDQ2MTU0LDY4LjIzMzg0NjEgMjkuODMzODQ2MSw1Ny4xMDc2OTIyIEw4LjA3Mzg0NjEyLDU3LjEwNzY5MjIgWiIgaWQ9Iui3r+W+hCIgZmlsbD0iI0ZGRkZGRiI+PC9wYXRoPgogICAgICAgICAgICA8cGF0aCBkPSJNNTMuMTY5MjMwOCwzLjkzODQ2MTUgQzI1Ljk5Mzg0NjEsMy45Mzg0NjE1IDMuOTM4NDYxNSwyNS45OTM4NDYxIDMuOTM4NDYxNSw1My4xNjkyMzA3IEwzMy40NzY5MjMsNTMuMTY5MjMwNyBDMzMuNDc2OTIzLDQyLjMzODQ2MTUgNDIuMzM4NDYxNSwzMy40NzY5MjMgNTMuMTY5MjMwOCwzMy40NzY5MjMgQzY0LDMzLjQ3NjkyMyA3Mi44NjE1Mzg1LDQyLjMzODQ2MTUgNzIuODYxNTM4NSw1My4xNjkyMzA3IEwxMDIuNCw1My4xNjkyMzA3IEMxMDIuNCwyNS45OTM4NDYxIDgwLjM0NDYxNTQsMy45Mzg0NjE1IDUzLjE2OTIzMDgsMy45Mzg0NjE1IFoiIGlkPSLot6/lvoQiIGZpbGw9IiNENjA5MDkiPjwvcGF0aD4KICAgICAgICAgICAgPHBhdGggZD0iTTEwMi40LDU3LjEwNzY5MjIgTDcyLjg2MTUzODUsNTcuMTA3NjkyMiBDNzAuNjk1Mzg0Niw1Ny4xMDc2OTIyIDY4LjkyMzA3Nyw1NS4zMzUzODQ1IDY4LjkyMzA3NjksNTMuMTY5MjMwNyBDNjguOTIzMDc2OSw0NC41MDQ2MTU0IDYxLjgzMzg0NjEsMzcuNDE1Mzg0NiA1My4xNjkyMzA3LDM3LjQxNTM4NDYgQzQ0LjUwNDYxNTQsMzcuNDE1Mzg0NiAzNy40MTUzODQ2LDQ0LjUwNDYxNTQgMzcuNDE1Mzg0Niw1My4xNjkyMzA3IEMzNy40MTUzODQ2LDU1LjMzNTM4NDYgMzUuNjQzMDc2OSw1Ny4xMDc2OTIyIDMzLjQ3NjkyMyw1Ny4xMDc2OTIyIEwzLjkzODQ2MTUsNTcuMTA3NjkyMiBDMS43NzIzMDc2Miw1Ny4xMDc2OTIyIDAsNTUuMzM1Mzg0NSAwLDUzLjE2OTIzMDcgQzAsMjMuODI3NjkyMiAyMy44Mjc2OTIzLDAgNTMuMTY5MjMwNywwIEM4Mi41MTA3NjkyLDAgMTA2LjMzODQ2MSwyMy44Mjc2OTIyIDEwNi4zMzg0NjEsNTMuMTY5MjMwNyBDMTA2LjMzODQ2MSw1NS4zMzUzODQ2IDEwNC41NjYxNTQsNTcuMTA3NjkyMiAxMDIuNCw1Ny4xMDc2OTIyIFoiIGlkPSLot6/lvoQiIGZpbGw9IiMzMzM2M0EiPjwvcGF0aD4KICAgICAgICAgICAgPHBhdGggZD0iTTc2LjUwNDYxNTQsNDkuMjMwNzY5MyBMOTguMzYzMDc2OSw0OS4yMzA3NjkzIEM5Ni4yOTUzODQ2LDI2LjA5MjMwNzYgNzYuOCw3Ljg3NjkyMyA1My4xNjkyMzA3LDcuODc2OTIzIEMyOS41Mzg0NjE1LDcuODc2OTIzIDEwLjA0MzA3NjksMjYuMDkyMzA3NiA4LjA3Mzg0NjEyLDQ5LjIzMDc2OTMgTDI5LjkzMjMwNzYsNDkuMjMwNzY5MyBDMzEuNzA0NjE1NCwzOC4xMDQ2MTU0IDQxLjQ1MjMwNzYsMjkuNTM4NDYxNSA1My4xNjkyMzA3LDI5LjUzODQ2MTUgQzY0Ljg4NjE1MzksMjkuNTM4NDYxNSA3NC42MzM4NDYxLDM4LjEwNDYxNTQgNzYuNTA0NjE1NCw0OS4yMzA3NjkzIEw3Ni41MDQ2MTU0LDQ5LjIzMDc2OTMgWiIgaWQ9Iui3r+W+hCIgZmlsbD0iI0Q2MDkwOSI+PC9wYXRoPgogICAgICAgICAgICA8cGF0aCBkPSJNNTMuMTY5MjMwNyw3Ni44IEM0MC4xNzIzMDc2LDc2LjggMjkuNTM4NDYxNSw2Ni4xNjYxNTM5IDI5LjUzODQ2MTUsNTMuMTY5MjMwNyBDMjkuNTM4NDYxNSw0MC4xNzIzMDc2IDQwLjE3MjMwNzYsMjkuNTM4NDYxNSA1My4xNjkyMzA3LDI5LjUzODQ2MTUgQzY2LjE2NjE1MzksMjkuNTM4NDYxNSA3Ni44LDQwLjE3MjMwNzYgNzYuOCw1My4xNjkyMzA3IEM3Ni44LDY2LjE2NjE1MzkgNjYuMTY2MTUzOSw3Ni44IDUzLjE2OTIzMDcsNzYuOCBaIiBpZD0i6Lev5b6EIiBmaWxsPSIjMzMzNjNBIj48L3BhdGg+CiAgICAgICAgICAgIDxwYXRoIGQ9Ik01My4xNjkyMzA3LDM3LjQxNTM4NDYgQzQ0LjUwNDYxNTQsMzcuNDE1Mzg0NiAzNy40MTUzODQ2LDQ0LjUwNDYxNTQgMzcuNDE1Mzg0Niw1My4xNjkyMzA3IEMzNy40MTUzODQ2LDYxLjgzMzg0NjEgNDQuNTA0NjE1NCw2OC45MjMwNzY5IDUzLjE2OTIzMDcsNjguOTIzMDc2OSBDNjEuODMzODQ2MSw2OC45MjMwNzY5IDY4LjkyMzA3NjksNjEuODMzODQ2MSA2OC45MjMwNzY5LDUzLjE2OTIzMDcgQzY4LjkyMzA3NjksNDQuNTA0NjE1NCA2MS44MzM4NDYxLDM3LjQxNTM4NDYgNTMuMTY5MjMwNywzNy40MTUzODQ2IEw1My4xNjkyMzA3LDM3LjQxNTM4NDYgWiIgaWQ9Iui3r+W+hCIgZmlsbD0iI0ZGRkZGRiI+PC9wYXRoPgogICAgICAgICAgICA8cGF0aCBkPSJNNDMuMzIzMDc2OSw1My4xNjkyMzA3IEM0My4zMjMwNzY5LDU4LjYwNzExMTQgNDcuNzMxMzUwMSw2My4wMTUzODQ2IDUzLjE2OTIzMDcsNjMuMDE1Mzg0NiBDNTguNjA3MTExNCw2My4wMTUzODQ2IDYzLjAxNTM4NDYsNTguNjA3MTExNCA2My4wMTUzODQ2LDUzLjE2OTIzMDcgQzYzLjAxNTM4NDYsNDcuNzMxMzUwMSA1OC42MDcxMTE0LDQzLjMyMzA3NjkgNTMuMTY5MjMwNyw0My4zMjMwNzY5IEM0Ny43MzEzNTAxLDQzLjMyMzA3NjkgNDMuMzIzMDc2OSw0Ny43MzEzNTAxIDQzLjMyMzA3NjksNTMuMTY5MjMwNyBaIiBpZD0i6Lev5b6EIiBmaWxsPSIjMzMzNjNBIj48L3BhdGg+CiAgICAgICAgPC9nPgogICAgPC9nPgo8L3N2Zz4=
-// @version      2024.12.26.01
-// @description  弹幕自动变色防检测循环发送 一键续牌 查看真实人数/查看主播数据 已播时长 一键签到(直播间/车队/鱼吧/客户端) 一键领取鱼粮(宝箱/气泡/任务) 一键寻宝 送出指定数量的礼物 一键清空背包 屏蔽广告 调节弹幕大小 自动更新 同屏画中画/多直播间小窗观看/可在斗鱼看多个平台直播(虎牙/b站) 获取真实直播流地址 自动抢礼物红包 背包信息扩展 简洁模式 夜间模式 开播提醒 幻神模式 关键词回复 关键词禁言 自动谢礼物 自动抢宝箱 弹幕右键信息扩展 防止下播自动跳转 影院模式 直播时间流控制 弹幕投票 直播滤镜 直播音频流 账号多开/切换 显示粉丝牌获取日期 月消费数据显示 弹幕时速 相机截图录制gif 全景播放器 斗鱼视频下载/弹幕ass下载 直播画面局部缩放 全站抽奖信息 直播音效增强 阻止P2P上传 显示贡献榜贡献值 恢复弹幕显示 斗鱼视频弹幕高能进度条 检测弹幕是否发送成功 查看主播配置信息 自动网页全屏 自动最高画质 弹幕无限收藏 收藏弹幕搜索 支持弹幕带图片 屏蔽弹幕背景 弹幕+1 房间VIP到期提醒 自动钓鱼
+// @version      2025.01.24.01
+// @description  斗鱼直播间增强插件，功能：弹幕自动变色防检测循环发送 一键续牌 查看真实人数/查看主播数据 已播时长 一键签到(直播间/车队/鱼吧/客户端) 一键领取鱼粮(宝箱/气泡/任务) 一键寻宝 送出指定数量的礼物 一键清空背包 屏蔽广告 调节弹幕大小 自动更新 同屏画中画/多直播间小窗观看/可在斗鱼看多个平台直播(虎牙/b站) 获取真实直播流地址 自动抢礼物红包 背包信息扩展 简洁模式 夜间模式 开播提醒 幻神模式 关键词回复 关键词禁言 自动谢礼物 自动抢宝箱 弹幕右键信息扩展 防止下播自动跳转 影院模式 直播时间流控制 弹幕投票 直播滤镜 直播音频流 账号多开/切换 显示粉丝牌获取日期 月消费数据显示 弹幕时速 相机截图录制gif 全景播放器 斗鱼视频下载/弹幕ass下载 直播画面局部缩放 全站抽奖信息 直播音效增强 阻止P2P上传 显示贡献榜贡献值 恢复弹幕显示 斗鱼视频弹幕高能进度条 检测弹幕是否发送成功 查看主播配置信息 自动网页全屏 自动最高画质 弹幕无限收藏 收藏弹幕搜索 支持弹幕带图片 屏蔽弹幕背景 弹幕+1 房间VIP到期提醒 自动钓鱼
 // @author       小淳
 // @match			*://*.douyu.com/0*
 // @match			*://*.douyu.com/1*
@@ -237,19 +237,7 @@ function initStyles() {
     padding: 0px 10px;
     right: 20px;
 }.bloop {
-	background-color: rgba(255,255,255,0.9);
-	width: 100%;
-	height: 200px;
-	position: relative;
-	bottom: 200px;
-	display: none;
-	z-index: 1015;
-}
-
-.bloop__switch {
-	position: absolute;
-	right: 0;
-	bottom: 0;
+	width: 400px;
 }
 
 .bloop__mode {
@@ -345,13 +333,7 @@ function initStyles() {
 	right:0px;
 	position:absolute;
 }.extool {
-	background-color: rgba(255,255,255,0.9);
-	width: 100%;
-	height: 200px;
-	position: relative;
-	bottom: 200px;
-	display: none;
-	z-index: 1015;
+	width: 600px;
 }
 
 .extool__switch {
@@ -363,7 +345,7 @@ function initStyles() {
 	margin-bottom: 5px;
 }
 .extool__redpacket_room,.extool__gold,.extool__autofish {
-	display: inline-block;
+	display: block;
 }
 .ex_giftAnimation {
 	width: 100%;
@@ -411,33 +393,17 @@ function initStyles() {
     margin-top: 5px;
 }
 
-#enter__enterId {
-    width: 40px;
-}
-
-#enter__reply {
-    width: 150px;
-}
-
-#enter__word {
-    width: 140px;
-}
-
 #enter__level {
     width: 25px;
     text-align: center;
 }
 
 #enter__export {
-    cursor: pointer;
-    color: royalblue;
-    margin-left: 10px;
+    margin: 0 10px 0 auto ;
 }
 
 #enter__import {
-    cursor: pointer;
-    color: royalblue;
-    margin-left: 5px;
+    margin-right: 10px;
 }.gift__panel {
     width: 100%;
     display: none;
@@ -460,28 +426,14 @@ function initStyles() {
     width: 40px;
 }
 
-#gift__reply {
-    width: 150px;
-}
-
 #gift__export {
-    cursor: pointer;
-    color: royalblue;
-    margin-left: 10px;
+    margin: 0 10px 0 auto ;
 }
 
 #gift__import {
-    cursor: pointer;
-    color: royalblue;
-    margin-left: 5px;
+    margin-right: 10px;
 }.livetool {
-	background-color: rgba(255,255,255,0.9);
-	width: 100%;
-	height: 290px;
-	position: relative;
-	bottom: 290px;
-	display: none;
-	z-index: 1015;
+	width: 500px;
 }
 
 .livetool__cell {
@@ -505,10 +457,14 @@ function initStyles() {
 .livetool__cell_title {
 	flex: 1;
     -webkit-box-flex: 1;
+    display: flex;
+    align-items: center;
 }
 
 .livetool__cell_option {
 	text-align: right;
+    display: flex; 
+    align-items: center;
 }
 
 .livetool__cell_switch {
@@ -524,14 +480,10 @@ function initStyles() {
     color: royalblue;
 }
 #mute__idlist {
-    cursor: pointer;
-    color: royalblue;
-    margin-left: 10px;
+    margin: 0 10px 0 auto ;
 }
 #mute__export, #mute__import {
-    cursor: pointer;
-    color: royalblue;
-    margin-left: 5px;
+    margin-right: 10px;
 }
 #mute__select {
     width: 110px;
@@ -539,18 +491,6 @@ function initStyles() {
 
 .mute__option {
     margin-top: 5px;
-}
-
-#mute__word {
-    width: 70px;
-}
-
-#mute__count {
-    width: 30px;
-}
-
-#mute__time {
-    width: 65px;
 }.exRankPoint {
     position: absolute;
     right: 16px;
@@ -584,24 +524,12 @@ function initStyles() {
     margin-top: 5px;
 }
 
-#reply__word {
-    width: 70px;
-}
-
-#reply__reply {
-    width: 147px;
-}
-
 #reply__export {
-    cursor: pointer;
-    color: royalblue;
-    margin-left: 10px;
+   margin: 0 10px 0 auto ;
 }
 
 #reply__import {
-    cursor: pointer;
-    color: royalblue;
-    margin-left: 5px;
+    margin-right: 10px;
 }.livetool__Treasure {
     width: 100%;
     position: relative;
@@ -624,35 +552,27 @@ function initStyles() {
     margin-top: 5px;
 }
 
-#vote__theme {
-    width: 70px;
-}
-
-#vote__options {
-    width: 133px;
-}
-
 #vote__time {
     width: 35px;
 }
 
 #vote__show-result {
-    cursor: pointer;
-    color: royalblue;
-    margin-left: 10px;
+    margin: 0 10px 0 auto ;
 }
 
 .vote__result {
-    position: absolute;
-    top: 0px;
-    width: 300px;
-    background: rgba(255,255,255,0.85);
-    left: 0px;
-    z-index: 999;
+    position: fixed;
+    top: 50%;
+    width: 600px;
+    height: 70vh;
+    background: rgb(255 255 255);
+    left: 50%;
+    z-index: 10003;
     padding: 5px;
     border-radius: 10px;
     user-select: none;
     display: none;
+    transform: translate(-50%, -50%);
 }
 
 #vote__result-theme {
@@ -699,16 +619,7 @@ function initStyles() {
 }
 
 .exlottery {
-	background-color: rgba(255,255,255,1);
-	width: 100%;
-	height: 250px;
-	position: relative;
-	bottom: 250px;
-	display: none;
-	z-index: 1015;
-    overflow: auto;
-    padding: 0 10px;
-    box-sizing: border-box;
+	width: 500px;
 }
 
 .lottery__nodata {
@@ -1572,7 +1483,246 @@ function initStyles() {
     position: absolute;
     right: 15px;
     cursor: pointer;
-}.noticejs-top{top:0;width:100%!important}.noticejs-top .item{border-radius:0!important;margin:0!important}.noticejs-topRight{top:10px;right:10px}.noticejs-topLeft{top:10px;left:10px}.noticejs-topCenter{top:10px;left:50%;transform:translate(-50%)}.noticejs-middleLeft,.noticejs-middleRight{right:10px;top:50%;transform:translateY(-50%)}.noticejs-middleLeft{left:10px}.noticejs-middleCenter{top:50%;left:50%;transform:translate(-50%,-50%)}.noticejs-bottom{bottom:0;width:100%!important}.noticejs-bottom .item{border-radius:0!important;margin:0!important}.noticejs-bottomRight{bottom:10px;right:10px}.noticejs-bottomLeft{bottom:10px;left:10px}.noticejs-bottomCenter{bottom:10px;left:50%;transform:translate(-50%)}.noticejs{font-family:Helvetica Neue,Helvetica,Arial,sans-serif}.noticejs .item{margin:0 0 10px;border-radius:3px;overflow:hidden}.noticejs .item .close{float:right;font-size:18px;font-weight:700;line-height:1;color:#fff;text-shadow:0 1px 0 #fff;opacity:1;margin-right:7px}.noticejs .item .close:hover{opacity:.5;color:#000}.noticejs .item a{color:#fff;border-bottom:1px dashed #fff}.noticejs .item a,.noticejs .item a:hover{text-decoration:none}.noticejs .success{background-color:#64ce83}.noticejs .success .noticejs-heading{background-color:#3da95c;color:#fff;padding:10px}.noticejs .success .noticejs-body{color:#fff;padding:10px}.noticejs .success .noticejs-body:hover{visibility:visible!important}.noticejs .success .noticejs-content{visibility:visible}.noticejs .info{background-color:#3ea2ff}.noticejs .info .noticejs-heading{background-color:#067cea;color:#fff;padding:10px}.noticejs .info .noticejs-body{color:#fff;padding:10px}.noticejs .info .noticejs-body:hover{visibility:visible!important}.noticejs .info .noticejs-content{visibility:visible}.noticejs .warning{background-color:#ff7f48}.noticejs .warning .noticejs-heading{background-color:#f44e06;color:#fff;padding:10px}.noticejs .warning .noticejs-body{color:#fff;padding:10px}.noticejs .warning .noticejs-body:hover{visibility:visible!important}.noticejs .warning .noticejs-content{visibility:visible}.noticejs .error{background-color:#e74c3c}.noticejs .error .noticejs-heading{background-color:#ba2c1d;color:#fff;padding:10px}.noticejs .error .noticejs-body{color:#fff;padding:10px}.noticejs .error .noticejs-body:hover{visibility:visible!important}.noticejs .error .noticejs-content{visibility:visible}.noticejs .progressbar{width:100%}.noticejs .progressbar .bar{width:1%;height:30px;background-color:#4caf50}.noticejs .success .noticejs-progressbar{width:100%;background-color:#64ce83;margin-top:-1px}.noticejs .success .noticejs-progressbar .noticejs-bar{width:100%;height:5px;background:#3da95c}.noticejs .info .noticejs-progressbar{width:100%;background-color:#3ea2ff;margin-top:-1px}.noticejs .info .noticejs-progressbar .noticejs-bar{width:100%;height:5px;background:#067cea}.noticejs .warning .noticejs-progressbar{width:100%;background-color:#ff7f48;margin-top:-1px}.noticejs .warning .noticejs-progressbar .noticejs-bar{width:100%;height:5px;background:#f44e06}.noticejs .error .noticejs-progressbar{width:100%;background-color:#e74c3c;margin-top:-1px}.noticejs .error .noticejs-progressbar .noticejs-bar{width:100%;height:5px;background:#ba2c1d}@keyframes noticejs-fadeOut{0%{opacity:1}to{opacity:0}}.noticejs-fadeOut{animation-name:noticejs-fadeOut}@keyframes noticejs-modal-in{to{opacity:.3}}@keyframes noticejs-modal-out{to{opacity:0}}.noticejs-rtl .noticejs-heading{direction:rtl}.noticejs-rtl .close{float:left!important;margin-left:7px;margin-right:0!important}.noticejs-rtl .noticejs-content{direction:rtl}.noticejs{position:fixed;z-index:10050}.noticejs ::-webkit-scrollbar{width:8px}.noticejs ::-webkit-scrollbar-button{width:8px;height:5px}.noticejs ::-webkit-scrollbar-track{border-radius:10px}.noticejs ::-webkit-scrollbar-thumb{background:hsla(0,0%,100%,.5);border-radius:10px}.noticejs ::-webkit-scrollbar-thumb:hover{background:#fff}.noticejs-modal{position:fixed;width:100%;height:100%;background-color:#000;z-index:10000;opacity:.3;left:0;top:0}.noticejs-modal-open{opacity:0;animation:noticejs-modal-in .3s ease-out}.noticejs-modal-close{animation:noticejs-modal-out .3s ease-out;animation-fill-mode:forwards}/**
+}.ex-input {
+    width: 100%;
+    max-width: 300px;
+    padding: 6px 10px;
+    font-size: 14px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    outline: none;
+    transition: border-color 0.2s ease, box-shadow 0.2s ease;
+    background-color: #fff;
+}
+
+.ex-input:focus {
+    border-color: #007bff;
+    box-shadow: 0 0 2px rgba(0, 123, 255, 0.5);
+}
+
+/* 下拉选择框 */
+.ex-select {
+    width: 100%;
+    max-width: 300px;
+    padding: 6px 10px;
+    font-size: 14px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    outline: none;
+    background-color: #fff;
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    cursor: pointer;
+    transition: border-color 0.2s ease;
+    background-repeat: no-repeat;
+    background-position: right 8px center;
+    background-size: 8px 6px;
+    background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 10 6'%3E%3Cpath fill='%23333' d='M5 6L0 0h10z'/%3E%3C/svg%3E");
+}
+
+.ex-select:focus {
+    border-color: #007bff;
+}
+
+/* 按钮 */
+.ex-btn {
+    display: inline-block;
+    padding: 6px 12px;
+    font-size: 14px;
+    font-weight: bold;
+    text-align: center;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.2s ease, transform 0.1s ease;
+    background-color: #f0f0f0;
+    color: #222;
+}
+
+/* 默认按钮 */
+.ex-btn-default {
+    color: #fff;
+    background-color: #007bff;
+}
+
+.ex-btn-default:hover {
+    background-color: #0056b3;
+}
+
+.ex-btn-default:active {
+    transform: scale(0.98);
+}
+
+/* 成功按钮 */
+.ex-btn-success {
+    color: #fff;
+    background-color: #28a745;
+}
+
+.ex-btn-success:hover {
+    background-color: #218838;
+}
+
+.ex-btn-success:active {
+    transform: scale(0.98);
+}
+
+/* 错误按钮 */
+.ex-btn-error {
+    color: #fff;
+    background-color: #dc3545;
+}
+
+.ex-btn-error:hover {
+    background-color: #c82333;
+}
+
+.ex-btn-error:active {
+    transform: scale(0.98);
+}
+
+/* 按钮禁用状态 */
+.ex-btn:disabled {
+    background-color: #ccc;
+    color: #777;
+    cursor: not-allowed;
+}
+
+/* 标签和提示 */
+.ex-label {
+    font-size: 13px;
+    color: #555;
+    margin-bottom: 4px;
+    display: flex;
+    align-items: center;
+}
+
+.ex-label-inline {
+    display: inline-block;
+    margin-right: 8px;
+}
+
+.ex-hint {
+    font-size: 12px;
+    color: #888;
+    margin-top: 4px;
+}
+
+.ex-textarea {
+    width: 100%;
+    max-width: 300px;
+    height: 100px; /* 默认高度 */
+    padding: 6px 10px;
+    font-size: 14px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    outline: none;
+    resize: vertical; /* 允许垂直调整大小 */
+    transition: border-color 0.2s ease, box-shadow 0.2s ease;
+    background-color: #fff;
+}
+
+.ex-textarea:focus {
+    border-color: #007bff;
+    box-shadow: 0 0 2px rgba(0, 123, 255, 0.5);
+}
+
+.ex-textarea::placeholder {
+    color: #aaa;
+    font-size: 13px;
+}
+
+
+/* 复选框容器 */
+.ex-checkbox-container {
+    display: flex;
+    align-items: center;
+    margin-bottom: 8px;
+}
+
+/* 自定义复选框 */
+.ex-checkbox {
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    width: 16px;
+    height: 16px;
+    margin: 0;
+    margin-right: 8px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    outline: none;
+    background-color: #fff;
+    cursor: pointer;
+    position: relative;
+    transition: background-color 0.2s ease, border-color 0.2s ease;
+}
+
+.ex-checkbox:checked {
+    background-color: #007bff;
+    border-color: #007bff;
+}
+
+.ex-checkbox:checked::after {
+    content: '';
+    position: absolute;
+    left: 4px;
+    top: 2px;
+    width: 6px;
+    height: 10px;
+    border: solid #fff;
+    border-width: 0 2px 2px 0;
+    transform: rotate(45deg);
+}
+
+/* 标签样式 */
+.ex-checkbox-label {
+    font-size: 14px;
+    color: #333;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+}
+
+
+.ex-line{
+    width: 100%;
+    height: 0;
+    border-top: 1px solid #eee;
+}
+
+/* 弹窗 */
+.ex-dialog{
+    background-color: rgba(255,255,255);
+	max-height: 60vh;
+	display: none;
+	z-index: 10001;
+	position: fixed;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	border-radius: 4px;
+    padding: 20px;
+	overflow: auto;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, .12), 0 0 6px rgba(0, 0, 0, .04);
+}
+
+.ex-dialog::-webkit-scrollbar {
+    width: 8px;
+}
+
+.ex-dialog::-webkit-scrollbar-thumb {
+    border-radius: 8px;
+    background: rgba(0, 0, 0, 0.2) !important;
+}
+
+#root::-webkit-scrollbar-thumb {
+    border-radius: 8px;
+    background: rgba(0, 0, 0, 0.2) !important;
+}
+
+.noticejs-top{top:0;width:100%!important}.noticejs-top .item{border-radius:0!important;margin:0!important}.noticejs-topRight{top:10px;right:10px}.noticejs-topLeft{top:10px;left:10px}.noticejs-topCenter{top:10px;left:50%;transform:translate(-50%)}.noticejs-middleLeft,.noticejs-middleRight{right:10px;top:50%;transform:translateY(-50%)}.noticejs-middleLeft{left:10px}.noticejs-middleCenter{top:50%;left:50%;transform:translate(-50%,-50%)}.noticejs-bottom{bottom:0;width:100%!important}.noticejs-bottom .item{border-radius:0!important;margin:0!important}.noticejs-bottomRight{bottom:10px;right:10px}.noticejs-bottomLeft{bottom:10px;left:10px}.noticejs-bottomCenter{bottom:10px;left:50%;transform:translate(-50%)}.noticejs{font-family:Helvetica Neue,Helvetica,Arial,sans-serif}.noticejs .item{margin:0 0 10px;border-radius:3px;overflow:hidden}.noticejs .item .close{float:right;font-size:18px;font-weight:700;line-height:1;color:#fff;text-shadow:0 1px 0 #fff;opacity:1;margin-right:7px}.noticejs .item .close:hover{opacity:.5;color:#000}.noticejs .item a{color:#fff;border-bottom:1px dashed #fff}.noticejs .item a,.noticejs .item a:hover{text-decoration:none}.noticejs .success{background-color:#64ce83}.noticejs .success .noticejs-heading{background-color:#3da95c;color:#fff;padding:10px}.noticejs .success .noticejs-body{color:#fff;padding:10px}.noticejs .success .noticejs-body:hover{visibility:visible!important}.noticejs .success .noticejs-content{visibility:visible}.noticejs .info{background-color:#3ea2ff}.noticejs .info .noticejs-heading{background-color:#067cea;color:#fff;padding:10px}.noticejs .info .noticejs-body{color:#fff;padding:10px}.noticejs .info .noticejs-body:hover{visibility:visible!important}.noticejs .info .noticejs-content{visibility:visible}.noticejs .warning{background-color:#ff7f48}.noticejs .warning .noticejs-heading{background-color:#f44e06;color:#fff;padding:10px}.noticejs .warning .noticejs-body{color:#fff;padding:10px}.noticejs .warning .noticejs-body:hover{visibility:visible!important}.noticejs .warning .noticejs-content{visibility:visible}.noticejs .error{background-color:#e74c3c}.noticejs .error .noticejs-heading{background-color:#ba2c1d;color:#fff;padding:10px}.noticejs .error .noticejs-body{color:#fff;padding:10px}.noticejs .error .noticejs-body:hover{visibility:visible!important}.noticejs .error .noticejs-content{visibility:visible}.noticejs .progressbar{width:100%}.noticejs .progressbar .bar{width:1%;height:30px;background-color:#4caf50}.noticejs .success .noticejs-progressbar{width:100%;background-color:#64ce83;margin-top:-1px}.noticejs .success .noticejs-progressbar .noticejs-bar{width:100%;height:5px;background:#3da95c}.noticejs .info .noticejs-progressbar{width:100%;background-color:#3ea2ff;margin-top:-1px}.noticejs .info .noticejs-progressbar .noticejs-bar{width:100%;height:5px;background:#067cea}.noticejs .warning .noticejs-progressbar{width:100%;background-color:#ff7f48;margin-top:-1px}.noticejs .warning .noticejs-progressbar .noticejs-bar{width:100%;height:5px;background:#f44e06}.noticejs .error .noticejs-progressbar{width:100%;background-color:#e74c3c;margin-top:-1px}.noticejs .error .noticejs-progressbar .noticejs-bar{width:100%;height:5px;background:#ba2c1d}@keyframes noticejs-fadeOut{0%{opacity:1}to{opacity:0}}.noticejs-fadeOut{animation-name:noticejs-fadeOut}@keyframes noticejs-modal-in{to{opacity:.3}}@keyframes noticejs-modal-out{to{opacity:0}}.noticejs-rtl .noticejs-heading{direction:rtl}.noticejs-rtl .close{float:left!important;margin-left:7px;margin-right:0!important}.noticejs-rtl .noticejs-content{direction:rtl}.noticejs{position:fixed;z-index:10050}.noticejs ::-webkit-scrollbar{width:8px}.noticejs ::-webkit-scrollbar-button{width:8px;height:5px}.noticejs ::-webkit-scrollbar-track{border-radius:10px}.noticejs ::-webkit-scrollbar-thumb{background:hsla(0,0%,100%,.5);border-radius:10px}.noticejs ::-webkit-scrollbar-thumb:hover{background:#fff}.noticejs-modal{position:fixed;width:100%;height:100%;background-color:#000;z-index:10000;opacity:.3;left:0;top:0}.noticejs-modal-open{opacity:0;animation:noticejs-modal-in .3s ease-out}.noticejs-modal-close{animation:noticejs-modal-out .3s ease-out;animation-fill-mode:forwards}/**
  * PostbirdAlertBox.js
  * -    原生javascript弹框插件
  * Author:  Postbird - http://www.ptbird.cn
@@ -1586,7 +1736,7 @@ function initStyles() {
     position: fixed;
     top: 0;
     left: 0;
-    z-index: 9999;
+    z-index: 10002;
     background-color: rgba(0, 0, 0, 0.2);
     display: block;
     -webkit-user-select: none;
@@ -2157,35 +2307,68 @@ function getTextareaPosition(element) {
   return cursorPos;
 }
 
+
+let panels = [
+  {
+    name: "弹幕发送小助手",
+    className: "bloop",
+  },
+  {
+    name: "扩展功能",
+    className: "extool",
+  },
+  {
+    name: "直播间工具",
+    className: "livetool",
+  },
+  {
+    name: "全站抽奖信息",
+    className: "exlottery"
+  },
+];
 function showExRightPanel(name) {
-  let panels = [
-    {
-      name: "弹幕发送小助手",
-      className: "bloop",
-    },
-    {
-      name: "扩展功能",
-      className: "extool",
-    },
-    {
-      name: "直播间工具",
-      className: "livetool",
-    },
-    {
-      name: "全站抽奖信息",
-      className: "exlottery",
-    },
-  ];
   for (let i = 0; i < panels.length; i++) {
     let item = panels[i];
     let dom = document.getElementsByClassName(item.className)[0];
+    let mask = document.getElementsByClassName("ex-mask")[0];
     if (dom) {
       if (name === item.name) {
         dom.style.display = dom.style.display !== "block" ? "block" : "none";
+        mask.style.display = dom.style.display !== "block" ? "none" : "block";
       } else {
         dom.style.display = "none";
       }
     }
+  }
+}
+
+maskLayer();
+function maskLayer() {
+  let mask = document.createElement("div");
+  mask.style.position = "fixed";
+  mask.style.top = "0";
+  mask.style.left = "0";
+  mask.style.width = "100%";
+  mask.style.height = "100%";
+  mask.style.backgroundColor = "rgba(0,0,0,0.5)";
+  mask.style.zIndex = "10000";
+  mask.style.display = "none";
+  mask.className = "ex-mask";
+  mask.style.backdropFilter = "blur(3px)";
+  document.body.appendChild(mask);
+
+  mask.onclick = function (event) {
+    if (event.target.className != "ex-mask") {
+      return;
+    }
+    for (let i = 0; i < panels.length; i++) {
+      let item = panels[i];
+      let dom = document.getElementsByClassName(item.className)[0];
+      if (dom) {
+        dom.style.display = "none";
+      }
+    }
+    mask.style.display = "none";
   }
 }
 
@@ -3408,23 +3591,23 @@ function initPkg_BarrageLoop() {
 function BarrageLoop_insertModal() {
 	let html = "";
 	let a = document.createElement("div");
-	a.className = "bloop";
-	html += '<div style="display:inline-block"><label>弹幕：</label></div>';
+	a.className = "bloop ex-dialog";
+	html += '<div class="ex-label"><label>弹幕：</label></div>';
+	html += '<textarea placeholder="一行一个，开启舔狗模式后此处不需要输入" id="bloop__textarea" rows="5" cols="50" class="ex-textarea"></textarea>';
+	html += '<div><label class="ex-label">速度(ms)：</label><input class="ex-input" id="bloop__text_speed1" type="text" style="width:50px;text-align:center;" value="2000" />~<input class="ex-input" id="bloop__text_speed2" type="text" style="width:50px;text-align:center;" value="3000" /></div>';
+	html += '<div><label class="ex-label">限时(min)：</label><input class="ex-input" id="bloop__text_stoptime" type="text" style="width:50px;text-align:center;" value="1" /></div>';
+	html += '<div class="ex-checkbox-container"><label class="ex-checkbox-label" style="margin-right: 20px;"><input class="ex-checkbox" id="bloop__checkbox_changeColor" type="checkbox" name="checkbox_changeColor" checked>自动变色</label><label class="ex-checkbox-label"><input class="ex-checkbox" id="bloop__checkbox_tiangou" type="checkbox">舔狗模式</label></div>';
+	html += '<div class="bloop__switch ex-checkbox-container" style="justify-content: flex-end;"><label class="ex-checkbox-label"><input class="ex-checkbox"id="bloop__checkbox_startSend" type="checkbox">开始发送</label></div>';
 	html += `
-	<span style="float:right;margin-right:15px;">
-		<select id="bloop__select"></select>
-		<input style="width:40px;margin-left:10px;" type="button" id="bloop__save" value="保存"/>
-		<input style="width:40px;margin-left:10px;" type="button" id="bloop__delete" value="删除"/>
-	</span>
+	<div class="ex-line"></div>
+	<div style="margin-top:10px;">
+		<select id="bloop__select" class="ex-select"></select>
+		<input class="ex-btn" style="margin-left:10px;" type="button" id="bloop__save" value="保存"/>
+		<input class="ex-btn ex-btn-error" style="margin-left:10px;" type="button" id="bloop__delete" value="删除"/>
+	</div>
 	`;
-	html += '<textarea placeholder="一行一个，开启舔狗模式后此处不需要输入" id="bloop__textarea" rows="5" cols="50"></textarea>';
-	html += '<div><label>速度(ms)：</label><input id="bloop__text_speed1" type="text" style="width:50px;text-align:center;" value="2000" />~<input id="bloop__text_speed2" type="text" style="width:50px;text-align:center;" value="3000" /></div>';
-	html += '<div><label>限时(min)：</label><input id="bloop__text_stoptime" type="text" style="width:50px;text-align:center;" value="1" /></div>';
-	html += '<div><label><input id="bloop__checkbox_changeColor" type="checkbox" name="checkbox_changeColor" checked>自动变色</label><label><input id="bloop__checkbox_tiangou" type="checkbox">舔狗模式</label></div>';
-	html += '<div class="bloop__switch"><label><input id="bloop__checkbox_startSend" type="checkbox">开始发送</label></div>';
-	
 	a.innerHTML = html;
-	let b = document.getElementsByClassName("layout-Player-chat")[0];
+	let b = document.getElementsByClassName("ex-mask")[0];
 	b.insertBefore(a, b.childNodes[0]);
 }
 function BarrageLoop_insertIcon() {
@@ -5528,14 +5711,14 @@ function initPkg_ExpandTool() {
 
 function initPkg_ExpandTool_Module() {
 	// initPkg_ExpandTool_RedPacket_Motorcade();
-	initPkg_ExpandTool_Treasure();
-	initPkg_ExpandTool_Gold();
-	initPkg_ExpandTool_RedPacket_Room();
-	initPkg_ExpandTool_AutoFish();
 	initPkg_ExpandTool_ClearBag();
     initPkg_ExpandTool_SendGift();
     // initPkg_ExpandTool_BarrageSize();
+	initPkg_ExpandTool_Treasure();
 	initPkg_ExpandTool_TabSwitch();
+	initPkg_ExpandTool_Gold();
+	initPkg_ExpandTool_RedPacket_Room();
+	initPkg_ExpandTool_AutoFish();
 	initPkg_ExpandTool_P2P();
 	initPkg_ExpandTool_FullScreen();
 }
@@ -5548,9 +5731,9 @@ function initPkg_ExpandTool_Dom() {
 }
 function ExpandTool_insertModal() {
 	let a = document.createElement("div");
-	a.className = "extool";
+	a.className = "extool ex-dialog";
 	
-	let b = document.getElementsByClassName("layout-Player-chat")[0];
+	let b = document.getElementsByClassName("ex-mask")[0];
 	b.insertBefore(a, b.childNodes[0]);
 }
 function ExpandTool_insertIcon() {
@@ -5587,7 +5770,7 @@ function initPkg_ExpandTool_AutoFish() {
 
 function ExpandTool_AutoFish_insertDom() {
   let html = "";
-  html += '<label><input style="margin-top:5px;" id="extool__autofish_start" type="checkbox">自动钓鱼</label>';
+  html += '<label class="ex-label"><input class="ex-checkbox" id="extool__autofish_start" type="checkbox">自动钓鱼</label>';
 
   let a = document.createElement("div");
   a.className = "extool__autofish";
@@ -5858,10 +6041,10 @@ function initPkg_ExpandTool_ClearBag() {
 
 function ExpandTool_ClearBag_insertDom() {
     let html = "";
-    html += '<label>背包送礼：[速度并不快,间隔>0.1s]</label><a id="extool__clearbag_showid" style="margin-left:10px;color:blue;" href="javascript:void(0);">礼物id示例</a><br />';
-    html += '<label>礼物ID：</label><input id="extool__clearbag_id" type="text" style="width:50px;text-align:center;margin-right:10px;" value="268" />';
-    html += '<label>数量：</label><input id="extool__clearbag_cnt" type="text" style="width:30px;text-align:center;" value="1" />';
-    html += '<input style="width:40px;margin-left:10px;" type="button" id="extool__clearbag_sendbtn" value="送出" />';
+    html += '<label class="ex-label">背包送礼：[速度并不快,间隔>0.1s]</label><a id="extool__clearbag_showid" style="color:blue;" href="javascript:void(0);">礼物id示例</a><br />';
+    html += '<label class="ex-label"><p style="width:5em">礼物ID：</p><input class="ex-input" id="extool__clearbag_id" type="text" value="268" /></label>';
+    html += '<label class="ex-label"><p style="width:5em">数量：</p><input class="ex-input" id="extool__clearbag_cnt" type="text"  value="1" /></label>';
+    html += '<input class="ex-btn" type="button" id="extool__clearbag_sendbtn" value="送出" />';
     // html += '<input style="width:60px;margin-left:10px;" type="button" id="extool__clearbag_clearbtn" value="清空背包" />';
     let a = document.createElement("div");
     a.className = "extool__clearbag";
@@ -5946,7 +6129,7 @@ function initPkg_ExpandTool_FullScreen() {
 function ExpandTool_FullScreen_insertDom() {
     let a = document.createElement("span");
     // a.className = "extool__bsize";
-    a.innerHTML = '<label title="自动网页全屏"><input style="margin-top:5px;" id="extool__fullscreen" type="checkbox">自动网页全屏</label><label title="自动最高画质"><input id="extool__highestvideoquality" type="checkbox">自动最高画质</label>';
+    a.innerHTML = '<label class="ex-label" title="自动网页全屏"><input class="ex-checkbox" id="extool__fullscreen" type="checkbox">自动网页全屏</label><label class="ex-label" title="自动最高画质"><input class="ex-checkbox" id="extool__highestvideoquality" type="checkbox">自动最高画质</label>';
     
     let b = document.getElementsByClassName("extool")[0];
     b.insertBefore(a, b.childNodes[0]);
@@ -6071,8 +6254,8 @@ function initPkg_ExpandTool_Gold() {
 
 function ExpandTool_Gold_insertDom() {
     let html = "";
-    html += '<label><input style="margin-top:5px;" id="extool__gold_start" type="checkbox">幻神模式</label>';
-    html += '<label><input style="margin-top:5px;" id="extool__goldGift_start" type="checkbox">荧光棒变超火</label>';
+    html += '<label class="ex-label"><input class="ex-checkbox" id="extool__gold_start" type="checkbox">幻神模式</label>';
+    html += '<label class="ex-label"><input class="ex-checkbox" id="extool__goldGift_start" type="checkbox">荧光棒变超火</label>';
     
     let a = document.createElement("div");
     a.className = "extool__gold";
@@ -6358,7 +6541,7 @@ function initPkg_ExpandTool_P2P() {
 function ExpandTool_P2P_insertDom() {
     let a = document.createElement("span");
     // a.className = "extool__bsize";
-    a.innerHTML = '<label title="阻止p2p在后台占用网速，开启后直播画面会在刚进入页面时卡一下"><input style="margin-top:5px;" id="extool__p2p" type="checkbox">阻止p2p上传</label>';
+    a.innerHTML = '<label class="ex-label" title="阻止p2p在后台占用网速，开启后直播画面会在刚进入页面时卡一下"><input class="ex-checkbox" id="extool__p2p" type="checkbox">阻止p2p上传</label>';
     
     let b = document.getElementsByClassName("extool")[0];
     b.insertBefore(a, b.childNodes[0]);
@@ -6432,7 +6615,7 @@ function initPkg_ExpandTool_RedPacket_Room() {
 
 function ExpandTool_RedPacket_Room_insertDom() {
     let html = "";
-    html += '<label><input style="margin-top:5px;" id="extool__redpacekt_room_start" type="checkbox">自动抢礼物红包</label>';
+    html += '<label class="ex-label"><input class="ex-checkbox" id="extool__redpacekt_room_start" type="checkbox">自动抢礼物红包</label>';
     
     let a = document.createElement("div");
     a.className = "extool__redpacket_room";
@@ -6561,11 +6744,12 @@ function initPkg_ExpandTool_SendGift() {
 
 function ExpandTool_SendGift_insertDom() {
     let html = "";
-    html += '<label>送礼：[用于打榜,例如送出999个飞机]</label><a style="margin-left:10px;color:blue;" href="http://open.douyucdn.cn/api/RoomApi/room/' + rid + '" target="_blank">礼物id示例</a><br />';
-    html += '<label>礼物ID：</label><input id="extool__sendgift_id" type="text" style="width:50px;text-align:center;margin-right:10px;" value="20000" />';
-    html += '<label>数量：</label><input id="extool__sendgift_cnt" type="text" style="width:30px;text-align:center;margin-right:10px;" value="1" />';
-    html += '<label>间隔ms：</label><input id="extool__sendgift_delay" type="text" style="width:30px;text-align:center;" value="0" />';
-    html += '<input style="width:40px;margin-left:10px;" type="button" id="extool__sendgift_btn" value="送出" />';
+    html += '<label class="ex-label">送礼：[用于打榜,例如送出999个飞机]</label><a style="color:blue;" href="http://open.douyucdn.cn/api/RoomApi/room/' + rid + '" target="_blank">礼物id示例</a><br />';
+    html += '<label class="ex-label"><p style="width:5em">礼物ID：</p><input class="ex-input" id="extool__sendgift_id" type="text" value="20000" /></label>';
+    html += '<label class="ex-label"><p style="width:5em">数量：</p><input class="ex-input" id="extool__sendgift_cnt" type="text"  value="1" /></label>';
+    html += '<label class="ex-label"><p style="width:5em">间隔ms：</p><input class="ex-input" id="extool__sendgift_delay" type="text" value="0" /></label>';
+    html += '<input class="ex-btn" type="button" id="extool__sendgift_btn" value="送出" />';
+    html += '<div class="ex-line" style="margin:10px 0"></div>';
     let a = document.createElement("div");
     a.className = "extool__sendgift";
     a.innerHTML = html;
@@ -6634,7 +6818,7 @@ function initPkg_ExpandTool_TabSwitch() {
 function ExpandTool_TabSwitch_insertDom() {
   let a = document.createElement("span");
   // a.className = "extool__bsize";
-  a.innerHTML = '<label title="阻止页面后台挂机检测"><input style="margin-top:5px;" id="extool__tabSwitch" type="checkbox">页面防挂机</label>';
+  a.innerHTML = '<label class="ex-label" title="阻止页面后台挂机检测"><input class="ex-checkbox" id="extool__tabSwitch" type="checkbox">页面防挂机</label><div class="ex-line" style="margin-bottom:10px"></div>';
   
   let b = document.getElementsByClassName("extool")[0];
   b.insertBefore(a, b.childNodes[0]);
@@ -6694,10 +6878,11 @@ function initPkg_ExpandTool_Treasure() {
 
 function ExpandTool_Treasure_insertDom() {
     let html = "";
-    html += '<label><input style="margin-top:5px" id="extool__treasure_start" type="checkbox">自动抢宝箱</label>';
-    html += '<label style="margin-left:10px;">延迟(抢得过快请调高)：</label><input id="extool__treasure_delay" type="text" style="width:50px;text-align:center;" value="3200" />ms'
-    html += '<div><a href="https://www.rrocr.com/" target="_blank" style="color:blue" title="点击进入rrocr官网，将账号用户中心的appkey填入右边然后开启功能即可">rrocr秘钥：</a><input id="extool__treasure_skey" type="text" style="width:200px;text-align:center;" placeholder="填写则会自动完成宝箱领取验证"></div>';
-    
+    html += '<label class="ex-label"><input class="ex-checkbox" id="extool__treasure_start" type="checkbox">自动抢宝箱</label>';
+    html += '<label class="ex-label ex-label-inline">延迟(抢得过快请调高)：</label><input class="ex-input" id="extool__treasure_delay" type="text" style="width:50px;text-align:center;" value="3200" />ms'
+    html += '<div style="margin-top:10px"><label class="ex-label ex-label-inline">rrocr秘钥：</label><input class="ex-input" id="extool__treasure_skey" type="text" style="width:200px;text-align:center;" placeholder="填写则会自动完成宝箱领取验证"></div>';
+    html += '<div><a href="https://www.rrocr.com/" target="_blank" style="color:blue" title="点击进入rrocr官网，将账号用户中心的appkey填入右边然后开启功能即可">点击进入rrocr官网，将账号用户中心的appkey填入右边然后开启功能即可</a></div>';
+    html += '<div class="ex-line" style="margin:10px 0"></div>';
     let a = document.createElement("div");
     a.className = "extool__treasure";
     a.innerHTML = html;
@@ -7447,8 +7632,8 @@ function LiveTool_Enter_insertDom() {
     let cell = `
         <div class='livetool__cell_title'>
             <span id='enter__title'>进场欢迎</span>
-            <span id='enter__export'>导出</span>
-            <span id='enter__import'>导入</span>
+            <button class="ex-btn" id='enter__export'>导出</button>
+            <button class="ex-btn" id='enter__import'>导入</button>
         </div>
         <div class='livetool__cell_option'>
             <div class="onoffswitch livetool__cell_switch">
@@ -7459,13 +7644,14 @@ function LiveTool_Enter_insertDom() {
     `;
     let panel = `
         <div class='enter__panel'>
-            <select id='enter__select'>
+            <select id='enter__select' class="ex-select">
             </select>
-            <input style="width:40px;margin-left:10px;" type="button" id="enter__add" value="添加"/>
-            <input style="width:40px;margin-left:10px;" type="button" id="enter__del" value="删除"/>
+            <input class="ex-btn ex-btn-success" style="margin-left:10px;" type="button" id="enter__add" value="添加"/>
+            <input class="ex-btn ex-btn-error" style="margin-left:10px;" type="button" id="enter__del" value="删除"/>
+            <div class="ex-line" style="margin:5px 0"></div>
             <div class="enter__option">
-                <label>等级≥<input id="enter__level" type="text" value="1"/></label>
-                <label>当前欢迎词：<input id="enter__word" type="text" placeholder="欢迎<id>光临直播间"/></label>
+                <label class="ex-label"><div style="width:7em">等级≥：</div><input class="ex-input" id="enter__level" type="text" value="1"/></label>
+                <label class="ex-label"><div style="width:7em">当前欢迎词：</div><input class="ex-input" id="enter__word" type="text" placeholder="欢迎<id>光临直播间"/></label>
             </div>
         </div>
     `;
@@ -7717,8 +7903,8 @@ function LiveTool_Gift_insertDom() {
     let cell = `
         <div class='livetool__cell_title'>
             <span id='gift__title'>自动谢礼物</span>
-            <span id='gift__export'>导出</span>
-            <span id='gift__import'>导入</span>
+            <button class="ex-btn" id='gift__export'>导出</button>
+            <button class="ex-btn" id='gift__import'>导入</button>
         </div>
         <div class='livetool__cell_option'>
             <div class="onoffswitch livetool__cell_switch">
@@ -7729,14 +7915,16 @@ function LiveTool_Gift_insertDom() {
     `;
     let panel = `
         <div class='gift__panel'>
-            <select id='gift__select'>
+            <select id='gift__select' class="ex-select">
             </select>
-            <input style="width:40px;margin-left:10px;" type="button" id="gift__add" value="添加"/>
-            <input style="width:40px;margin-left:10px;" type="button" id="gift__del" value="删除"/>
-            <input style="width:64px;margin-left:10px;" type="button" id="gift__template" value="生成模板"/>
+            <input class="ex-btn ex-btn-success" style="margin-left:10px;" type="button" id="gift__add" value="添加"/>
+            <input class="ex-btn ex-btn-error" style="margin-left:10px;" type="button" id="gift__del" value="删除"/>
+            <input class="ex-btn" style="margin-left:10px;" type="button" id="gift__template" value="生成模板"/>
+            <div class="ex-line" style="margin:5px 0"></div>
             <div class="gift__option">
-                <label><a id="reply__show_gid" style="color:blue;" href="javascript:void(0);">礼物id：</a><input id="gift__giftId" type="text"/></label>
-                <label>回复：<input id="gift__reply" type="text" placeholder="<id>=用户名 <cnt>个数"/></label>
+                <label class="ex-label"><div style="width:6em">礼物id：</div><input class="ex-input" id="gift__giftId" type="text"/></label>
+                <label class="ex-label"><div style="width:6em">回复：</div><input class="ex-input" id="gift__reply" type="text" placeholder="<id>=用户名 <cnt>个数"/></label>
+                <a id="reply__show_gid" style="color:blue;" href="javascript:void(0);">点击查看礼物ID</a>
             </div>
         </div>
     `;
@@ -8085,9 +8273,9 @@ function initPkg_LiveTool_Module() {
 }
 function LiveTool_insertModal() {
 	let a = document.createElement("div");
-	a.className = "livetool";
+	a.className = "livetool ex-dialog";
 	
-	let b = document.getElementsByClassName("layout-Player-chat")[0];
+	let b = document.getElementsByClassName("ex-mask")[0];
 	b.insertBefore(a, b.childNodes[0]);
 }
 function LiveTool_insertIcon() {
@@ -8158,9 +8346,9 @@ function LiveTool_Mute_insertDom() {
     let cell = `
         <div class='livetool__cell_title'>
             <span id='mute__title'>关键词禁言</span>
-            <span id='mute__idlist'>名单</span>
-            <span id='mute__export'>导出</span>
-            <span id='mute__import'>导入</span>
+            <button class="ex-btn" id='mute__idlist'>名单</button>
+            <button class="ex-btn" id='mute__export'>导出</button>
+            <button class="ex-btn" id='mute__import'>导入</button>
         </div>
         <div class='livetool__cell_option'>
             <div class="onoffswitch livetool__cell_switch">
@@ -8171,16 +8359,17 @@ function LiveTool_Mute_insertDom() {
     `;
     let panel = `
         <div class='mute__panel'>
-            <select id='mute__select'>
+            <select id='mute__select' class="ex-select">
             </select>
-            <input style="width:40px;margin-left:10px;" type="button" id="mute__add" value="添加"/>
-            <input style="width:40px;margin-left:10px;" type="button" id="mute__del" value="删除"/>
-            <input style="width:65px;margin-left:10px;" type="button" id="mute__delmute" value="一键解禁"/>
+            <input class="ex-btn ex-btn-success" style="margin-left:10px;" type="button" id="mute__add" value="添加"/>
+            <input class="ex-btn ex-btn-error" style="margin-left:10px;" type="button" id="mute__del" value="删除"/>
+            <input class="ex-btn" style="margin-left:10px;" type="button" id="mute__delmute" value="一键解禁"/>
+            <div class="ex-line" style="margin-top:5px"></div>
             <div class="mute__option">
-                <label>词：<input id="mute__word" type="text" placeholder="re(式)=结果"/></label>
-                <label>次数：<input id="mute__count" type="number" value="5"/></label>
-                <label>时间：
-                    <select id='mute__time'>
+                <label class="ex-label"><div style="width:4em">词：</div><input class="ex-input" id="mute__word" type="text" placeholder="re(式)=结果"/></label>
+                <label class="ex-label"><div style="width:4em">次数：</div><input class="ex-input" id="mute__count" type="number" value="5"/></label>
+                <label class="ex-label"><div style="width:4em">时间：</div>
+                    <select id='mute__time' class="ex-select">
                         <option value="1">1分钟</option>
                         <option value="10">10分钟</option>
                         <option value="30">30分钟</option>
@@ -8632,8 +8821,8 @@ function LiveTool_Reply_insertDom() {
     let cell = `
         <div class='livetool__cell_title'>
             <span id='reply__title'>关键词回复</span>
-            <span id='reply__export'>导出</span>
-            <span id='reply__import'>导入</span>
+            <button class="ex-btn" id='reply__export' sty>导出</button>
+            <button class="ex-btn" id='reply__import'>导入</button>
         </div>
         <div class='livetool__cell_option'>
             <div class="onoffswitch livetool__cell_switch">
@@ -8644,14 +8833,15 @@ function LiveTool_Reply_insertDom() {
     `;
     let panel = `
         <div class='reply__panel'>
-            <select id='reply__select'>
+            <select id='reply__select' class="ex-select">
             </select>
-            <input style="width:40px;margin-left:10px;" type="button" id="reply__add" value="添加"/>
-            <input style="width:40px;margin-left:10px;" type="button" id="reply__del" value="删除"/>
-            <label style="margin-left:5px">CD：<input id="reply__time" type="text" placeholder="秒" /></label>
+            <input style="margin-left:10px;" class="ex-btn ex-btn-success" type="button" id="reply__add" value="添加"/>
+            <input style="margin-left:10px;" class="ex-btn ex-btn-error" type="button" id="reply__del" value="删除"/>
+            <label class="ex-label" style="margin-top: 5px;"><div style="width:4em;">CD：</div><input id="reply__time" class="ex-input" type="text" placeholder="秒" /></label>
+            <div class="ex-line"></div>
             <div class="reply__option">
-                <label>词：<input id="reply__word" type="text" placeholder="re(式)=结果"/></label>
-                <label>回复：<input id="reply__reply" type="text" placeholder="<id>用户名 <txt>弹幕"/></label>
+                <label class="ex-label"><div style="width:4em;">词：</div><input class="ex-input" id="reply__word" type="text" placeholder="re(式)=结果"/></label>
+                <label class="ex-label"><div style="width:4em;">回复：</div><input class="ex-input" id="reply__reply" type="text" placeholder="<id>用户名 <txt>弹幕"/></label>
             </div>
         </div>
     `;
@@ -9128,10 +9318,11 @@ function LiveTool_Vote_insertDom() {
     a.className = "livetool__cell";
     let cell = `
         <div class='livetool__cell_title'>
-            <span id='vote__title'>弹幕投票</span><span id='vote__show-result'>面板</span>
+            <span id='vote__title'>弹幕投票</span>
         </div>
+        <label style="margin-right:10px;" class="ex-label"><input class="ex-checkbox" id="vote__repeat" class="ex-checkbox" type="checkbox">重复投票</label>
+        <button class="ex-btn" id='vote__show-result'>面板</button>
         <div class='livetool__cell_option'>
-            <label style="margin-right:10px;"><input id="vote__repeat" type="checkbox">重复投票</label>
             <div class="onoffswitch livetool__cell_switch">
                 <input type="checkbox" name="onoffswitch" class="onoffswitch-checkbox" id="vote__switch" tabindex="0" checked>
                 <label class="onoffswitch-label" for="vote__switch"></label>
@@ -9140,14 +9331,15 @@ function LiveTool_Vote_insertDom() {
     `;
     let panel = `
         <div class='vote__panel'>
-            <select id='vote__select'>
+            <select id='vote__select' class="ex-select">
             </select>
-            <input style="width:40px;margin-left:10px;" type="button" id="vote__add" value="添加"/>
-            <input style="width:40px;margin-left:10px;" type="button" id="vote__del" value="删除"/>
-            <label style="margin-left:5px">限时：<input id="vote__time" type="text" placeholder="秒" /></label>
+            <input class="ex-btn ex-btn-success"style="margin-left:10px;" type="button" id="vote__add" value="添加"/>
+            <input class="ex-btn ex-btn-error"style="margin-left:10px;" type="button" id="vote__del" value="删除"/>
+            <label class="ex-label" style="margin-top:5px">限时：<input class="ex-input" id="vote__time" type="text" placeholder="秒" /></label>
+            <div class="ex-line" style="margin:5px 0"></div>
             <div class="vote__option">
-                <label>主题：<input id="vote__theme" type="text"/></label>
-                <label>选项：<input id="vote__options" type="text" placeholder="用空格隔开每个选项"/></label>
+                <label class="ex-label">主题：<input class="ex-input" id="vote__theme" type="text"/></label>
+                <label class="ex-label">选项：<input class="ex-input" id="vote__options" type="text" placeholder="用空格隔开每个选项"/></label>
             </div>
         </div>
     `;
@@ -9437,20 +9629,20 @@ function Lottery_insertIcon() {
 
 function Lottery_insertModal() {
 	let a = document.createElement("div");
-	a.className = "exlottery";
+	a.className = "exlottery ex-dialog";
 	a.innerHTML = `
         <div class="lottery__func">
             <div id="lottery-refresh">
                 <svg t="1636115506027" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="2454" width="16" height="16"><path d="M927.999436 531.028522a31.998984 31.998984 0 0 0-31.998984 31.998984c0 51.852948-10.147341 102.138098-30.163865 149.461048a385.47252 385.47252 0 0 1-204.377345 204.377345c-47.32295 20.016524-97.6081 30.163865-149.461048 30.163865s-102.138098-10.147341-149.461048-30.163865a385.47252 385.47252 0 0 1-204.377345-204.377345c-20.016524-47.32295-30.163865-97.6081-30.163865-149.461048s10.147341-102.138098 30.163865-149.461048a385.47252 385.47252 0 0 1 204.377345-204.377345c47.32295-20.016524 97.6081-30.163865 149.461048-30.163865a387.379888 387.379888 0 0 1 59.193424 4.533611l-56.538282 22.035878A31.998984 31.998984 0 1 0 537.892156 265.232491l137.041483-53.402685a31.998984 31.998984 0 0 0 18.195855-41.434674L639.723197 33.357261a31.998984 31.998984 0 1 0-59.630529 23.23882l26.695923 68.502679a449.969005 449.969005 0 0 0-94.786785-10.060642c-60.465003 0-119.138236 11.8488-174.390489 35.217667a449.214005 449.214005 0 0 0-238.388457 238.388457c-23.361643 55.252253-35.22128 113.925486-35.22128 174.390489s11.8488 119.138236 35.217668 174.390489a449.214005 449.214005 0 0 0 238.388457 238.388457c55.252253 23.368867 113.925486 35.217667 174.390489 35.217667s119.138236-11.8488 174.390489-35.217667A449.210393 449.210393 0 0 0 924.784365 737.42522c23.368867-55.270316 35.217667-113.925486 35.217667-174.390489a31.998984 31.998984 0 0 0-32.002596-32.006209z" fill="" p-id="2455"></path></svg>
             </div>
             <div class="lottery__notice">
-                <label class="lottery__notice"><input class="lottery__notice" id="lottery-notice" type="checkbox">开启提醒</label>
+                <label class="lottery__notic ex-label"><input class="lottery__notice ex-checkbox" id="lottery-notice" type="checkbox">开启提醒</label>
             </div>
         </div>
         <div class="lottery__nodata">暂无数据</div>
         <div class="lottery__wrap"></div>
     `;
-	let b = document.getElementsByClassName("layout-Player-chat")[0];
+	let b = document.getElementsByClassName("ex-mask")[0];
 	b.insertBefore(a, b.childNodes[0]);
 }
 
@@ -9720,6 +9912,7 @@ function initPkg_Monitor_Func() {
 let totalMonthCost = 0;
 let typeNum = 0;
 let typeCount = 0;
+let typeDetail = [];
 
 let svg_see = `<svg t="1619141525444" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="4635" width="16" height="16" style="/* display: inline-block; */"><path d="M1009.592 531.212C863.184 730.624 696.96 832 512 832c-184.96 0-351.184-101.376-497.592-300.788C10.384 525.864 8 519.212 8 512s2.384-13.864 6.408-19.212C160.816 293.376 327.04 192 512 192c184.96 0 351.184 101.376 497.592 300.788 4.024 5.348 6.408 12 6.408 19.212s-2.384 13.864-6.408 19.212zM512 768c156.864 0 300.54-84.332 432.012-256C812.54 340.332 668.864 256 512 256c-156.864 0-300.54 84.332-432.012 256C211.46 683.668 355.136 768 512 768z m0-64c-106.04 0-192-85.96-192-192s85.96-192 192-192 192 85.96 192 192-85.96 192-192 192z m0-64c70.692 0 128-57.308 128-128s-57.308-128-128-128-128 57.308-128 128 57.308 128 128 128z" p-id="4636" fill="#707070"></path></svg>`;
 let svg_unsee = `<svg t="1619143157694" class="icon" viewBox="0 0 1186 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="1733" width="16" height="16"><path d="M591.707784 915.740462A642.870487 642.870487 0 0 1 2.965954 526.459025a39.298888 39.298888 0 0 1 0-28.91805 632.489649 632.489649 0 0 1 584.292899-388.539948h8.897862a630.265183 630.265183 0 0 1 584.292899 388.539948 39.298888 39.298888 0 0 1 0 28.91805 637.680068 637.680068 0 0 1-336.635757 337.377245 646.577929 646.577929 0 0 1-252.106073 51.904192zM77.856287 512.370744a565.755688 565.755688 0 0 0 1026.961505 0 556.116338 556.116338 0 0 0-508.661077-329.220872h-8.897862a556.857827 556.857827 0 0 0-509.402566 329.220872z" p-id="1734" fill="#707070"></path><path d="M590.966296 732.592814a218.739093 218.739093 0 1 1 222.446535-218.739093 218.739093 218.739093 0 0 1-222.446535 218.739093z m0-362.587852a144.590248 144.590248 0 1 0 148.29769 143.848759 148.29769 148.29769 0 0 0-148.29769-143.848759z" p-id="1735" fill="#707070"></path><path d="M1137.443284 1023.997776a37.074423 37.074423 0 0 1-24.469119-8.897862L20.761677 65.253208A37.074423 37.074423 0 0 1 68.958426 8.900086l1092.212489 946.880752a37.074423 37.074423 0 0 1 0 52.64568 35.591446 35.591446 0 0 1-23.727631 15.571258z" p-id="1736" fill="#707070"></path></svg>`;
@@ -9767,6 +9960,7 @@ function initPkg_MonthCost_Func() {
 			document.getElementsByClassName("monthcost__icon")[0].innerHTML = svg_see;
 			MonthCost_updateCost();
 		}
+		MonthCost_ContentAttrTitle();
 		MonthCost_saveSeeStatus();
 	})
 	
@@ -9799,58 +9993,124 @@ function MonthCost_queryData(url) {
     })
 }
 
+
+async function getMonthCost_gift() {
+	const [start, end] = getMonthTimeRange();
+	const [formattedStart, formattedEnd] = getFormattedMonthTimeRange();
+	let direction = 1;
+	let data = [];
+	let hasMoreData = true;
+	let id = 0;
+
+	while (hasMoreData) {
+		let url = `https://www.douyu.com/wjapi/nc/exchange/consume/giftList?queryType=0&consumeType=0&startDate=${start}&endDate=${end}&tradeStartDate=${formattedStart}&tradeEndDate=${formattedEnd}&direction=${direction}`;
+		if (id !== 0) {
+			url += `&id=${id}`;
+		}
+		
+		let ret = await MonthCost_queryData(url);
+		if (ret.error == 1000) {
+			await new Promise(resolve => setTimeout(resolve, 2000));
+		} else {
+			data = data.concat(ret.data);
+			if (ret.data.length < 20) {
+				hasMoreData = false;
+			} else {
+				id = ret.data[ret.data.length - 1].id;
+			}
+		}
+	}
+
+	data.forEach(item => {
+		totalMonthCost += Math.abs(item.amount)
+	});
+
+	let categorizedData = {};
+	data.forEach(item => {
+		if (!categorizedData[item.consumeTypeDesc]) {
+			categorizedData[item.consumeTypeDesc] = 0;
+		}
+		categorizedData[item.consumeTypeDesc] += Math.abs(item.amount);
+	});
+
+	for (let type in categorizedData) {
+		typeDetail[typeNum] = { 'title': type, 'money': categorizedData[type] };
+		typeNum++;
+	}
+
+}
+
+async function getMonthCost_diamondFans() {
+	let type = 0;
+	let page = 1;
+	let data = [];
+	let hasMoreData = true;
+
+	while (hasMoreData) {
+		let url = `https://www.douyu.com/japi/interactnc/web/dFansbadge/myLogs?type=${type}&page=${page}`;
+		let ret = await MonthCost_queryData(url);
+		ret.data.list.forEach(item => {
+			let consumeDate = new Date(item.consumeTime * 1000);
+			let currentDate = new Date();
+			if (consumeDate.getMonth() === currentDate.getMonth() && consumeDate.getFullYear() === currentDate.getFullYear()) {
+				data.push(item);
+			}
+		});
+		let lastItemDate = new Date(ret.data.list[ret.data.list.length - 1].consumeTime * 1000);
+		if (ret.data.list.length < 20 || lastItemDate.getMonth() !== new Date().getMonth() || lastItemDate.getFullYear() !== new Date().getFullYear()) {
+			hasMoreData = false;
+		} else {
+			page++;
+		}
+	}
+
+	let diamondFansMoney = 0;
+	data.forEach(item => {
+		diamondFansMoney += Math.abs(item.consumeMoney)
+	});
+	if (diamondFansMoney > 0) {
+		typeDetail.push({ 'title': '钻粉充值/续费', 'money': diamondFansMoney });
+	}
+	totalMonthCost += diamondFansMoney;
+}
+
 async function getMonthCost() {
 	totalMonthCost = 0;
-	let ret = await MonthCost_queryData("https://www.douyu.com/member/cp/getYcConsumeTypeList");
-	typeNum = ret.data.length - 1;
-	if (ret.code == 0) {
-		// 跳过第一个 也就是全部，全部不支持查询月数据
-		for (let i = 1; i < ret.data.length; i++) {
-			let item = ret.data[i];
-			calcMonthCost(item.type);
-		}
+	typeDetail = [];
+	await getMonthCost_gift();
+	await getMonthCost_diamondFans();
+	MonthCost_saveData();
+	MonthCost_ContentAttrTitle();
+	document.getElementById("monthcost__money").innerText = String(totalMonthCost / 100);
+}
+
+function MonthCost_ContentAttrTitle(){
+	let a = document.getElementsByClassName("month-cost")[0];
+	if(seeStatus == 1 && typeDetail.length > 0){
+		let titleContent = "数据每日更新，根据个人中心消费数据统计。\n--- ---\n";
+		typeDetail.forEach(detail => {
+			titleContent += `${detail.title}: ${String(detail.money / 100)} 元\n`;
+		});
+		a.title = titleContent;
+	}else{
+		a.title = "数据每日更新，根据个人中心消费数据统计。"
 	}
 }
 
-async function calcMonthCost(type) {
-	// type: 礼物(1) 太空魔盒(3) 福袋礼物(5) 甜蜜告白(6) 音乐学徒(19)
-    let [beginTime, endTime] = getMonthTimeRange();
-    let host = "https://www.douyu.com/member/cp/getYcTransactionList";
+function getFormattedMonthTimeRange() {
+	let now = new Date();
+	let nowMonth = now.getMonth();
+	let nowYear = now.getFullYear();
+	let monthStartDate = new Date(nowYear, nowMonth, 1);
 
-    let lastId = "";
-    let currentNum = 0;
-    let currentPage = 1;
-    let total = 0;
-    let ret;
-
-    do {
-        ret = await MonthCost_queryData(host + "?" + `firstId=&lastId=${lastId}&propType=0&beginTime=${beginTime}&endTime=${endTime}&type=${type}&pageNum=${currentPage}&pageSize=50`)
-        if (ret.code == "0") {
-            let len = ret.data.details.length;
-            if (len == 0) {
-                break;
-            }
-            lastId = ret.data.details[len - 1].id;
-            total = Number(ret.data.total);
-            currentNum += Number(ret.data.pageSize);
-            currentPage++;
-            
-            for (let i = 0; i < ret.data.details.length; i++) {
-                let item = ret.data.details[i];
-				totalMonthCost += Number(item.price) * Number(item.number);
-            }
-            
-        } else {
-            console.log(ret.msg);
-            break;
-        }
-    } while (currentNum < total);
-	typeCount++;
-	if (typeCount >= typeNum) {
-		// 结束
-		MonthCost_saveData();
-		document.getElementById("monthcost__money").innerText = String(totalMonthCost/ 100);
+	let formatDate = (date) => {
+		let year = date.getFullYear();
+		let month = (date.getMonth() + 1).toString().padStart(2, '0');
+		let day = date.getDate().toString().padStart(2, '0');
+		return `${year}-${month}-${day}`;
 	}
+
+	return [formatDate(monthStartDate), formatDate(now)];
 }
 
 function getMonthTimeRange() {
@@ -9864,7 +10124,8 @@ function getMonthTimeRange() {
 function MonthCost_saveData() {
 	let data = {
 		monthCost: totalMonthCost,
-		updateTime: new Date().getTime()
+		updateTime: new Date().getTime(),
+		typeDetail: typeDetail 
 	}
 	let storage = localStorage.getItem("ExSave_MonthCost");
 	if (storage !== null) {
@@ -9889,6 +10150,7 @@ function MonthCost_getData() {
 function MonthCost_updateCost() {
 	let timeDiff = 1;
 	let tmpCost = 0;
+	let tmpTypeDetail = [];
 	// 默认为1，也就是要更新
 	let now = new Date().getDate();
 
@@ -9897,12 +10159,16 @@ function MonthCost_updateCost() {
 		let item = storage[my_uid];
 		timeDiff = Math.abs(now - new Date(item.updateTime).getDate());
 		tmpCost = item.monthCost;
+		tmpTypeDetail = item.typeDetail || [];
+		document.getElementById("monthcost__money").innerText = String(tmpCost / 100);
+		typeDetail = tmpTypeDetail;
+		MonthCost_ContentAttrTitle();
+	}else{
+		document.getElementById("monthcost__money").innerHTML = `<span class="PlayerToolbar-dataLoadding"></span>`;
 	}
 
 	if (timeDiff >= 1) {
 		getMonthCost();
-	} else {
-		document.getElementById("monthcost__money").innerText = String(tmpCost/ 100);
 	}
 }
 let svg_night  = '<svg t="1587640254282" class="icon" viewBox="0 0 1055 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="5670" width="26" height="26"><path d="M388.06497 594.013091c-96.566303-167.253333-39.067152-381.889939 128.217212-478.487273a348.656485 348.656485 0 0 1 256.248242-36.864C623.491879-5.306182 435.417212-11.170909 276.542061 80.616727 37.236364 218.763636-44.776727 524.815515 93.401212 764.152242c138.146909 239.305697 444.198788 321.318788 683.535515 183.140849 158.875152-91.725576 247.870061-257.520485 249.669818-428.559515a348.656485 348.656485 0 0 1-160.085333 203.496727c-167.253333 96.566303-381.889939 39.036121-478.487273-128.217212" p-id="5671" fill="#8a8a8a"></path></svg>';
@@ -11736,6 +12002,7 @@ function setRefreshBarrage() {
     .UserCsgoGameDataMedal,.Barrage-honor,.Barrage-listItem .Barrage-icon,.Barrage-listItem .FansMedal.is-made,.Barrage-listItem .RoomLevel,.Barrage-listItem .Motor,.Barrage-listItem .ChatAchievement,.Barrage-listItem .Barrage-hiIcon,.Barrage-listItem .Medal,.Barrage-listItem .MatchSystemTeamMedal{display:none !important;}
     /*.Barrage-listItem .UserLevel{display:none !important;}*/
     .Barrage-listItem .Baby{display:none !important;}
+    .FansMedalWrap{display:none !important;}
     `;
     StyleHook_set("Ex_Style_RefreshBarrage", cssText);
     current_barrage_status = 1;
@@ -13465,7 +13732,7 @@ function initPkg_SyncJoy_Func() {
 // 版本号
 // 格式 yyyy.MM.dd.**
 // var curVersion = "2020.01.12.01";
-var curVersion = "2024.12.26.01"
+var curVersion = "2025.01.24.01"
 var isNeedUpdate = false
 var lastestVersion = ""
 function initPkg_Update() {
