@@ -177,7 +177,19 @@ function initStyles() {
     padding: 0px 10px;
     right: 20px;
 }.bloop {
-	width: 400px;
+	background-color: rgba(255,255,255,0.9);
+	width: 100%;
+	height: 200px;
+	position: relative;
+	bottom: 200px;
+	display: none;
+	z-index: 1015;
+}
+
+.bloop__switch {
+	position: absolute;
+	right: 0;
+	bottom: 0;
 }
 
 .bloop__mode {
@@ -273,7 +285,13 @@ function initStyles() {
 	right:0px;
 	position:absolute;
 }.extool {
-	width: 600px;
+	background-color: rgba(255,255,255,0.9);
+	width: 100%;
+	height: 200px;
+	position: relative;
+	bottom: 200px;
+	display: none;
+	z-index: 1015;
 }
 
 .extool__switch {
@@ -285,7 +303,7 @@ function initStyles() {
 	margin-bottom: 5px;
 }
 .extool__redpacket_room,.extool__gold,.extool__autofish {
-	display: block;
+	display: inline-block;
 }
 .ex_giftAnimation {
 	width: 100%;
@@ -333,17 +351,33 @@ function initStyles() {
     margin-top: 5px;
 }
 
+#enter__enterId {
+    width: 40px;
+}
+
+#enter__reply {
+    width: 150px;
+}
+
+#enter__word {
+    width: 140px;
+}
+
 #enter__level {
     width: 25px;
     text-align: center;
 }
 
 #enter__export {
-    margin: 0 10px 0 auto ;
+    cursor: pointer;
+    color: royalblue;
+    margin-left: 10px;
 }
 
 #enter__import {
-    margin-right: 10px;
+    cursor: pointer;
+    color: royalblue;
+    margin-left: 5px;
 }.gift__panel {
     width: 100%;
     display: none;
@@ -366,14 +400,28 @@ function initStyles() {
     width: 40px;
 }
 
+#gift__reply {
+    width: 150px;
+}
+
 #gift__export {
-    margin: 0 10px 0 auto ;
+    cursor: pointer;
+    color: royalblue;
+    margin-left: 10px;
 }
 
 #gift__import {
-    margin-right: 10px;
+    cursor: pointer;
+    color: royalblue;
+    margin-left: 5px;
 }.livetool {
-	width: 500px;
+	background-color: rgba(255,255,255,0.9);
+	width: 100%;
+	height: 290px;
+	position: relative;
+	bottom: 290px;
+	display: none;
+	z-index: 1015;
 }
 
 .livetool__cell {
@@ -397,14 +445,10 @@ function initStyles() {
 .livetool__cell_title {
 	flex: 1;
     -webkit-box-flex: 1;
-    display: flex;
-    align-items: center;
 }
 
 .livetool__cell_option {
 	text-align: right;
-    display: flex; 
-    align-items: center;
 }
 
 .livetool__cell_switch {
@@ -420,10 +464,14 @@ function initStyles() {
     color: royalblue;
 }
 #mute__idlist {
-    margin: 0 10px 0 auto ;
+    cursor: pointer;
+    color: royalblue;
+    margin-left: 10px;
 }
 #mute__export, #mute__import {
-    margin-right: 10px;
+    cursor: pointer;
+    color: royalblue;
+    margin-left: 5px;
 }
 #mute__select {
     width: 110px;
@@ -431,6 +479,18 @@ function initStyles() {
 
 .mute__option {
     margin-top: 5px;
+}
+
+#mute__word {
+    width: 70px;
+}
+
+#mute__count {
+    width: 30px;
+}
+
+#mute__time {
+    width: 65px;
 }.exRankPoint {
     position: absolute;
     right: 16px;
@@ -464,12 +524,24 @@ function initStyles() {
     margin-top: 5px;
 }
 
+#reply__word {
+    width: 70px;
+}
+
+#reply__reply {
+    width: 147px;
+}
+
 #reply__export {
-   margin: 0 10px 0 auto ;
+    cursor: pointer;
+    color: royalblue;
+    margin-left: 10px;
 }
 
 #reply__import {
-    margin-right: 10px;
+    cursor: pointer;
+    color: royalblue;
+    margin-left: 5px;
 }.livetool__Treasure {
     width: 100%;
     position: relative;
@@ -492,27 +564,35 @@ function initStyles() {
     margin-top: 5px;
 }
 
+#vote__theme {
+    width: 70px;
+}
+
+#vote__options {
+    width: 133px;
+}
+
 #vote__time {
     width: 35px;
 }
 
 #vote__show-result {
-    margin: 0 10px 0 auto ;
+    cursor: pointer;
+    color: royalblue;
+    margin-left: 10px;
 }
 
 .vote__result {
-    position: fixed;
-    top: 50%;
-    width: 600px;
-    height: 70vh;
-    background: rgb(255 255 255);
-    left: 50%;
-    z-index: 10003;
+    position: absolute;
+    top: 0px;
+    width: 300px;
+    background: rgba(255,255,255,0.85);
+    left: 0px;
+    z-index: 999;
     padding: 5px;
     border-radius: 10px;
     user-select: none;
     display: none;
-    transform: translate(-50%, -50%);
 }
 
 #vote__result-theme {
@@ -559,7 +639,16 @@ function initStyles() {
 }
 
 .exlottery {
-	width: 500px;
+	background-color: rgba(255,255,255,1);
+	width: 100%;
+	height: 250px;
+	position: relative;
+	bottom: 250px;
+	display: none;
+	z-index: 1015;
+    overflow: auto;
+    padding: 0 10px;
+    box-sizing: border-box;
 }
 
 .lottery__nodata {
@@ -1423,260 +1512,21 @@ function initStyles() {
     position: absolute;
     right: 15px;
     cursor: pointer;
-}.ex-input {
-    width: 100%;
-    max-width: 300px;
-    padding: 6px 10px;
-    font-size: 14px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    outline: none;
-    transition: border-color 0.2s ease, box-shadow 0.2s ease;
-    background-color: #fff;
-}
-
-.ex-input:focus {
-    border-color: #007bff;
-    box-shadow: 0 0 2px rgba(0, 123, 255, 0.5);
-}
-
-/* 下拉选择框 */
-.ex-select {
-    width: 100%;
-    max-width: 300px;
-    padding: 6px 10px;
-    font-size: 14px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    outline: none;
-    background-color: #fff;
-    appearance: none;
-    -webkit-appearance: none;
-    -moz-appearance: none;
-    cursor: pointer;
-    transition: border-color 0.2s ease;
-    background-repeat: no-repeat;
-    background-position: right 8px center;
-    background-size: 8px 6px;
-    background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 10 6'%3E%3Cpath fill='%23333' d='M5 6L0 0h10z'/%3E%3C/svg%3E");
-}
-
-.ex-select:focus {
-    border-color: #007bff;
-}
-
-/* 按钮 */
-.ex-btn {
-    display: inline-block;
-    padding: 6px 12px;
-    font-size: 14px;
-    font-weight: bold;
-    text-align: center;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-    transition: background-color 0.2s ease, transform 0.1s ease;
-    background-color: #f0f0f0;
-    color: #222;
-}
-
-/* 默认按钮 */
-.ex-btn-default {
-    color: #fff;
-    background-color: #007bff;
-}
-
-.ex-btn-default:hover {
-    background-color: #0056b3;
-}
-
-.ex-btn-default:active {
-    transform: scale(0.98);
-}
-
-/* 成功按钮 */
-.ex-btn-success {
-    color: #fff;
-    background-color: #28a745;
-}
-
-.ex-btn-success:hover {
-    background-color: #218838;
-}
-
-.ex-btn-success:active {
-    transform: scale(0.98);
-}
-
-/* 错误按钮 */
-.ex-btn-error {
-    color: #fff;
-    background-color: #dc3545;
-}
-
-.ex-btn-error:hover {
-    background-color: #c82333;
-}
-
-.ex-btn-error:active {
-    transform: scale(0.98);
-}
-
-/* 按钮禁用状态 */
-.ex-btn:disabled {
-    background-color: #ccc;
-    color: #777;
-    cursor: not-allowed;
-}
-
-/* 标签和提示 */
-.ex-label {
-    font-size: 13px;
-    color: #555;
-    margin-bottom: 4px;
-    display: flex;
-    align-items: center;
-}
-
-.ex-label-inline {
-    display: inline-block;
-    margin-right: 8px;
-}
-
-.ex-hint {
-    font-size: 12px;
-    color: #888;
-    margin-top: 4px;
-}
-
-.ex-textarea {
-    width: 100%;
-    max-width: 300px;
-    height: 100px; /* 默认高度 */
-    padding: 6px 10px;
-    font-size: 14px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    outline: none;
-    resize: vertical; /* 允许垂直调整大小 */
-    transition: border-color 0.2s ease, box-shadow 0.2s ease;
-    background-color: #fff;
-}
-
-.ex-textarea:focus {
-    border-color: #007bff;
-    box-shadow: 0 0 2px rgba(0, 123, 255, 0.5);
-}
-
-.ex-textarea::placeholder {
-    color: #aaa;
-    font-size: 13px;
-}
-
-
-/* 复选框容器 */
-.ex-checkbox-container {
-    display: flex;
-    align-items: center;
-    margin-bottom: 8px;
-}
-
-/* 自定义复选框 */
-.ex-checkbox {
-    appearance: none;
-    -webkit-appearance: none;
-    -moz-appearance: none;
-    width: 16px;
-    height: 16px;
-    margin: 0;
-    margin-right: 8px;
-    border: 1px solid #ccc;
-    border-radius: 3px;
-    outline: none;
-    background-color: #fff;
-    cursor: pointer;
-    position: relative;
-    transition: background-color 0.2s ease, border-color 0.2s ease;
-}
-
-.ex-checkbox:checked {
-    background-color: #007bff;
-    border-color: #007bff;
-}
-
-.ex-checkbox:checked::after {
-    content: '';
-    position: absolute;
-    left: 4px;
-    top: 2px;
-    width: 6px;
-    height: 10px;
-    border: solid #fff;
-    border-width: 0 2px 2px 0;
-    transform: rotate(45deg);
-}
-
-/* 标签样式 */
-.ex-checkbox-label {
-    font-size: 14px;
-    color: #333;
-    cursor: pointer;
-    display: flex;
-    align-items: center;
-}
-
-
-.ex-line{
-    width: 100%;
-    height: 0;
-    border-top: 1px solid #eee;
-}
-
-/* 弹窗 */
-.ex-dialog{
-    background-color: rgba(255,255,255);
-	max-height: 60vh;
-	display: none;
-	z-index: 10001;
-	position: fixed;
-	top: 50%;
-	left: 50%;
-	transform: translate(-50%, -50%);
-	border-radius: 4px;
-    padding: 20px;
-	overflow: auto;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, .12), 0 0 6px rgba(0, 0, 0, .04);
-}
-
-.ex-dialog::-webkit-scrollbar {
-    width: 8px;
-}
-
-.ex-dialog::-webkit-scrollbar-thumb {
-    border-radius: 8px;
-    background: rgba(0, 0, 0, 0.2) !important;
-}
-
-#root::-webkit-scrollbar-thumb {
-    border-radius: 8px;
-    background: rgba(0, 0, 0, 0.2) !important;
-}
-
-.noticejs-top{top:0;width:100%!important}.noticejs-top .item{border-radius:0!important;margin:0!important}.noticejs-topRight{top:10px;right:10px}.noticejs-topLeft{top:10px;left:10px}.noticejs-topCenter{top:10px;left:50%;transform:translate(-50%)}.noticejs-middleLeft,.noticejs-middleRight{right:10px;top:50%;transform:translateY(-50%)}.noticejs-middleLeft{left:10px}.noticejs-middleCenter{top:50%;left:50%;transform:translate(-50%,-50%)}.noticejs-bottom{bottom:0;width:100%!important}.noticejs-bottom .item{border-radius:0!important;margin:0!important}.noticejs-bottomRight{bottom:10px;right:10px}.noticejs-bottomLeft{bottom:10px;left:10px}.noticejs-bottomCenter{bottom:10px;left:50%;transform:translate(-50%)}.noticejs{font-family:Helvetica Neue,Helvetica,Arial,sans-serif}.noticejs .item{margin:0 0 10px;border-radius:3px;overflow:hidden}.noticejs .item .close{float:right;font-size:18px;font-weight:700;line-height:1;color:#fff;text-shadow:0 1px 0 #fff;opacity:1;margin-right:7px}.noticejs .item .close:hover{opacity:.5;color:#000}.noticejs .item a{color:#fff;border-bottom:1px dashed #fff}.noticejs .item a,.noticejs .item a:hover{text-decoration:none}.noticejs .success{background-color:#64ce83}.noticejs .success .noticejs-heading{background-color:#3da95c;color:#fff;padding:10px}.noticejs .success .noticejs-body{color:#fff;padding:10px}.noticejs .success .noticejs-body:hover{visibility:visible!important}.noticejs .success .noticejs-content{visibility:visible}.noticejs .info{background-color:#3ea2ff}.noticejs .info .noticejs-heading{background-color:#067cea;color:#fff;padding:10px}.noticejs .info .noticejs-body{color:#fff;padding:10px}.noticejs .info .noticejs-body:hover{visibility:visible!important}.noticejs .info .noticejs-content{visibility:visible}.noticejs .warning{background-color:#ff7f48}.noticejs .warning .noticejs-heading{background-color:#f44e06;color:#fff;padding:10px}.noticejs .warning .noticejs-body{color:#fff;padding:10px}.noticejs .warning .noticejs-body:hover{visibility:visible!important}.noticejs .warning .noticejs-content{visibility:visible}.noticejs .error{background-color:#e74c3c}.noticejs .error .noticejs-heading{background-color:#ba2c1d;color:#fff;padding:10px}.noticejs .error .noticejs-body{color:#fff;padding:10px}.noticejs .error .noticejs-body:hover{visibility:visible!important}.noticejs .error .noticejs-content{visibility:visible}.noticejs .progressbar{width:100%}.noticejs .progressbar .bar{width:1%;height:30px;background-color:#4caf50}.noticejs .success .noticejs-progressbar{width:100%;background-color:#64ce83;margin-top:-1px}.noticejs .success .noticejs-progressbar .noticejs-bar{width:100%;height:5px;background:#3da95c}.noticejs .info .noticejs-progressbar{width:100%;background-color:#3ea2ff;margin-top:-1px}.noticejs .info .noticejs-progressbar .noticejs-bar{width:100%;height:5px;background:#067cea}.noticejs .warning .noticejs-progressbar{width:100%;background-color:#ff7f48;margin-top:-1px}.noticejs .warning .noticejs-progressbar .noticejs-bar{width:100%;height:5px;background:#f44e06}.noticejs .error .noticejs-progressbar{width:100%;background-color:#e74c3c;margin-top:-1px}.noticejs .error .noticejs-progressbar .noticejs-bar{width:100%;height:5px;background:#ba2c1d}@keyframes noticejs-fadeOut{0%{opacity:1}to{opacity:0}}.noticejs-fadeOut{animation-name:noticejs-fadeOut}@keyframes noticejs-modal-in{to{opacity:.3}}@keyframes noticejs-modal-out{to{opacity:0}}.noticejs-rtl .noticejs-heading{direction:rtl}.noticejs-rtl .close{float:left!important;margin-left:7px;margin-right:0!important}.noticejs-rtl .noticejs-content{direction:rtl}.noticejs{position:fixed;z-index:10050}.noticejs ::-webkit-scrollbar{width:8px}.noticejs ::-webkit-scrollbar-button{width:8px;height:5px}.noticejs ::-webkit-scrollbar-track{border-radius:10px}.noticejs ::-webkit-scrollbar-thumb{background:hsla(0,0%,100%,.5);border-radius:10px}.noticejs ::-webkit-scrollbar-thumb:hover{background:#fff}.noticejs-modal{position:fixed;width:100%;height:100%;background-color:#000;z-index:10000;opacity:.3;left:0;top:0}.noticejs-modal-open{opacity:0;animation:noticejs-modal-in .3s ease-out}.noticejs-modal-close{animation:noticejs-modal-out .3s ease-out;animation-fill-mode:forwards}/**
+}.noticejs-top{top:0;width:100%!important}.noticejs-top .item{border-radius:0!important;margin:0!important}.noticejs-topRight{top:10px;right:10px}.noticejs-topLeft{top:10px;left:10px}.noticejs-topCenter{top:10px;left:50%;transform:translate(-50%)}.noticejs-middleLeft,.noticejs-middleRight{right:10px;top:50%;transform:translateY(-50%)}.noticejs-middleLeft{left:10px}.noticejs-middleCenter{top:50%;left:50%;transform:translate(-50%,-50%)}.noticejs-bottom{bottom:0;width:100%!important}.noticejs-bottom .item{border-radius:0!important;margin:0!important}.noticejs-bottomRight{bottom:10px;right:10px}.noticejs-bottomLeft{bottom:10px;left:10px}.noticejs-bottomCenter{bottom:10px;left:50%;transform:translate(-50%)}.noticejs{font-family:Helvetica Neue,Helvetica,Arial,sans-serif}.noticejs .item{margin:0 0 10px;border-radius:3px;overflow:hidden}.noticejs .item .close{float:right;font-size:18px;font-weight:700;line-height:1;color:#fff;text-shadow:0 1px 0 #fff;opacity:1;margin-right:7px}.noticejs .item .close:hover{opacity:.5;color:#000}.noticejs .item a{color:#fff;border-bottom:1px dashed #fff}.noticejs .item a,.noticejs .item a:hover{text-decoration:none}.noticejs .success{background-color:#64ce83}.noticejs .success .noticejs-heading{background-color:#3da95c;color:#fff;padding:10px}.noticejs .success .noticejs-body{color:#fff;padding:10px}.noticejs .success .noticejs-body:hover{visibility:visible!important}.noticejs .success .noticejs-content{visibility:visible}.noticejs .info{background-color:#3ea2ff}.noticejs .info .noticejs-heading{background-color:#067cea;color:#fff;padding:10px}.noticejs .info .noticejs-body{color:#fff;padding:10px}.noticejs .info .noticejs-body:hover{visibility:visible!important}.noticejs .info .noticejs-content{visibility:visible}.noticejs .warning{background-color:#ff7f48}.noticejs .warning .noticejs-heading{background-color:#f44e06;color:#fff;padding:10px}.noticejs .warning .noticejs-body{color:#fff;padding:10px}.noticejs .warning .noticejs-body:hover{visibility:visible!important}.noticejs .warning .noticejs-content{visibility:visible}.noticejs .error{background-color:#e74c3c}.noticejs .error .noticejs-heading{background-color:#ba2c1d;color:#fff;padding:10px}.noticejs .error .noticejs-body{color:#fff;padding:10px}.noticejs .error .noticejs-body:hover{visibility:visible!important}.noticejs .error .noticejs-content{visibility:visible}.noticejs .progressbar{width:100%}.noticejs .progressbar .bar{width:1%;height:30px;background-color:#4caf50}.noticejs .success .noticejs-progressbar{width:100%;background-color:#64ce83;margin-top:-1px}.noticejs .success .noticejs-progressbar .noticejs-bar{width:100%;height:5px;background:#3da95c}.noticejs .info .noticejs-progressbar{width:100%;background-color:#3ea2ff;margin-top:-1px}.noticejs .info .noticejs-progressbar .noticejs-bar{width:100%;height:5px;background:#067cea}.noticejs .warning .noticejs-progressbar{width:100%;background-color:#ff7f48;margin-top:-1px}.noticejs .warning .noticejs-progressbar .noticejs-bar{width:100%;height:5px;background:#f44e06}.noticejs .error .noticejs-progressbar{width:100%;background-color:#e74c3c;margin-top:-1px}.noticejs .error .noticejs-progressbar .noticejs-bar{width:100%;height:5px;background:#ba2c1d}@keyframes noticejs-fadeOut{0%{opacity:1}to{opacity:0}}.noticejs-fadeOut{animation-name:noticejs-fadeOut}@keyframes noticejs-modal-in{to{opacity:.3}}@keyframes noticejs-modal-out{to{opacity:0}}.noticejs-rtl .noticejs-heading{direction:rtl}.noticejs-rtl .close{float:left!important;margin-left:7px;margin-right:0!important}.noticejs-rtl .noticejs-content{direction:rtl}.noticejs{position:fixed;z-index:10050}.noticejs ::-webkit-scrollbar{width:8px}.noticejs ::-webkit-scrollbar-button{width:8px;height:5px}.noticejs ::-webkit-scrollbar-track{border-radius:10px}.noticejs ::-webkit-scrollbar-thumb{background:hsla(0,0%,100%,.5);border-radius:10px}.noticejs ::-webkit-scrollbar-thumb:hover{background:#fff}.noticejs-modal{position:fixed;width:100%;height:100%;background-color:#000;z-index:10000;opacity:.3;left:0;top:0}.noticejs-modal-open{opacity:0;animation:noticejs-modal-in .3s ease-out}.noticejs-modal-close{animation:noticejs-modal-out .3s ease-out;animation-fill-mode:forwards}/**
  * PostbirdAlertBox.js
  * -    原生javascript弹框插件
  * Author:  Postbird - http://www.ptbird.cn
  * License: MIT
  * Date:    2017-09-23
  */
-.postbird-box-container {
+ .postbird-box-container {
     width: 100%;
     height: 100%;
     overflow: hidden;
     position: fixed;
     top: 0;
     left: 0;
-    z-index: 10002;
+    z-index: 9999;
     background-color: rgba(0, 0, 0, 0.2);
     display: block;
     -webkit-user-select: none;
@@ -2247,68 +2097,35 @@ function getTextareaPosition(element) {
   return cursorPos;
 }
 
-
-let panels = [
-  {
-    name: "弹幕发送小助手",
-    className: "bloop",
-  },
-  {
-    name: "扩展功能",
-    className: "extool",
-  },
-  {
-    name: "直播间工具",
-    className: "livetool",
-  },
-  {
-    name: "全站抽奖信息",
-    className: "exlottery"
-  },
-];
 function showExRightPanel(name) {
+  let panels = [
+    {
+      name: "弹幕发送小助手",
+      className: "bloop",
+    },
+    {
+      name: "扩展功能",
+      className: "extool",
+    },
+    {
+      name: "直播间工具",
+      className: "livetool",
+    },
+    {
+      name: "全站抽奖信息",
+      className: "exlottery"
+    },
+  ];
   for (let i = 0; i < panels.length; i++) {
     let item = panels[i];
     let dom = document.getElementsByClassName(item.className)[0];
-    let mask = document.getElementsByClassName("ex-mask")[0];
     if (dom) {
       if (name === item.name) {
         dom.style.display = dom.style.display !== "block" ? "block" : "none";
-        mask.style.display = dom.style.display !== "block" ? "none" : "block";
       } else {
         dom.style.display = "none";
       }
     }
-  }
-}
-
-maskLayer();
-function maskLayer() {
-  let mask = document.createElement("div");
-  mask.style.position = "fixed";
-  mask.style.top = "0";
-  mask.style.left = "0";
-  mask.style.width = "100%";
-  mask.style.height = "100%";
-  mask.style.backgroundColor = "rgba(0,0,0,0.5)";
-  mask.style.zIndex = "10000";
-  mask.style.display = "none";
-  mask.className = "ex-mask";
-  mask.style.backdropFilter = "blur(3px)";
-  document.body.appendChild(mask);
-
-  mask.onclick = function (event) {
-    if (event.target.className != "ex-mask") {
-      return;
-    }
-    for (let i = 0; i < panels.length; i++) {
-      let item = panels[i];
-      let dom = document.getElementsByClassName(item.className)[0];
-      if (dom) {
-        dom.style.display = "none";
-      }
-    }
-    mask.style.display = "none";
   }
 }
 
@@ -3531,23 +3348,23 @@ function initPkg_BarrageLoop() {
 function BarrageLoop_insertModal() {
 	let html = "";
 	let a = document.createElement("div");
-	a.className = "bloop ex-dialog";
-	html += '<div class="ex-label"><label>弹幕：</label></div>';
-	html += '<textarea placeholder="一行一个，开启舔狗模式后此处不需要输入" id="bloop__textarea" rows="5" cols="50" class="ex-textarea"></textarea>';
-	html += '<div><label class="ex-label">速度(ms)：</label><input class="ex-input" id="bloop__text_speed1" type="text" style="width:50px;text-align:center;" value="2000" />~<input class="ex-input" id="bloop__text_speed2" type="text" style="width:50px;text-align:center;" value="3000" /></div>';
-	html += '<div><label class="ex-label">限时(min)：</label><input class="ex-input" id="bloop__text_stoptime" type="text" style="width:50px;text-align:center;" value="1" /></div>';
-	html += '<div class="ex-checkbox-container"><label class="ex-checkbox-label" style="margin-right: 20px;"><input class="ex-checkbox" id="bloop__checkbox_changeColor" type="checkbox" name="checkbox_changeColor" checked>自动变色</label><label class="ex-checkbox-label"><input class="ex-checkbox" id="bloop__checkbox_tiangou" type="checkbox">舔狗模式</label></div>';
-	html += '<div class="bloop__switch ex-checkbox-container" style="justify-content: flex-end;"><label class="ex-checkbox-label"><input class="ex-checkbox"id="bloop__checkbox_startSend" type="checkbox">开始发送</label></div>';
+	a.className = "bloop";
+	html += '<div style="display:inline-block"><label>弹幕：</label></div>';
 	html += `
-	<div class="ex-line"></div>
-	<div style="margin-top:10px;">
-		<select id="bloop__select" class="ex-select"></select>
-		<input class="ex-btn" style="margin-left:10px;" type="button" id="bloop__save" value="保存"/>
-		<input class="ex-btn ex-btn-error" style="margin-left:10px;" type="button" id="bloop__delete" value="删除"/>
-	</div>
+	<span style="float:right;margin-right:15px;">
+		<select id="bloop__select"></select>
+		<input style="width:40px;margin-left:10px;" type="button" id="bloop__save" value="保存"/>
+		<input style="width:40px;margin-left:10px;" type="button" id="bloop__delete" value="删除"/>
+	</span>
 	`;
+	html += '<textarea placeholder="一行一个，开启舔狗模式后此处不需要输入" id="bloop__textarea" rows="5" cols="50"></textarea>';
+	html += '<div><label>速度(ms)：</label><input id="bloop__text_speed1" type="text" style="width:50px;text-align:center;" value="2000" />~<input id="bloop__text_speed2" type="text" style="width:50px;text-align:center;" value="3000" /></div>';
+	html += '<div><label>限时(min)：</label><input id="bloop__text_stoptime" type="text" style="width:50px;text-align:center;" value="1" /></div>';
+	html += '<div><label><input id="bloop__checkbox_changeColor" type="checkbox" name="checkbox_changeColor" checked>自动变色</label><label><input id="bloop__checkbox_tiangou" type="checkbox">舔狗模式</label></div>';
+	html += '<div class="bloop__switch"><label><input id="bloop__checkbox_startSend" type="checkbox">开始发送</label></div>';
+	
 	a.innerHTML = html;
-	let b = document.getElementsByClassName("ex-mask")[0];
+	let b = document.getElementsByClassName("layout-Player-chat")[0];
 	b.insertBefore(a, b.childNodes[0]);
 }
 function BarrageLoop_insertIcon() {
@@ -5651,14 +5468,14 @@ function initPkg_ExpandTool() {
 
 function initPkg_ExpandTool_Module() {
 	// initPkg_ExpandTool_RedPacket_Motorcade();
-	initPkg_ExpandTool_ClearBag();
-    initPkg_ExpandTool_SendGift();
-    // initPkg_ExpandTool_BarrageSize();
 	initPkg_ExpandTool_Treasure();
-	initPkg_ExpandTool_TabSwitch();
 	initPkg_ExpandTool_Gold();
 	initPkg_ExpandTool_RedPacket_Room();
 	initPkg_ExpandTool_AutoFish();
+	initPkg_ExpandTool_ClearBag();
+    initPkg_ExpandTool_SendGift();
+    // initPkg_ExpandTool_BarrageSize();
+	initPkg_ExpandTool_TabSwitch();
 	initPkg_ExpandTool_P2P();
 	initPkg_ExpandTool_FullScreen();
 }
@@ -5671,9 +5488,9 @@ function initPkg_ExpandTool_Dom() {
 }
 function ExpandTool_insertModal() {
 	let a = document.createElement("div");
-	a.className = "extool ex-dialog";
+	a.className = "extool";
 	
-	let b = document.getElementsByClassName("ex-mask")[0];
+	let b = document.getElementsByClassName("layout-Player-chat")[0];
 	b.insertBefore(a, b.childNodes[0]);
 }
 function ExpandTool_insertIcon() {
@@ -5710,7 +5527,7 @@ function initPkg_ExpandTool_AutoFish() {
 
 function ExpandTool_AutoFish_insertDom() {
   let html = "";
-  html += '<label class="ex-label"><input class="ex-checkbox" id="extool__autofish_start" type="checkbox">自动钓鱼</label>';
+  html += '<label><input style="margin-top:5px;" id="extool__autofish_start" type="checkbox">自动钓鱼</label>';
 
   let a = document.createElement("div");
   a.className = "extool__autofish";
@@ -5981,10 +5798,10 @@ function initPkg_ExpandTool_ClearBag() {
 
 function ExpandTool_ClearBag_insertDom() {
     let html = "";
-    html += '<label class="ex-label">背包送礼：[速度并不快,间隔>0.1s]</label><a id="extool__clearbag_showid" style="color:blue;" href="javascript:void(0);">礼物id示例</a><br />';
-    html += '<label class="ex-label"><p style="width:5em">礼物ID：</p><input class="ex-input" id="extool__clearbag_id" type="text" value="268" /></label>';
-    html += '<label class="ex-label"><p style="width:5em">数量：</p><input class="ex-input" id="extool__clearbag_cnt" type="text"  value="1" /></label>';
-    html += '<input class="ex-btn" type="button" id="extool__clearbag_sendbtn" value="送出" />';
+    html += '<label>背包送礼：[速度并不快,间隔>0.1s]</label><a id="extool__clearbag_showid" style="margin-left:10px;color:blue;" href="javascript:void(0);">礼物id示例</a><br />';
+    html += '<label>礼物ID：</label><input id="extool__clearbag_id" type="text" style="width:50px;text-align:center;margin-right:10px;" value="268" />';
+    html += '<label>数量：</label><input id="extool__clearbag_cnt" type="text" style="width:30px;text-align:center;" value="1" />';
+    html += '<input style="width:40px;margin-left:10px;" type="button" id="extool__clearbag_sendbtn" value="送出" />';
     // html += '<input style="width:60px;margin-left:10px;" type="button" id="extool__clearbag_clearbtn" value="清空背包" />';
     let a = document.createElement("div");
     a.className = "extool__clearbag";
@@ -6069,7 +5886,7 @@ function initPkg_ExpandTool_FullScreen() {
 function ExpandTool_FullScreen_insertDom() {
     let a = document.createElement("span");
     // a.className = "extool__bsize";
-    a.innerHTML = '<label class="ex-label" title="自动网页全屏"><input class="ex-checkbox" id="extool__fullscreen" type="checkbox">自动网页全屏</label><label class="ex-label" title="自动最高画质"><input class="ex-checkbox" id="extool__highestvideoquality" type="checkbox">自动最高画质</label>';
+    a.innerHTML = '<label title="自动网页全屏"><input style="margin-top:5px;" id="extool__fullscreen" type="checkbox">自动网页全屏</label><label title="自动最高画质"><input id="extool__highestvideoquality" type="checkbox">自动最高画质</label>';
     
     let b = document.getElementsByClassName("extool")[0];
     b.insertBefore(a, b.childNodes[0]);
@@ -6194,8 +6011,8 @@ function initPkg_ExpandTool_Gold() {
 
 function ExpandTool_Gold_insertDom() {
     let html = "";
-    html += '<label class="ex-label"><input class="ex-checkbox" id="extool__gold_start" type="checkbox">幻神模式</label>';
-    html += '<label class="ex-label"><input class="ex-checkbox" id="extool__goldGift_start" type="checkbox">荧光棒变超火</label>';
+    html += '<label><input style="margin-top:5px;" id="extool__gold_start" type="checkbox">幻神模式</label>';
+    html += '<label><input style="margin-top:5px;" id="extool__goldGift_start" type="checkbox">荧光棒变超火</label>';
     
     let a = document.createElement("div");
     a.className = "extool__gold";
@@ -6481,7 +6298,7 @@ function initPkg_ExpandTool_P2P() {
 function ExpandTool_P2P_insertDom() {
     let a = document.createElement("span");
     // a.className = "extool__bsize";
-    a.innerHTML = '<label class="ex-label" title="阻止p2p在后台占用网速，开启后直播画面会在刚进入页面时卡一下"><input class="ex-checkbox" id="extool__p2p" type="checkbox">阻止p2p上传</label>';
+    a.innerHTML = '<label title="阻止p2p在后台占用网速，开启后直播画面会在刚进入页面时卡一下"><input style="margin-top:5px;" id="extool__p2p" type="checkbox">阻止p2p上传</label>';
     
     let b = document.getElementsByClassName("extool")[0];
     b.insertBefore(a, b.childNodes[0]);
@@ -6555,7 +6372,7 @@ function initPkg_ExpandTool_RedPacket_Room() {
 
 function ExpandTool_RedPacket_Room_insertDom() {
     let html = "";
-    html += '<label class="ex-label"><input class="ex-checkbox" id="extool__redpacekt_room_start" type="checkbox">自动抢礼物红包</label>';
+    html += '<label><input style="margin-top:5px;" id="extool__redpacekt_room_start" type="checkbox">自动抢礼物红包</label>';
     
     let a = document.createElement("div");
     a.className = "extool__redpacket_room";
@@ -6684,12 +6501,11 @@ function initPkg_ExpandTool_SendGift() {
 
 function ExpandTool_SendGift_insertDom() {
     let html = "";
-    html += '<label class="ex-label">送礼：[用于打榜,例如送出999个飞机]</label><a style="color:blue;" href="http://open.douyucdn.cn/api/RoomApi/room/' + rid + '" target="_blank">礼物id示例</a><br />';
-    html += '<label class="ex-label"><p style="width:5em">礼物ID：</p><input class="ex-input" id="extool__sendgift_id" type="text" value="20000" /></label>';
-    html += '<label class="ex-label"><p style="width:5em">数量：</p><input class="ex-input" id="extool__sendgift_cnt" type="text"  value="1" /></label>';
-    html += '<label class="ex-label"><p style="width:5em">间隔ms：</p><input class="ex-input" id="extool__sendgift_delay" type="text" value="0" /></label>';
-    html += '<input class="ex-btn" type="button" id="extool__sendgift_btn" value="送出" />';
-    html += '<div class="ex-line" style="margin:10px 0"></div>';
+    html += '<label>送礼：[用于打榜,例如送出999个飞机]</label><a style="margin-left:10px;color:blue;" href="http://open.douyucdn.cn/api/RoomApi/room/' + rid + '" target="_blank">礼物id示例</a><br />';
+    html += '<label>礼物ID：</label><input id="extool__sendgift_id" type="text" style="width:50px;text-align:center;margin-right:10px;" value="20000" />';
+    html += '<label>数量：</label><input id="extool__sendgift_cnt" type="text" style="width:30px;text-align:center;margin-right:10px;" value="1" />';
+    html += '<label>间隔ms：</label><input id="extool__sendgift_delay" type="text" style="width:30px;text-align:center;" value="0" />';
+    html += '<input style="width:40px;margin-left:10px;" type="button" id="extool__sendgift_btn" value="送出" />';
     let a = document.createElement("div");
     a.className = "extool__sendgift";
     a.innerHTML = html;
@@ -6758,7 +6574,7 @@ function initPkg_ExpandTool_TabSwitch() {
 function ExpandTool_TabSwitch_insertDom() {
   let a = document.createElement("span");
   // a.className = "extool__bsize";
-  a.innerHTML = '<label class="ex-label" title="阻止页面后台挂机检测"><input class="ex-checkbox" id="extool__tabSwitch" type="checkbox">页面防挂机</label><div class="ex-line" style="margin-bottom:10px"></div>';
+  a.innerHTML = '<label title="阻止页面后台挂机检测"><input style="margin-top:5px;" id="extool__tabSwitch" type="checkbox">页面防挂机</label>';
   
   let b = document.getElementsByClassName("extool")[0];
   b.insertBefore(a, b.childNodes[0]);
@@ -6818,11 +6634,10 @@ function initPkg_ExpandTool_Treasure() {
 
 function ExpandTool_Treasure_insertDom() {
     let html = "";
-    html += '<label class="ex-label"><input class="ex-checkbox" id="extool__treasure_start" type="checkbox">自动抢宝箱</label>';
-    html += '<label class="ex-label ex-label-inline">延迟(抢得过快请调高)：</label><input class="ex-input" id="extool__treasure_delay" type="text" style="width:50px;text-align:center;" value="3200" />ms'
-    html += '<div style="margin-top:10px"><label class="ex-label ex-label-inline">rrocr秘钥：</label><input class="ex-input" id="extool__treasure_skey" type="text" style="width:200px;text-align:center;" placeholder="填写则会自动完成宝箱领取验证"></div>';
-    html += '<div><a href="https://www.rrocr.com/" target="_blank" style="color:blue" title="点击进入rrocr官网，将账号用户中心的appkey填入右边然后开启功能即可">点击进入rrocr官网，将账号用户中心的appkey填入右边然后开启功能即可</a></div>';
-    html += '<div class="ex-line" style="margin:10px 0"></div>';
+    html += '<label><input style="margin-top:5px" id="extool__treasure_start" type="checkbox">自动抢宝箱</label>';
+    html += '<label style="margin-left:10px;">延迟(抢得过快请调高)：</label><input id="extool__treasure_delay" type="text" style="width:50px;text-align:center;" value="3200" />ms'
+    html += '<div><a href="https://www.rrocr.com/" target="_blank" style="color:blue" title="点击进入rrocr官网，将账号用户中心的appkey填入右边然后开启功能即可">rrocr秘钥：</a><input id="extool__treasure_skey" type="text" style="width:200px;text-align:center;" placeholder="填写则会自动完成宝箱领取验证"></div>';
+    
     let a = document.createElement("div");
     a.className = "extool__treasure";
     a.innerHTML = html;
@@ -7572,8 +7387,8 @@ function LiveTool_Enter_insertDom() {
     let cell = `
         <div class='livetool__cell_title'>
             <span id='enter__title'>进场欢迎</span>
-            <button class="ex-btn" id='enter__export'>导出</button>
-            <button class="ex-btn" id='enter__import'>导入</button>
+            <span id='enter__export'>导出</span>
+            <span id='enter__import'>导入</span>
         </div>
         <div class='livetool__cell_option'>
             <div class="onoffswitch livetool__cell_switch">
@@ -7584,14 +7399,13 @@ function LiveTool_Enter_insertDom() {
     `;
     let panel = `
         <div class='enter__panel'>
-            <select id='enter__select' class="ex-select">
+            <select id='enter__select'>
             </select>
-            <input class="ex-btn ex-btn-success" style="margin-left:10px;" type="button" id="enter__add" value="添加"/>
-            <input class="ex-btn ex-btn-error" style="margin-left:10px;" type="button" id="enter__del" value="删除"/>
-            <div class="ex-line" style="margin:5px 0"></div>
+            <input style="width:40px;margin-left:10px;" type="button" id="enter__add" value="添加"/>
+            <input style="width:40px;margin-left:10px;" type="button" id="enter__del" value="删除"/>
             <div class="enter__option">
-                <label class="ex-label"><div style="width:7em">等级≥：</div><input class="ex-input" id="enter__level" type="text" value="1"/></label>
-                <label class="ex-label"><div style="width:7em">当前欢迎词：</div><input class="ex-input" id="enter__word" type="text" placeholder="欢迎<id>光临直播间"/></label>
+                <label>等级≥<input id="enter__level" type="text" value="1"/></label>
+                <label>当前欢迎词：<input id="enter__word" type="text" placeholder="欢迎<id>光临直播间"/></label>
             </div>
         </div>
     `;
@@ -7843,8 +7657,8 @@ function LiveTool_Gift_insertDom() {
     let cell = `
         <div class='livetool__cell_title'>
             <span id='gift__title'>自动谢礼物</span>
-            <button class="ex-btn" id='gift__export'>导出</button>
-            <button class="ex-btn" id='gift__import'>导入</button>
+            <span id='gift__export'>导出</span>
+            <span id='gift__import'>导入</span>
         </div>
         <div class='livetool__cell_option'>
             <div class="onoffswitch livetool__cell_switch">
@@ -7855,16 +7669,14 @@ function LiveTool_Gift_insertDom() {
     `;
     let panel = `
         <div class='gift__panel'>
-            <select id='gift__select' class="ex-select">
+            <select id='gift__select'>
             </select>
-            <input class="ex-btn ex-btn-success" style="margin-left:10px;" type="button" id="gift__add" value="添加"/>
-            <input class="ex-btn ex-btn-error" style="margin-left:10px;" type="button" id="gift__del" value="删除"/>
-            <input class="ex-btn" style="margin-left:10px;" type="button" id="gift__template" value="生成模板"/>
-            <div class="ex-line" style="margin:5px 0"></div>
+            <input style="width:40px;margin-left:10px;" type="button" id="gift__add" value="添加"/>
+            <input style="width:40px;margin-left:10px;" type="button" id="gift__del" value="删除"/>
+            <input style="width:64px;margin-left:10px;" type="button" id="gift__template" value="生成模板"/>
             <div class="gift__option">
-                <label class="ex-label"><div style="width:6em">礼物id：</div><input class="ex-input" id="gift__giftId" type="text"/></label>
-                <label class="ex-label"><div style="width:6em">回复：</div><input class="ex-input" id="gift__reply" type="text" placeholder="<id>=用户名 <cnt>个数"/></label>
-                <a id="reply__show_gid" style="color:blue;" href="javascript:void(0);">点击查看礼物ID</a>
+                <label><a id="reply__show_gid" style="color:blue;" href="javascript:void(0);">礼物id：</a><input id="gift__giftId" type="text"/></label>
+                <label>回复：<input id="gift__reply" type="text" placeholder="<id>=用户名 <cnt>个数"/></label>
             </div>
         </div>
     `;
@@ -8186,85 +7998,85 @@ function getRoomAvatar() {
     })
 }
 function initPkg_LiveTool() {
-    initPkg_LiveTool_Dom();
-    initPkg_LiveTool_Module();
-    initPkg_LiveTool_Func();
-    initPkg_LiveTool_HandleFunc();
+	initPkg_LiveTool_Dom();
+	initPkg_LiveTool_Module();
+	initPkg_LiveTool_Func();
+	initPkg_LiveTool_HandleFunc();
 }
 
 function initPkg_LiveTool_Dom() {
-    LiveTool_insertModal();
-    LiveTool_insertIcon();
+	LiveTool_insertModal();
+	LiveTool_insertIcon();
 }
 
 function initPkg_LiveTool_Module() {
-	// 添加模块
-	initPkg_LiveTool_Vote();
-	initPkg_LiveTool_Enter();
-	initPkg_LiveTool_Mute();
-	initPkg_LiveTool_Gift();
-	initPkg_LiveTool_Reply();
-	initPkg_LiveTool_Treasure();
-	initPkg_LiveTool_BarrageSpeed();
-	initPkg_LiveTool_RankList();
-	initPkg_LiveTool_BarrageSendCheck();
+// 添加模块
+initPkg_LiveTool_Vote();
+initPkg_LiveTool_Enter();
+initPkg_LiveTool_Mute();
+initPkg_LiveTool_Gift();
+initPkg_LiveTool_Reply();
+initPkg_LiveTool_Treasure();
+initPkg_LiveTool_BarrageSpeed();
+initPkg_LiveTool_RankList();
+initPkg_LiveTool_BarrageSendCheck();
 
-	// initPkg_LiveTool_Bojiang_Handle();
+// initPkg_LiveTool_Bojiang_Handle();
 }
 function LiveTool_insertModal() {
-	let a = document.createElement("div");
-	a.className = "livetool ex-dialog";
-	
-	let b = document.getElementsByClassName("ex-mask")[0];
-	b.insertBefore(a, b.childNodes[0]);
+let a = document.createElement("div");
+a.className = "livetool";
+
+let b = document.getElementsByClassName("layout-Player-chat")[0];
+b.insertBefore(a, b.childNodes[0]);
 }
 function LiveTool_insertIcon() {
-	let a = document.createElement("div");
-	a.className = "livetool-icon";
-	a.innerHTML = '<a class="ex-panel__icon" title="直播间工具"><svg t="1590294900594" style="display:block;" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="20028" width="36" height="36"><path d="M352.2 245.3c-5.1 0-10.2-2-14.1-5.9L196.6 98c-7.8-7.8-7.8-20.5 0-28.3s20.5-7.8 28.3 0l141.4 141.4c7.8 7.8 7.8 20.5 0 28.3-3.9 3.9-9 5.9-14.1 5.9zM477.1 245.3c-5.1 0-10.2-2-14.1-5.9-7.8-7.8-7.8-20.5 0-28.3L604.3 69.7c7.8-7.8 20.5-7.8 28.3 0 7.8 7.8 7.8 20.5 0 28.3L491.2 239.4c-3.9 3.9-9 5.9-14.1 5.9z" fill="#0C2B4A" p-id="20029"></path><path d="M703.9 194.8H124.2c-33 0-60 27-60 60v453c0 33 27 60 60 60h418c1.7-122.5 99.6-221.8 221.7-225.5V254.8c0-33-27-60-60-60zM533.4 522.9L356.3 625.2c-24 13.9-54-3.5-54-31.2V389.5c0-27.7 30-45 54-31.2l177.1 102.2c24 13.9 24 48.6 0 62.4zM815.2 776.4c0 21.9-17.8 39.7-39.7 39.7-21.9 0-39.7-17.8-39.7-39.7 0-21.9 17.8-39.7 39.7-39.7 21.9 0 39.7 17.8 39.7 39.7z" fill="#0C2B4A" p-id="20030"></path><path d="M775.5 591C673.6 591 591 673.6 591 775.5S673.6 960 775.5 960 960 877.4 960 775.5 877.4 591 775.5 591zM879 819l-15.6 27c-2.1 3.6-6.8 4.9-10.4 2.8l-15.5-8.9c-2.7-1.6-6.1-1.3-8.5 0.6-7.5 5.9-15.9 10.6-25.1 13.8-3 1.1-5.1 4-5.1 7.2v18.7c0 4.2-3.4 7.6-7.6 7.6H760c-4.2 0-7.6-3.4-7.6-7.6v-18.5c0-3.3-2.1-6.2-5.1-7.2-9.3-3.2-17.9-7.8-25.5-13.7-2.4-1.9-5.8-2.2-8.5-0.6l-15.2 8.8c-3.6 2.1-8.3 0.9-10.4-2.8l-15.6-27c-2.1-3.6-0.8-8.3 2.8-10.4l12.2-7.1c3-1.7 4.5-5.2 3.7-8.5-1.7-6.8-2.6-13.8-2.6-21.1 0-4.1 0.3-8.2 0.9-12.2 0.4-3.1-1-6.1-3.7-7.7l-10.5-6.1c-3.6-2.1-4.9-6.8-2.8-10.4l15.6-27c2.1-3.6 6.8-4.9 10.4-2.8l7.8 4.5c2.9 1.7 6.6 1.3 9-1.1 9.1-8.7 20-15.5 32.2-19.7 3.1-1 5.1-4 5.1-7.2v-7.9c0-4.2 3.4-7.6 7.6-7.6H791c4.2 0 7.6 3.4 7.6 7.6v8.1c0 3.2 2 6.1 5.1 7.2 12.1 4.2 22.9 10.9 31.9 19.6 2.4 2.4 6.1 2.8 9.1 1.1l8.2-4.7c3.6-2.1 8.3-0.8 10.4 2.8l15.6 27c2.1 3.6 0.9 8.3-2.8 10.4l-11 6.3c-2.7 1.6-4.1 4.6-3.7 7.7 0.6 3.9 0.8 8 0.8 12.1 0 7.2-0.9 14.1-2.5 20.8-0.8 3.3 0.7 6.7 3.6 8.3l12.8 7.4c3.7 2.1 5 6.8 2.9 10.4z" fill="#0C2B4A" p-id="20031"></path></svg><i id="LiveTool__tip" class="ex-panel__tip"></i></a>';
-	
-	let b = document.getElementsByClassName("ex-panel__wrap")[0];
-	b.insertBefore(a, b.childNodes[0]);
-	
+let a = document.createElement("div");
+a.className = "livetool-icon";
+a.innerHTML = '<a class="ex-panel__icon" title="直播间工具"><svg t="1590294900594" style="display:block;" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="20028" width="36" height="36"><path d="M352.2 245.3c-5.1 0-10.2-2-14.1-5.9L196.6 98c-7.8-7.8-7.8-20.5 0-28.3s20.5-7.8 28.3 0l141.4 141.4c7.8 7.8 7.8 20.5 0 28.3-3.9 3.9-9 5.9-14.1 5.9zM477.1 245.3c-5.1 0-10.2-2-14.1-5.9-7.8-7.8-7.8-20.5 0-28.3L604.3 69.7c7.8-7.8 20.5-7.8 28.3 0 7.8 7.8 7.8 20.5 0 28.3L491.2 239.4c-3.9 3.9-9 5.9-14.1 5.9z" fill="#0C2B4A" p-id="20029"></path><path d="M703.9 194.8H124.2c-33 0-60 27-60 60v453c0 33 27 60 60 60h418c1.7-122.5 99.6-221.8 221.7-225.5V254.8c0-33-27-60-60-60zM533.4 522.9L356.3 625.2c-24 13.9-54-3.5-54-31.2V389.5c0-27.7 30-45 54-31.2l177.1 102.2c24 13.9 24 48.6 0 62.4zM815.2 776.4c0 21.9-17.8 39.7-39.7 39.7-21.9 0-39.7-17.8-39.7-39.7 0-21.9 17.8-39.7 39.7-39.7 21.9 0 39.7 17.8 39.7 39.7z" fill="#0C2B4A" p-id="20030"></path><path d="M775.5 591C673.6 591 591 673.6 591 775.5S673.6 960 775.5 960 960 877.4 960 775.5 877.4 591 775.5 591zM879 819l-15.6 27c-2.1 3.6-6.8 4.9-10.4 2.8l-15.5-8.9c-2.7-1.6-6.1-1.3-8.5 0.6-7.5 5.9-15.9 10.6-25.1 13.8-3 1.1-5.1 4-5.1 7.2v18.7c0 4.2-3.4 7.6-7.6 7.6H760c-4.2 0-7.6-3.4-7.6-7.6v-18.5c0-3.3-2.1-6.2-5.1-7.2-9.3-3.2-17.9-7.8-25.5-13.7-2.4-1.9-5.8-2.2-8.5-0.6l-15.2 8.8c-3.6 2.1-8.3 0.9-10.4-2.8l-15.6-27c-2.1-3.6-0.8-8.3 2.8-10.4l12.2-7.1c3-1.7 4.5-5.2 3.7-8.5-1.7-6.8-2.6-13.8-2.6-21.1 0-4.1 0.3-8.2 0.9-12.2 0.4-3.1-1-6.1-3.7-7.7l-10.5-6.1c-3.6-2.1-4.9-6.8-2.8-10.4l15.6-27c2.1-3.6 6.8-4.9 10.4-2.8l7.8 4.5c2.9 1.7 6.6 1.3 9-1.1 9.1-8.7 20-15.5 32.2-19.7 3.1-1 5.1-4 5.1-7.2v-7.9c0-4.2 3.4-7.6 7.6-7.6H791c4.2 0 7.6 3.4 7.6 7.6v8.1c0 3.2 2 6.1 5.1 7.2 12.1 4.2 22.9 10.9 31.9 19.6 2.4 2.4 6.1 2.8 9.1 1.1l8.2-4.7c3.6-2.1 8.3-0.8 10.4 2.8l15.6 27c2.1 3.6 0.9 8.3-2.8 10.4l-11 6.3c-2.7 1.6-4.1 4.6-3.7 7.7 0.6 3.9 0.8 8 0.8 12.1 0 7.2-0.9 14.1-2.5 20.8-0.8 3.3 0.7 6.7 3.6 8.3l12.8 7.4c3.7 2.1 5 6.8 2.9 10.4z" fill="#0C2B4A" p-id="20031"></path></svg><i id="LiveTool__tip" class="ex-panel__tip"></i></a>';
+
+let b = document.getElementsByClassName("ex-panel__wrap")[0];
+b.insertBefore(a, b.childNodes[0]);
+
 }
 
 function initPkg_LiveTool_Func() {
-	document.getElementsByClassName("livetool-icon")[0].addEventListener("click", function() {
-		showExRightPanel("直播间工具");
-	});
+document.getElementsByClassName("livetool-icon")[0].addEventListener("click", function() {
+	showExRightPanel("直播间工具");
+});
 }
 
 function initPkg_LiveTool_HandleFunc() {
-    // 开启ws，并且设置处理函数的入口
-    // 是否生效由每个处理函数决定，可以设置一个变量保存开启状态，判断是否要执行
-    let ws = new Ex_WebSocket_UnLogin(rid, (ret) => {
-        initPkg_LiveTool_LiveNotice_Handle(ret); // 开播提醒
-		initPkg_LiveTool_Mute_Handle(ret); // 关键词禁言
-		initPkg_LiveTool_Reply_Handle(ret); // 关键词回复
-		initPkg_LiveTool_Gift_Handle(ret); // 自动谢礼物
-		initPkg_LiveTool_Treasure_Handle(ret); // 自动抢宝箱
-		initPkg_LiveTool_Enter_Handle(ret); // 自动欢迎
-		// initPkg_LiveTool_Friend_Handle(ret);
-		initPkg_LiveTool_Vote_Handle(ret); // 投票
-		initPkg_LiveTool_BarrageSpeed_Handle(ret); // 弹幕时速
-		initPkg_LiveTool_RankList_Handle(ret); // 排行榜
-		initPkg_LiveTool_BarrageSendCheck_Handle(ret); // 检查弹幕是否发送成功
-    });
+	// 开启ws，并且设置处理函数的入口
+	// 是否生效由每个处理函数决定，可以设置一个变量保存开启状态，判断是否要执行
+	let ws = new Ex_WebSocket_UnLogin(rid, (ret) => {
+			initPkg_LiveTool_LiveNotice_Handle(ret); // 开播提醒
+	initPkg_LiveTool_Mute_Handle(ret); // 关键词禁言
+	initPkg_LiveTool_Reply_Handle(ret); // 关键词回复
+	initPkg_LiveTool_Gift_Handle(ret); // 自动谢礼物
+	initPkg_LiveTool_Treasure_Handle(ret); // 自动抢宝箱
+	initPkg_LiveTool_Enter_Handle(ret); // 自动欢迎
+	// initPkg_LiveTool_Friend_Handle(ret);
+	initPkg_LiveTool_Vote_Handle(ret); // 投票
+	initPkg_LiveTool_BarrageSpeed_Handle(ret); // 弹幕时速
+	initPkg_LiveTool_RankList_Handle(ret); // 排行榜
+	initPkg_LiveTool_BarrageSendCheck_Handle(ret); // 检查弹幕是否发送成功
+	});
 }
 
 function getType(str) {
-    return getStrMiddle(str, "type@=", "/");
+	return getStrMiddle(str, "type@=", "/");
 }
 
 function selectOptionByValue(selectId, checkValue) {
-	// 根据value值选择option 
-    let select = document.getElementById(selectId);  
-    for(let i=0; i<select.options.length; i++){  
-        if(select.options[i].value == checkValue){  
-            select.options[i].selected = true;  
-            break;
-        }  
-    }  
+// 根据value值选择option 
+	let select = document.getElementById(selectId);  
+	for(let i=0; i<select.options.length; i++){  
+			if(select.options[i].value == checkValue){  
+					select.options[i].selected = true;  
+					break;
+			}  
+	}  
 }
 let isMuteOn = false;
 // let canMute;
@@ -8286,9 +8098,9 @@ function LiveTool_Mute_insertDom() {
     let cell = `
         <div class='livetool__cell_title'>
             <span id='mute__title'>关键词禁言</span>
-            <button class="ex-btn" id='mute__idlist'>名单</button>
-            <button class="ex-btn" id='mute__export'>导出</button>
-            <button class="ex-btn" id='mute__import'>导入</button>
+            <span id='mute__idlist'>名单</span>
+            <span id='mute__export'>导出</span>
+            <span id='mute__import'>导入</span>
         </div>
         <div class='livetool__cell_option'>
             <div class="onoffswitch livetool__cell_switch">
@@ -8299,17 +8111,16 @@ function LiveTool_Mute_insertDom() {
     `;
     let panel = `
         <div class='mute__panel'>
-            <select id='mute__select' class="ex-select">
+            <select id='mute__select'>
             </select>
-            <input class="ex-btn ex-btn-success" style="margin-left:10px;" type="button" id="mute__add" value="添加"/>
-            <input class="ex-btn ex-btn-error" style="margin-left:10px;" type="button" id="mute__del" value="删除"/>
-            <input class="ex-btn" style="margin-left:10px;" type="button" id="mute__delmute" value="一键解禁"/>
-            <div class="ex-line" style="margin-top:5px"></div>
+            <input style="width:40px;margin-left:10px;" type="button" id="mute__add" value="添加"/>
+            <input style="width:40px;margin-left:10px;" type="button" id="mute__del" value="删除"/>
+            <input style="width:65px;margin-left:10px;" type="button" id="mute__delmute" value="一键解禁"/>
             <div class="mute__option">
-                <label class="ex-label"><div style="width:4em">词：</div><input class="ex-input" id="mute__word" type="text" placeholder="re(式)=结果"/></label>
-                <label class="ex-label"><div style="width:4em">次数：</div><input class="ex-input" id="mute__count" type="number" value="5"/></label>
-                <label class="ex-label"><div style="width:4em">时间：</div>
-                    <select id='mute__time' class="ex-select">
+                <label>词：<input id="mute__word" type="text" placeholder="re(式)=结果"/></label>
+                <label>次数：<input id="mute__count" type="number" value="5"/></label>
+                <label>时间：
+                    <select id='mute__time'>
                         <option value="1">1分钟</option>
                         <option value="10">10分钟</option>
                         <option value="30">30分钟</option>
@@ -8761,8 +8572,8 @@ function LiveTool_Reply_insertDom() {
     let cell = `
         <div class='livetool__cell_title'>
             <span id='reply__title'>关键词回复</span>
-            <button class="ex-btn" id='reply__export' sty>导出</button>
-            <button class="ex-btn" id='reply__import'>导入</button>
+            <span id='reply__export'>导出</span>
+            <span id='reply__import'>导入</span>
         </div>
         <div class='livetool__cell_option'>
             <div class="onoffswitch livetool__cell_switch">
@@ -8773,15 +8584,14 @@ function LiveTool_Reply_insertDom() {
     `;
     let panel = `
         <div class='reply__panel'>
-            <select id='reply__select' class="ex-select">
+            <select id='reply__select'>
             </select>
-            <input style="margin-left:10px;" class="ex-btn ex-btn-success" type="button" id="reply__add" value="添加"/>
-            <input style="margin-left:10px;" class="ex-btn ex-btn-error" type="button" id="reply__del" value="删除"/>
-            <label class="ex-label" style="margin-top: 5px;"><div style="width:4em;">CD：</div><input id="reply__time" class="ex-input" type="text" placeholder="秒" /></label>
-            <div class="ex-line"></div>
+            <input style="width:40px;margin-left:10px;" type="button" id="reply__add" value="添加"/>
+            <input style="width:40px;margin-left:10px;" type="button" id="reply__del" value="删除"/>
+            <label style="margin-left:5px">CD：<input id="reply__time" type="text" placeholder="秒" /></label>
             <div class="reply__option">
-                <label class="ex-label"><div style="width:4em;">词：</div><input class="ex-input" id="reply__word" type="text" placeholder="re(式)=结果"/></label>
-                <label class="ex-label"><div style="width:4em;">回复：</div><input class="ex-input" id="reply__reply" type="text" placeholder="<id>用户名 <txt>弹幕"/></label>
+                <label>词：<input id="reply__word" type="text" placeholder="re(式)=结果"/></label>
+                <label>回复：<input id="reply__reply" type="text" placeholder="<id>用户名 <txt>弹幕"/></label>
             </div>
         </div>
     `;
@@ -9258,11 +9068,10 @@ function LiveTool_Vote_insertDom() {
     a.className = "livetool__cell";
     let cell = `
         <div class='livetool__cell_title'>
-            <span id='vote__title'>弹幕投票</span>
+            <span id='vote__title'>弹幕投票</span><span id='vote__show-result'>面板</span>
         </div>
-        <label style="margin-right:10px;" class="ex-label"><input class="ex-checkbox" id="vote__repeat" class="ex-checkbox" type="checkbox">重复投票</label>
-        <button class="ex-btn" id='vote__show-result'>面板</button>
         <div class='livetool__cell_option'>
+            <label style="margin-right:10px;"><input id="vote__repeat" type="checkbox">重复投票</label>
             <div class="onoffswitch livetool__cell_switch">
                 <input type="checkbox" name="onoffswitch" class="onoffswitch-checkbox" id="vote__switch" tabindex="0" checked>
                 <label class="onoffswitch-label" for="vote__switch"></label>
@@ -9271,15 +9080,14 @@ function LiveTool_Vote_insertDom() {
     `;
     let panel = `
         <div class='vote__panel'>
-            <select id='vote__select' class="ex-select">
+            <select id='vote__select'>
             </select>
-            <input class="ex-btn ex-btn-success"style="margin-left:10px;" type="button" id="vote__add" value="添加"/>
-            <input class="ex-btn ex-btn-error"style="margin-left:10px;" type="button" id="vote__del" value="删除"/>
-            <label class="ex-label" style="margin-top:5px">限时：<input class="ex-input" id="vote__time" type="text" placeholder="秒" /></label>
-            <div class="ex-line" style="margin:5px 0"></div>
+            <input style="width:40px;margin-left:10px;" type="button" id="vote__add" value="添加"/>
+            <input style="width:40px;margin-left:10px;" type="button" id="vote__del" value="删除"/>
+            <label style="margin-left:5px">限时：<input id="vote__time" type="text" placeholder="秒" /></label>
             <div class="vote__option">
-                <label class="ex-label">主题：<input class="ex-input" id="vote__theme" type="text"/></label>
-                <label class="ex-label">选项：<input class="ex-input" id="vote__options" type="text" placeholder="用空格隔开每个选项"/></label>
+                <label>主题：<input id="vote__theme" type="text"/></label>
+                <label>选项：<input id="vote__options" type="text" placeholder="用空格隔开每个选项"/></label>
             </div>
         </div>
     `;
@@ -9569,20 +9377,20 @@ function Lottery_insertIcon() {
 
 function Lottery_insertModal() {
 	let a = document.createElement("div");
-	a.className = "exlottery ex-dialog";
+	a.className = "exlottery";
 	a.innerHTML = `
         <div class="lottery__func">
             <div id="lottery-refresh">
                 <svg t="1636115506027" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="2454" width="16" height="16"><path d="M927.999436 531.028522a31.998984 31.998984 0 0 0-31.998984 31.998984c0 51.852948-10.147341 102.138098-30.163865 149.461048a385.47252 385.47252 0 0 1-204.377345 204.377345c-47.32295 20.016524-97.6081 30.163865-149.461048 30.163865s-102.138098-10.147341-149.461048-30.163865a385.47252 385.47252 0 0 1-204.377345-204.377345c-20.016524-47.32295-30.163865-97.6081-30.163865-149.461048s10.147341-102.138098 30.163865-149.461048a385.47252 385.47252 0 0 1 204.377345-204.377345c47.32295-20.016524 97.6081-30.163865 149.461048-30.163865a387.379888 387.379888 0 0 1 59.193424 4.533611l-56.538282 22.035878A31.998984 31.998984 0 1 0 537.892156 265.232491l137.041483-53.402685a31.998984 31.998984 0 0 0 18.195855-41.434674L639.723197 33.357261a31.998984 31.998984 0 1 0-59.630529 23.23882l26.695923 68.502679a449.969005 449.969005 0 0 0-94.786785-10.060642c-60.465003 0-119.138236 11.8488-174.390489 35.217667a449.214005 449.214005 0 0 0-238.388457 238.388457c-23.361643 55.252253-35.22128 113.925486-35.22128 174.390489s11.8488 119.138236 35.217668 174.390489a449.214005 449.214005 0 0 0 238.388457 238.388457c55.252253 23.368867 113.925486 35.217667 174.390489 35.217667s119.138236-11.8488 174.390489-35.217667A449.210393 449.210393 0 0 0 924.784365 737.42522c23.368867-55.270316 35.217667-113.925486 35.217667-174.390489a31.998984 31.998984 0 0 0-32.002596-32.006209z" fill="" p-id="2455"></path></svg>
             </div>
             <div class="lottery__notice">
-                <label class="lottery__notic ex-label"><input class="lottery__notice ex-checkbox" id="lottery-notice" type="checkbox">开启提醒</label>
+                <label class="lottery__notice"><input class="lottery__notice" id="lottery-notice" type="checkbox">开启提醒</label>
             </div>
         </div>
         <div class="lottery__nodata">暂无数据</div>
         <div class="lottery__wrap"></div>
     `;
-	let b = document.getElementsByClassName("ex-mask")[0];
+	let b = document.getElementsByClassName("layout-Player-chat")[0];
 	b.insertBefore(a, b.childNodes[0]);
 }
 
@@ -9996,6 +9804,7 @@ async function getMonthCost_diamondFans() {
 				data.push(item);
 			}
 		});
+		if (!ret.data.list[ret.data.list.length - 1]) break;
 		let lastItemDate = new Date(ret.data.list[ret.data.list.length - 1].consumeTime * 1000);
 		if (ret.data.list.length < 20 || lastItemDate.getMonth() !== new Date().getMonth() || lastItemDate.getFullYear() !== new Date().getFullYear()) {
 			hasMoreData = false;
@@ -13671,8 +13480,7 @@ function initPkg_SyncJoy_Func() {
 
 // 版本号
 // 格式 yyyy.MM.dd.**
-// var curVersion = "2020.01.12.01";
-var curVersion = "2025.01.24.01"
+var curVersion = "2025.03.17.01"
 var isNeedUpdate = false
 var lastestVersion = ""
 function initPkg_Update() {
@@ -13705,28 +13513,25 @@ function initPkg_Update_Func() {
 }
 function checkUpdate_Src() {
   return new Promise((resolve, reject) => {
-    fetch("http://src.douyuex.com/src/douyuex_version.txt", {
+    GM_xmlhttpRequest({
       method: "GET",
-      mode: "cors",
-      cache: "no-store",
-      credentials: "omit",
-    })
-      .then((res) => {
-        return res.text();
-      })
-      .then((txt) => {
+      url: `https://src.douyuex.com/src/douyuex_version.txt?t=${new Date().getTime()}`,
+      responseType: "text",
+      onload: function (response) {
+        const txt = response.response;
         if (txt != undefined) {
           if (txt != curVersion) {
             resolve([true, txt]);
           }
         }
         resolve(false);
-      })
-      .catch((err) => {
-        console.error("请求失败", err);
+      },
+      onerror: function (err) {
+        console.error('请求失败', err);
         reject();
-      });
-  });
+      }
+    });
+  })
 }
 
 function checkUpdate_GreasyFork() {
@@ -13760,7 +13565,7 @@ function checkUpdate_GreasyFork() {
 async function Update_checkVersion(isShowNotUpdate = false) {
   // 用解构赋值会导致函数undefined，暂不知原因
   let tmp = [];
-  tmp = await checkUpdate_GreasyFork().catch(err => {
+  tmp = await checkUpdate_Src().catch(err => {
     tmp = [false, curVersion];
     isNeedUpdate = tmp[0];
     lastestVersion = tmp[1];

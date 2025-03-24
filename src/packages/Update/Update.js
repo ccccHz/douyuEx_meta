@@ -1,7 +1,6 @@
 // 版本号
 // 格式 yyyy.MM.dd.**
-// var curVersion = "2020.01.12.01";
-var curVersion = "2025.01.24.01"
+var curVersion = "2025.03.17.01"
 var isNeedUpdate = false
 var lastestVersion = ""
 function initPkg_Update() {
@@ -34,28 +33,25 @@ function initPkg_Update_Func() {
 }
 function checkUpdate_Src() {
   return new Promise((resolve, reject) => {
-    fetch("http://src.douyuex.com/src/douyuex_version.txt", {
+    GM_xmlhttpRequest({
       method: "GET",
-      mode: "cors",
-      cache: "no-store",
-      credentials: "omit",
-    })
-      .then((res) => {
-        return res.text();
-      })
-      .then((txt) => {
+      url: `https://src.douyuex.com/src/douyuex_version.txt?t=${new Date().getTime()}`,
+      responseType: "text",
+      onload: function (response) {
+        const txt = response.response;
         if (txt != undefined) {
           if (txt != curVersion) {
             resolve([true, txt]);
           }
         }
         resolve(false);
-      })
-      .catch((err) => {
-        console.error("请求失败", err);
+      },
+      onerror: function (err) {
+        console.error('请求失败', err);
         reject();
-      });
-  });
+      }
+    });
+  })
 }
 
 function checkUpdate_GreasyFork() {
@@ -89,7 +85,7 @@ function checkUpdate_GreasyFork() {
 async function Update_checkVersion(isShowNotUpdate = false) {
   // 用解构赋值会导致函数undefined，暂不知原因
   let tmp = [];
-  tmp = await checkUpdate_GreasyFork().catch(err => {
+  tmp = await checkUpdate_Src().catch(err => {
     tmp = [false, curVersion];
     isNeedUpdate = tmp[0];
     lastestVersion = tmp[1];
